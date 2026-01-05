@@ -1,0 +1,45 @@
+scrapers:
+  cve_mitre:
+    rate_limit: 30
+    use_playwright: false
+    base_url: "https://cve.mitre.org/cgi-bin/cvekey.cgi"
+    keywords: ["artificial intelligence", "GPU", "neural network", "LLM", "machine learning"]
+    output_dir: "/app/data/bronze"
+  
+  nvidia:
+    rate_limit: 10
+    use_playwright: true
+    timeout: 60000
+    base_url: "https://www.nvidia.com/en-us/security/"
+    output_dir: "/app/data/bronze"
+  
+  intel:
+    rate_limit: 10
+    use_playwright: true
+    timeout: 60000
+    base_url: "https://www.intel.com/content/www/us/en/security-center/default.html"
+    output_dir: "/app/data/bronze"
+  
+  twitter:
+    rate_limit: 15 # Conservative limit for API
+    max_results: 100
+    output_dir: "/app/data/bronze"
+    queries:
+      - 'CVE vulnerability -is:retweet lang:en'
+      - 'zero-day exploit -is:retweet lang:en'
+      - 'NVIDIA security -is:retweet lang:en'
+      - 'Intel vulnerability -is:retweet lang:en'
+  
+  openai:
+    rate_limit: 20
+    use_playwright: true
+    timeout: 60000
+    base_url: "https://openai.com/blog"
+    output_dir: "/app/data/bronze"
+
+system:
+  user_agents:
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0"
+  log_level: "INFO"
