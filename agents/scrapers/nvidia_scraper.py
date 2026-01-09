@@ -1,61 +1,69 @@
 from typing import List, Dict
-import asyncio
 from base_scraper import BaseScraper
+import asyncio
 
 class NVIDIAScraper(BaseScraper):
     def __init__(self):
         super().__init__(name="nvidia")
-        self.base_url = self.scraper_config.get("base_url")
+        self.base_url = self.scraper_config.get("base_url", "https://www.nvidia.com/en-us/research/publications/")
+        self.timeout = self.scraper_config.get("timeout", 60000)
 
     async def scrape(self) -> List[Dict]:
         if not self.use_playwright:
-            raise RuntimeError("NVIDIA scraper requires Playwright")
+             raise RuntimeError("NVIDIA scraper requires Playwright")
 
-        results = []
+        self.logger.info(f"Navigating to {self.base_url}")
         page = await self.context.new_page()
+        page.set_default_timeout(self.timeout)
         
         try:
-            self.logger.info(f"Navigating to {self.base_url}")
-            await page.goto(self.base_url, wait_until="networkidle")
-            
-            # Anti-bot scrolling
-            await self._random_scroll(page)
-            
-            # Specific selector for NVIDIA security bulletins table/cards
-            # Warning: Selectors are fragile and need updates if site changes
-            rows = await page.locator("table tr").all()
-            
-            for row in rows[1:]: # Skip header
-                cols = await row.locator("td").all()
-                if len(cols) < 4:
-                    continue
-                    
-                bulletin_id = await cols[0].inner_text()
-                date = await cols[1].inner_text()
-                title = await cols[2].inner_text()
-                link = await cols[2].locator("a").get_attribute("href")
-                
-                if link and not link.startswith("http"):
-                    link = f"https://www.nvidia.com{link}"
+            await page.goto(self.base_url, wait_until="domcontentloaded", timeout=self.timeout)
+            # Wait for list or table
+            # Nvidia publications page usually has a filterable list.
+            await page.wait_for_selector('body', timeout=15000)
+            await page.wait_for_load_state("networkidle")
 
-                results.append({
-                    "bulletin_id": bulletin_id.strip(),
-                    "date": date.strip(),
-                    "title": title.strip(),
-                    "bulletin_url": link,
-                    "severity": "UNKNOWN", # Would need to click details to get this
-                    "source": "nvidia_security"
-                })
+            results = await page.evaluate("""() => {
+                const items = [];
+                // Look for publication links
+                // Often they link to .pdf or specific pages.
                 
+                // Strategy: Find all links that look like titles of papers.
+                const links = Array.from(document.querySelectorAll('a'));
+                
+                links.forEach(link => {
+                    const href = link.href;
+                    const text = link.innerText.trim();
+                    
+                    // Filter logic: Nvidia links often contain 'research.nvidia.com' or are PDFs
+                    // Or they are just relative links in the publications section.
+                    if (text.length > 15 && (href.includes('.pdf') || href.includes('/research/'))) {
+                         items.push({
+                             title: text,
+                             url: href,
+                             type: "Research Publication"
+                         });
+                    }
+                });
+                
+                // De-duplicate
+                const unique = [];
+                const seen = new Set();
+                items.forEach(i => {
+                    if (!seen.has(i.url)) {
+                        seen.add(i.url);
+                        unique.push(i);
+                    }
+                });
+                return unique;
+            }""")
+            
+            self.logger.info(f"Found {len(results)} potential research items.")
+            return results
+
         except Exception as e:
-            self.logger.error(f"Error scraping NVIDIA: {e}")
+            self.logger.error(f"Error scraping NVIDIA Research: {e}")
+            await page.screenshot(path="nvidia_error.png")
+            return []
         finally:
             await page.close()
-            
-        return results
-
-    async def _random_scroll(self, page):
-        """Scroll page randomly to mimic human behavior."""
-        for _ in range(3):
-            await page.mouse.wheel(0, 500)
-            await page.wait_for_timeout(1000)

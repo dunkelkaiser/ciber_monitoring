@@ -3,13 +3,16 @@ import argparse
 import logging
 import sys
 from typing import List
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Import scrapers
 from cve_mitre_scraper import CVEMitreScraper
 from nvidia_scraper import NVIDIAScraper
 from intel_scraper import IntelScraper
 from twitter_scraper import TwitterScraper
-from openai_blog_scraper import OpenAIBlogScraper
+from openai_blog_scraper import OpenAIScraper
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
@@ -37,7 +40,7 @@ async def main():
         "nvidia": NVIDIAScraper,
         "intel": IntelScraper,
         "twitter": TwitterScraper,
-        "openai": OpenAIBlogScraper
+        "openai": OpenAIScraper
     }
     
     to_run = []

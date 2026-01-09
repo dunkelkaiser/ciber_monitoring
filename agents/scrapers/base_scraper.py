@@ -33,7 +33,7 @@ class BaseScraper(ABC):
         self,
         name: str,
         config_path: str = "config.yaml",
-        output_dir: str = "data/bronze"
+        output_dir: str = "C:/Users/jagua/OneDrive/Documentos/Diplomado IA y TA/Modulo 4  Proyecto Integrador/ciber_monitoring/data_engineering/bronze"
     ):
         self.name = name
         self.output_dir = output_dir

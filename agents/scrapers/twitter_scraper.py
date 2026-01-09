@@ -2,7 +2,7 @@ from typing import List, Dict
 import tweepy
 import os
 import re
-from .base_scraper import BaseScraper
+from base_scraper import BaseScraper
 
 class TwitterScraper(BaseScraper):
     def __init__(self):
