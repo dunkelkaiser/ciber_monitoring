@@ -14,6 +14,7 @@ try:
     import openai
     from anthropic import Anthropic
     import google.generativeai as genai
+    from dotenv import load_dotenv
 except ImportError:
     pass
 
@@ -25,6 +26,14 @@ logger = logging.getLogger("GoldETL")
 BASE_DIR = Path(__file__).resolve().parent
 SILVER_DIR = BASE_DIR / "silver"
 GOLD_DIR = BASE_DIR / "gold"
+ENV_PATH = BASE_DIR.parent / "agents" / "scrapers" / ".env"
+
+# Load Env
+if ENV_PATH.exists():
+    load_dotenv(ENV_PATH)
+    logger.info(f"Loaded environment variables from {ENV_PATH}")
+else:
+    logger.warning(f".env file not found at {ENV_PATH}")
 
 GOLD_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -141,10 +150,19 @@ class GoldRefiner:
         if self.openai_key:
             try:
                 # Real OpenAI Call
-                # response = openai.ChatCompletion.create(...)
-                # return parsed_score
-                return 8.5 # Validation placeholder to save tokens/cost
-            except:
+                client = openai.OpenAI(api_key=self.openai_key)
+                response = client.chat.completions.create(
+                    model="gpt-5-nano-2025-08-07",
+                    messages=[
+                        {"role": "system", "content": "You are a tech analyst. Rate the 'innovation level' of the following research title from 0 to 10. Return ONLY the number."},
+                        {"role": "user", "content": text}
+                    ],
+                    max_completion_tokens=50
+                )
+                score_str = response.choices[0].message.content.strip()
+                return float(score_str)
+            except Exception as e:
+                logger.warning(f"OpenAI Call failed: {e}. using fallback.")
                 return 5.0
         else:
             # Fallback / "Ollama" local logic simulation
@@ -171,7 +189,7 @@ class GoldRefiner:
         # Assuming social data has ingestion timestamp or created_at
         # Use simple date simulation if missing
         dates = [self.timestamp - timedelta(days=x % 30) for x in range(len(social_df))]
-        social_df['date'] = [d.date() for d in dates]
+        social_df['date'] = [d.strftime('%Y-%m-%d') for d in dates] # Force String
         
         daily_sentiment = social_df.groupby('date')['sentiment'].mean().reset_index(name='avg_sentiment')
         
@@ -184,7 +202,14 @@ class GoldRefiner:
         # Assuming vuln_df has 'date' and 'days_risk_score'
         
         if vuln_df is not None and not vuln_df.empty:
-             daily_risk = vuln_df.groupby('date')['days_risk_score'].sum().reset_index()
+             # Ensure Vuln dates are strings
+             vuln_df['date_str'] = vuln_df['date'].astype(str)
+             daily_risk = vuln_df.groupby('date_str')['days_risk_score'].sum().reset_index()
+             daily_risk.rename(columns={'date_str': 'date'}, inplace=True)
+             
+             # Debug Dates
+             logger.info(f"Vuln Sample: {daily_risk['date'].head(3).tolist()}")
+             logger.info(f"Social Sample: {daily_sentiment['date'].head(3).tolist()}")
              
              merged = pd.merge(daily_risk, daily_sentiment, on='date', how='inner')
              
