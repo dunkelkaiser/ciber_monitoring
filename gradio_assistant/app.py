@@ -12,7 +12,7 @@ logger = logging.getLogger("GradioBot")
 
 # LLM Config (Ollama)
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/api/generate")
-MODEL_NAME = "gemma:4b"  # User specified "Gemma 3", mapping to available tag or custom
+MODEL_NAME = "gemma3:4b"  # Updated to verified model name
 
 # CSS (Provided by User)
 custom_css = """
@@ -59,17 +59,19 @@ h3 {
 """
 
 def query_ollama(prompt):
-    """Raw call to Ollama."""
+    """Raw call to Ollama via /api/chat."""
+    # Ensure URL points to /api/chat
+    chat_url = OLLAMA_URL.replace("/api/generate", "/api/chat")
     try:
         payload = {
             "model": MODEL_NAME,
-            "prompt": prompt,
+            "messages": [{"role": "user", "content": prompt}],
             "stream": False,
             "options": {"temperature": 0.3}
         }
-        res = requests.post(OLLAMA_URL, json=payload)
+        res = requests.post(chat_url, json=payload)
         if res.status_code == 200:
-            return res.json().get("response", "")
+            return res.json().get("message", {}).get("content", "")
         return f"Error: {res.text}"
     except Exception as e:
         return f"Connection Failed: {e}"
@@ -135,8 +137,6 @@ chat_interface = gr.ChatInterface(
     chatbot=gr.Chatbot(height=500),
     title="🛡️ CiberMonitoring AI Assistant (Gemma 3)",
     description="Ask about risks, trends, or specific CVEs... (Capabilities: Tech Edge Score, Risk Index, Correlations)",
-    theme=gr.themes.Soft(),
-    css=custom_css,
     examples=["What is the current Tech Edge Score?", "Show me the vulnerability risk index.", "Is there a correlation between tweets and CVEs?"]
 )
 
