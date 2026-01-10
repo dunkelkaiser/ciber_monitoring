@@ -4,12 +4,14 @@ import logging
 import requests
 from tools import AVAILABLE_TOOLS, TOOL_DESCRIPTIONS
 
+import os
+
 # Setup Logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("GradioBot")
 
 # LLM Config (Ollama)
-OLLAMA_URL = "http://localhost:11434/api/generate"
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/api/generate")
 MODEL_NAME = "gemma:4b"  # User specified "Gemma 3", mapping to available tag or custom
 
 # CSS (Provided by User)
@@ -73,7 +75,7 @@ def query_ollama(prompt):
         return f"Connection Failed: {e}"
 
 def chatbot_response(message, history):
-    history = history or []
+    # History is managed by ChatInterface, but for independent logic we use message
     
     # 1. Decision Step (Tool Use?)
     decision_prompt = f"""
@@ -124,38 +126,21 @@ def chatbot_response(message, history):
         # Direct Answer
         final_answer = query_ollama(f"You are a CiberSecurity Expert. Answer nicely: {message}")
 
-    history.append((message, final_answer))
-    return history, history
+    return final_answer
 
-with gr.Blocks(css=custom_css, theme=gr.themes.Soft()) as demo:
-    gr.Markdown("# 🛡️ CiberMonitoring AI Assistant (Gemma 3)")
-    
-    with gr.Row():
-        with gr.Column(scale=1):
-            gr.Markdown("### 🛠️ Config & Tools")
-            gr.Markdown("""
-            **Active Model**: Gemma 3 4B
-            **Capabilities**:
-            - 📈 **Tech Edge Score**: Analyzes Innovation.
-            - 🛡️ **Risk Index**: Historical CVE Data.
-            - 🔗 **Correlations**: Social vs Risk.
-            """)
-            
-            manual_tool_btn = gr.Button("Force Refresh Metrics")
-            status_box = gr.JSON(label="System Status", value={"api": "online", "rag": "ready"})
 
-        with gr.Column(scale=2):
-            gr.Markdown("### 💬 Secure Chat Ops")
-            chatbot = gr.Chatbot(label="Agent Session")
-            msg = gr.Textbox(
-                label="Command Center",
-                placeholder="Ask about risks, trends, or specific CVEs...",
-                autofocus=True
-            )
-            clear = gr.Button("Clear Context")
-
-    msg.submit(chatbot_response, [msg, chatbot], [chatbot, chatbot])
-    clear.click(lambda: None, None, chatbot, queue=False)
+# Create Chat Interface
+chat_interface = gr.ChatInterface(
+    fn=chatbot_response,
+    chatbot=gr.Chatbot(height=500),
+    title="🛡️ CiberMonitoring AI Assistant (Gemma 3)",
+    description="Ask about risks, trends, or specific CVEs... (Capabilities: Tech Edge Score, Risk Index, Correlations)",
+    theme=gr.themes.Soft(),
+    css=custom_css,
+    examples=["What is the current Tech Edge Score?", "Show me the vulnerability risk index.", "Is there a correlation between tweets and CVEs?"]
+)
 
 if __name__ == "__main__":
-    demo.launch(server_name="0.0.0.0", server_port=7860)
+    chat_interface.launch(server_name="0.0.0.0", server_port=7860)
+
+

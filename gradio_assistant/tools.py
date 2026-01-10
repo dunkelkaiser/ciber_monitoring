@@ -2,10 +2,12 @@ import requests
 import json
 import logging
 
+import os
+
 # Configure logger
 logger = logging.getLogger("AssistantTools")
 
-API_BASE_URL = "http://localhost:8000/api/v1"
+API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000/api/v1")
 
 def get_tech_edge_score():
     """Fetches the current Tech Edge Score and innovation ranking."""

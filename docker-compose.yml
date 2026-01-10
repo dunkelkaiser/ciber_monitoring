@@ -12,6 +12,8 @@ services:
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    networks:
+      - ciber_net
     restart: unless-stopped
 
   # 2. Scrapers Orchestrator (Runs Ingestion)
@@ -24,8 +26,10 @@ services:
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - TWITTER_BEARER_TOKEN=${TWITTER_BEARER_TOKEN}
-    ipc: host # Required for Playwright
-    profiles: [ "ingest" ] # Only run when requested (docker-compose --profile ingest up)
+    ipc: host
+    networks:
+      - ciber_net
+    profiles: [ "ingest" ]
 
   # 3. ETL Pipeline (Processes Bronze -> Gold)
   etl:
@@ -44,6 +48,29 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
     depends_on:
       - scrapers
+    networks:
+      - ciber_net
     profiles: [ "ingest" ]
 
-# .env file should be in the same directory
+  # 4. Gradio Assistant (Chatbot)
+  chatbot:
+    build: .
+    container_name: ciber_chatbot
+    command: python gradio_assistant/app.py
+    ports:
+      - "7860:7860"
+    volumes:
+      - ./:/app
+    environment:
+      - API_BASE_URL=http://api:8000/api/v1
+      # IMPORTANT: Points to host for Ollama if running locally on Windows/Mac
+      # If Linux, use http://172.17.0.1:11434 or network_mode: host
+      - OLLAMA_URL=http://host.docker.internal:11434/api/generate
+    depends_on:
+      - api
+    networks:
+      - ciber_net
+
+networks:
+  ciber_net:
+    driver: bridge

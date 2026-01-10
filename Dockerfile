@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM mcr.microsoft.com/playwright/python:v1.44.0-jammy
 
 WORKDIR /app
 
@@ -14,15 +14,16 @@ COPY agents/scrapers/requirements.txt scrape_reqs.txt
 COPY data_engineering/requirements.txt etl_reqs.txt
 COPY api_gateway/requirements.txt api_reqs.txt
 COPY rag_system/requirements.txt rag_reqs.txt
+COPY gradio_assistant/requirements.txt gradio_reqs.txt
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r scrape_reqs.txt
 RUN pip install --no-cache-dir -r etl_reqs.txt
 RUN pip install --no-cache-dir -r api_reqs.txt
 RUN pip install --no-cache-dir -r rag_reqs.txt
+RUN pip install --no-cache-dir -r gradio_reqs.txt
 
-# Install Playwright browsers (for NVIDIA/OpenAI scrapers)
-RUN playwright install --with-deps chromium
+# Playwright browsers are pre-installed in this image
 
 # Copy Python code
 COPY . /app
