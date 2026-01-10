@@ -1,102 +1,115 @@
 # 🛡️ CiberMonitoring: Plataforma de Ciberinteligencia y Monitoreo del Borde Tecnológico
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue.svg?style=for-the-badge&logo=python&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Enabled-blue.svg?style=for-the-badge&logo=docker&logoColor=white)
-![AI DNA](https://img.shields.io/badge/AI-GPT--5--Nano-green.svg?style=for-the-badge)
-![Big Data](https://img.shields.io/badge/Big_Data-Parquet-orange.svg?style=for-the-badge)
+![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg?style=for-the-badge&logo=docker&logoColor=white)
+![OpenAI](https://img.shields.io/badge/AI-GPT--5--Nano-green.svg?style=for-the-badge&logo=openai&logoColor=white)
+![FastAPI](https://img.shields.io/badge/API-FastAPI-009688.svg?style=for-the-badge&logo=fastapi&logoColor=white)
 
 > **Diplomado IA y TA | Módulo 4: Proyecto Integrador**
 >
-> *Fusión de Big Data y Ciberseguridad para la defensa proactiva.*
+> *Sistema autónomo de inteligencia predictiva que correlaciona innovación tecnológica con riesgos de ciberseguridad.*
 
 ---
 
-## 📖 Resumen Ejecutivo
-
-**CiberMonitoring** es un sistema avanzado de **Inteligencia Predictiva** que correlaciona el surgimiento de tecnologías emergentes con nuevas vulnerabilidades de seguridad.
-
-Mediante una red de **Agentes de Web Scraping** autónomos, el sistema monitorea masivamente fuentes críticas (NVIDIA, OpenAI, MITRE, Dark Web proxies). La información es procesada por un pipeline de **Big Data** enriquecido con **Inteligencia Artificial (GPT-5)** para generar alertas tempranas visuales, permitiendo a las organizaciones anticiparse a amenazas en infraestructura de vanguardia.
+## 📖 Visión General
+**CiberMonitoring** fusiona Big Data, Web Scraping y Modelos de Lenguaje (LLMs) para crear un **Dashboard de Defensa Proactiva**. El sistema monitorea continuamente el "estado del arte" en IA (Papers de NVIDIA/OpenAI) y lo cruza con vulnerabilidades emergentes (CVEs), permitiendo a los analistas visualizar el riesgo de adoptar nuevas tecnologías antes de que sea crítico.
 
 ---
 
 ## 🏗️ Arquitectura del Sistema
 
-El proyecto sigue una arquitectura **Medallion (Bronze/Silver/Gold)** potenciada por un cerebro **RAG (Retrieval-Augmented Generation)**.
-
 ```mermaid
 graph TD
-    subgraph Fuentes ["🌍 Fuentes de Datos"]
-        A[NVIDIA/OpenAI Research] 
-        B[CVE Mitre / Intel]
-        C[Redes Sociales / X]
+    subgraph Ingesta_Automatizada ["🕵️ 1. Ingesta (Browsers Autónomos)"]
+        direction TB
+        A[NVIDIA Research] & B[OpenAI Blog] -->|Playwright| C[Bronze: Raw JSON]
+        D[CVE Mitre] & E[Twitter/X] -->|APIs| C
     end
 
-    subgraph Ingesta ["🕵️ Capa de Agentes"]
-        D[Scrapers Autónomos] -->|JSON Crudo| E[(Bronze Layer)]
+    subgraph Procesamiento_Datos ["⚙️ 2. ETL & IA (Bronze → Gold)"]
+        C --> F[Silver ETL: Limpieza/Validación]
+        F --> G[Gold ETL: Feature Eng.]
+        G -->|GPT-5-Nano| H[Tech Edge Score]
+        G -->|Time Series| I[Vulnerability Index]
+        G -->|Correlation| J[Social Risk Matrix]
     end
 
-    subgraph Proceso ["⚙️ Ingeniería de Datos"]
-        E --> F[Silver ETL]
-        F -->|Limpieza + Great Expectations| G[(Silver Layer - Parquet)]
-        G --> H[Gold ETL]
-        H -->|ML + GPT-5-Nano| I[(Gold Layer - KPIs)]
-    end
-
-    subgraph Consumo ["🧠 Inteligencia & Visualización"]
-        I --> J[Vulnerability Index]
-        I --> K[Tech Edge Score]
-        G --> L[RAG System / ChromaDB]
+    subgraph Capa_Servicios ["🚀 3. Servicios & Consumo"]
+        H & I & J --> K[FastAPI Gateway]
+        F --> L[RAG Vector Store]
         L --> M[Asistente IA]
-        I --> N[Power BI Dashboard]
+        K --> N[📊 Power BI Dashboard]
     end
-
-    Fuentes --> D
 ```
 
 ---
 
-## 🚀 Componentes Desarrollados
+## 🚀 Despliegue con Docker
 
-### 1. 🕵️ Agentes de Recolección (Data Collection)
-Flota de robots autónomos diseñados con **Playwright** y **AsyncIO** para la navegación profunda.
-*   **Fuentes de Investigación**: Monitoreo de *Papers* en NVIDIA y OpenAI para detectar hacia dónde se mueve el "Borde Tecnológico".
-*   **Fuentes de Amenazas**: Rastreo en tiempo real de CVEs en MITRE e Intel.
-*   **Señales Sociales**: Análisis de tendencias en Twitter/X.
+El proyecto está contenerizado para un despliegue rápido y consistente.
 
-### 2. ⚙️ Pipeline de Datos (ETL)
-Transformación robusta de datos para Machine Learning.
-*   **Capa Bronze**: Data Lake de archivos crudos.
-*   **Capa Silver**: Datos limpios, deduplicados y validados con **Great Expectations**.
-*   **Capa Gold**:
-    *   **🧪 Tech Edge Score**: Algoritmo que utiliza **GPT-5-Nano** para leer títulos de papers y calificar su nivel de innovación (0-10).
-    *   **📉 Vulnerability Index**: Agregaciones de series de tiempo para predicción de riesgos.
-    *   **🔗 Matriz de Correlación**: Análisis cruzado entre sentimiento social y severidad de vulnerabilidades.
+### 1. Configuración
+Asegúrate de tener un archivo `.env` en la raíz (puedes copiar el de `agents/scrapers/.env`):
+```env
+OPENAI_API_KEY=sk-...
+TWITTER_BEARER_TOKEN=...
+```
 
-### 3. 🧠 Sistema RAG (Cerebro Vectorial)
-Base de conocimientos inteligente construida con **LangChain** y **ChromaDB**.
-*   Permite "conversar" con la base de datos completa.
-*   Ingesta automática desde la Capa Silver.
-*   Búsqueda semántica usando embeddings locales (`all-MiniLM-L6-v2`) para eficiencia y privacidad.
+### 2. Iniciar Servicios (API)
+Para levantar la API Gateway (Backend del Dashboard):
+```bash
+docker-compose up -d api
+```
+*   **API URL**: `http://localhost:8000`
+*   **Documentación**: `http://localhost:8000/docs`
 
----
-
-## 🛠️ Stack Tecnológico
-
-| Área | Tecnologías |
-| :--- | :--- |
-| **Lenguaje Core** | Python 3.11+ |
-| **Data Engineering** | Pandas, PyArrow (Parquet), Great Expectations |
-| **IA & LLMs** | OpenAI (GPT-5-Nano), LangChain, ChromaDB, Scikit-Learn |
-| **Web Scraping** | Playwright, BeautifulSoup, HTTPX |
-| **Infraestructura** | Docker (Ready), PowerShell |
+### 3. Ejecutar Pipeline de Ingesta (Batch)
+Para disparar los scrapers y actualizar todas las bases de datos (ETL + Vector Store):
+```bash
+docker-compose --profile ingest up
+```
+*Esto ejecutará secuencialmente: Scrapers -> Limpieza -> Análisis GPT-5 -> Indexación Vectorial.*
 
 ---
 
-## 🔮 Próximos Pasos Visuales
-Los datos procesados en la capa **Gold** están listos para ser conectados a **Power BI**, donde se visualizarán:
-1.  Evolución temporal de riesgos vs. lanzamientos tecnológicos.
-2.  Mapa de calor de "Tech Edge" (Qué empresas están innovando más rápido).
-3.  Alertas de correlación (Picos de discusión en redes -> Aparición de CVEs).
+## 🧩 Módulos del Proyecto
+
+| Módulo | Descripción | Tecnologías |
+| :--- | :--- | :--- |
+| **`agents/scrapers`** | Flota de robots que navegan webs dinámicas y APIs. | Playwright, AsyncIO |
+| **`data_engineering`** | Pipelines Bronze/Silver/Gold con validación de calidad. | Pandas, Great Expectations |
+| **`api_gateway`** | API REST que sirve los KPIs calculados a Power BI. | FastAPI, Uvicorn |
+| **`rag_system`** | Base de conocimiento vectorial para búsquedas semánticas. | LangChain, ChromaDB |
 
 ---
-*Proyecto desarrollado para el Diplomado de Inteligencia Artificial y Tecnologías Avanzadas.*
+
+## 📊 Integración con Power BI
+
+Para conectar Power BI a la plataforma:
+1.  Abrir Power BI Desktop.
+2.  Seleccionar **Inportar datos desde Web**.
+3.  Usar los endpoints de la API:
+    *   **Innovation Score**: `http://localhost:8000/api/v1/tech-edge-score`
+    *   **Risk Index**: `http://localhost:8000/api/v1/vulnerability-index`
+    *   **Correlations**: `http://localhost:8000/api/v1/correlation/matrix`
+
+---
+
+## 🤖 Asistente Conversacional (Gemma 3)
+
+El proyecto incluye una interfaz de chat avanzada potenciada por **Gemma 3 (4B)** y Gradio.
+
+### Capacidades
+*   **RAG (Retrieval Augmented Generation)**: Consulta la base de conocimiento local (ChromaDB).
+*   **Uso de Herramientas (Tool Use)**: El agente puede consultar dinámicamente la API para obtener métricas en tiempo real (Tech Edge Score, Risk Index).
+*   **Interfaz Personalizada**: Diseño CSS adaptado para modo Dark/Light profesional.
+
+### Ejecución
+```bash
+cd gradio_assistant
+python app.py
+```
+Acceso: `http://localhost:7860`
+
+---
+*Desarrollado para la Excelencia en Ciberinteligencia.*

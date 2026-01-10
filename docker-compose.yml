@@ -1,48 +1,49 @@
 version: '3.8'
 
 services:
-  # Shared base configuration
-  scraper-base: &scraper-base
-    build:
-      context: ./agents/scrapers
-      dockerfile: Dockerfile
+  # 1. API Gateway (Serves Gold Data)
+  api:
+    build: .
+    container_name: ciber_api
+    ports:
+      - "8000:8000"
     volumes:
-      - ./data_engineering/bronze:/app/data/bronze
-      - ./agents/scrapers/logs:/app/logs
-    env_file:
-      - ./agents/scrapers/.env
+      - ./:/app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    restart: unless-stopped
 
-  scraper-cve:
-    <<: *scraper-base
-    container_name: scraper-cve
-    command: python orchestrator.py --scraper=cve_mitre
-    # In production, use cron or an external scheduler
-    # restart: on-failure
+  # 2. Scrapers Orchestrator (Runs Ingestion)
+  scrapers:
+    build: .
+    container_name: ciber_scrapers
+    command: python agents/scrapers/orchestrator.py --scraper all
+    volumes:
+      - ./:/app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - TWITTER_BEARER_TOKEN=${TWITTER_BEARER_TOKEN}
+    ipc: host # Required for Playwright
+    profiles: [ "ingest" ] # Only run when requested (docker-compose --profile ingest up)
 
-  scraper-nvidia:
-    <<: *scraper-base
-    container_name: scraper-nvidia
-    command: python orchestrator.py --scraper=nvidia
+  # 3. ETL Pipeline (Processes Bronze -> Gold)
+  etl:
+    build: .
+    container_name: ciber_etl
+    command: >
+      sh -c "echo 'Starting Silver ETL...' && 
+             python data_engineering/silver_etl.py && 
+             echo 'Starting Gold ETL...' && 
+             python data_engineering/gold_etl.py &&
+             echo 'Building Vector Store...' &&
+             python rag_system/build_vector_store.py"
+    volumes:
+      - ./:/app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    depends_on:
+      - scrapers
+    profiles: [ "ingest" ]
 
-  scraper-intel:
-    <<: *scraper-base
-    container_name: scraper-intel
-    command: python orchestrator.py --scraper=intel
-
-  scraper-twitter:
-    <<: *scraper-base
-    container_name: scraper-twitter
-    command: python orchestrator.py --scraper=twitter
-
-  scraper-openai:
-    <<: *scraper-base
-    container_name: scraper-openai
-    command: python orchestrator.py --scraper=openai
-
-  # Orchestrator run all (optional manual trigger)
-  scraper-all:
-    <<: *scraper-base
-    container_name: scraper-all
-    command: python orchestrator.py --initial-load
-    profiles:
-      - manual
+# .env file should be in the same directory
