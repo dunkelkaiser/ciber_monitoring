@@ -4,26 +4,26 @@ scrapers:
     use_playwright: true
     base_url: "https://www.cve.org/CVERecord/SearchResults"
     keywords: ["artificial intelligence", "GPU", "neural network", "LLM", "machine learning"]
-    output_dir: "C:/Users/jagua/OneDrive/Documentos/Diplomado IA y TA/Modulo 4  Proyecto Integrador/ciber_monitoring/data_engineering/bronze"
+    output_dir: "data_engineering/bronze"
   
   nvidia:
     rate_limit: 10
     use_playwright: true
     timeout: 60000
     base_url: "https://www.nvidia.com/en-us/research/publications/"
-    output_dir: "C:/Users/jagua/OneDrive/Documentos/Diplomado IA y TA/Modulo 4  Proyecto Integrador/ciber_monitoring/data_engineering/bronze"
+    output_dir: "data_engineering/bronze"
   
   intel:
     rate_limit: 10
     use_playwright: true
     timeout: 60000
     base_url: "https://www.intel.com/content/www/us/en/security-center/default.html"
-    output_dir: "C:/Users/jagua/OneDrive/Documentos/Diplomado IA y TA/Modulo 4  Proyecto Integrador/ciber_monitoring/data_engineering/bronze"
+    output_dir: "data_engineering/bronze"
   
   twitter:
-    rate_limit: 15 # Conservative limit for API
+    rate_limit: 2 # Conservative limit for API
     max_results: 100
-    output_dir: "C:/Users/jagua/OneDrive/Documentos/Diplomado IA y TA/Modulo 4  Proyecto Integrador/ciber_monitoring/data_engineering/bronze"
+    output_dir: "data_engineering/bronze"
     queries:
       - 'CVE vulnerability -is:retweet lang:en'
       - 'zero-day exploit -is:retweet lang:en'
@@ -35,7 +35,7 @@ scrapers:
     use_playwright: true
     timeout: 60000
     base_url: "https://openai.com/research"
-    output_dir: "C:/Users/jagua/OneDrive/Documentos/Diplomado IA y TA/Modulo 4  Proyecto Integrador/ciber_monitoring/data_engineering/bronze"
+    output_dir: "data_engineering/bronze"
 
 system:
   user_agents:

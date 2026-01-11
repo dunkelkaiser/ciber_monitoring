@@ -32,14 +32,17 @@ class BaseScraper(ABC):
     def __init__(
         self,
         name: str,
-        config_path: str = "config.yaml",
-        output_dir: str = "C:/Users/jagua/OneDrive/Documentos/Diplomado IA y TA/Modulo 4  Proyecto Integrador/ciber_monitoring/data_engineering/bronze"
+        config_path: Optional[str] = None,
+        output_dir: str = "data_engineering/bronze"
     ):
         self.name = name
         self.output_dir = output_dir
         self.logger = logging.getLogger(name)
         
         # Load configuration
+        if config_path is None:
+             config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.yaml")
+
         self.config = self._load_config(config_path)
         self.scraper_config = self.config.get('scrapers', {}).get(name, {})
         

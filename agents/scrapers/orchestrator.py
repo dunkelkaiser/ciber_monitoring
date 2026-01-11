@@ -46,7 +46,9 @@ async def main():
     to_run = []
     
     if args.scraper:
-        if args.scraper in scrapers_map:
+        if args.scraper.lower() == 'all':
+             to_run = [cls() for cls in scrapers_map.values()]
+        elif args.scraper in scrapers_map:
             to_run.append(scrapers_map[args.scraper]())
         else:
             logger.error(f"Scraper '{args.scraper}' not found. Available: {list(scrapers_map.keys())}")

@@ -1,0 +1,1800 @@
+{
+  "metadata": {
+    "source": "twitter",
+    "timestamp": "2026-01-11T08:20:03.850201",
+    "record_count": 100
+  },
+  "data": [
+    {
+      "tweet_id": "2010258161807069667",
+      "text": "CVE-2026-0841 A vulnerability was detected in UTT 进取 520W 1.7.7-180627. Affected by this issue is the function strcpy of the file /goform/formPictureUrl. The manipulation of the argu… https://t.co/TT8na3DSYh",
+      "created_at": "2026-01-11T07:51:09+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 59
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0841"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010251737593242074",
+      "text": "🟠 CVE-2026-0840 - High\n\nA security vulnerability has been detected in UTT 进取 520W 1.7.7-180627. Affected by this vulnerability is the function strcpy of the file /goform/formConfigNoticeConfig. The manipulation o...\n\nhttps://t.co/4DPbvNKNrF https://t.co/Z3PjRaAA14",
+      "created_at": "2026-01-11T07:25:37+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 14
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0840"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010240036432658443",
+      "text": "[CVE-2026-0839: HIGH] Vulnerability found in UTT 进取 520W 1.7.7-180627 allows remote attackers to trigger buffer overflow via manipulated wepkey1 argument, risking cyber attacks.#cve,CVE-2026-0839,#cybersecurity https://t.co/7Ir7Mw17Oh https://t.co/jz7LjW7I0Y",
+      "created_at": "2026-01-11T06:39:07+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 29
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0839",
+        "CVE-2026-0839"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010236342400344234",
+      "text": "🟠 CVE-2026-0839 - High\n\nA weakness has been identified in UTT 进取 520W 1.7.7-180627. Affected is the function strcpy of the file /goform/APSecurity. Executing a manipulation of the argument wepkey1 can lead to buf...\n\nhttps://t.co/ph4QGvEYw2 https://t.co/VjIvMgBuJz",
+      "created_at": "2026-01-11T06:24:27+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 25
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0839"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010236293628961209",
+      "text": "🟠 CVE-2026-0838 - High\n\nA security flaw has been discovered in UTT 进取 520W 1.7.7-180627. This impacts the function strcpy of the file /goform/ConfigWirelessBase. Performing a manipulation of the argument ssid res...\n\nhttps://t.co/3GwSqaXLez https://t.co/d27lwMujGg",
+      "created_at": "2026-01-11T06:24:15+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 23
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0838"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010230559696683261",
+      "text": "🚨 D-Link DSL Gateway Routers [—] Jan 11, 2026 Comprehensive security advisory analyzing the ongoing exploitation of CVE-2026-0625 in legacy D-Link DSL gateway routers. This report provides extensive details on vulnerability mechanisms, business risks, impacts, defensive... https://t.co/Ktxb1Z3fdX",
+      "created_at": "2026-01-11T06:01:28+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 24
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0625"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010224971772023056",
+      "text": "[CVE-2026-0836: HIGH] Vulnerability discovered in UTT 进取 520W 1.7.7-180627 impacting strcpy function in /goform/formConfigFastDirectionW file, leading to buffer overflow with remote exploitation potential. Ven...#cve,CVE-2026-0836,#cybersecurity https://t.co/yxICT1T8PJ https://t.co/Un2FLqzXXd",
+      "created_at": "2026-01-11T05:39:16+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 32
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0836",
+        "CVE-2026-0836"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010222653853012133",
+      "text": "🟠 CVE-2026-0836 - High\n\nA vulnerability was determined in UTT 进取 520W 1.7.7-180627. The impacted element is the function strcpy of the file /goform/formConfigFastDirectionW. This manipulation of the argument ssid...\n\nhttps://t.co/cdVUBOET9s https://t.co/MurYchdiiy",
+      "created_at": "2026-01-11T05:30:03+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 26
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0836"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010222605262041342",
+      "text": "🟠 CVE-2026-0837 - High\n\nA vulnerability was identified in UTT 进取 520W 1.7.7-180627. This affects the function strcpy of the file /goform/formFireWall. Such manipulation of the argument GroupName leads to buffer o...\n\nhttps://t.co/eIQuItmuJW https://t.co/lv9mEsVWuf",
+      "created_at": "2026-01-11T05:29:51+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 23
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0837"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010216783458755053",
+      "text": "CVE-2026-0836 A vulnerability was determined in UTT 进取 520W 1.7.7-180627. The impacted element is the function strcpy of the file /goform/formConfigFastDirectionW. This manipulation … https://t.co/rZ9e6mScNl",
+      "created_at": "2026-01-11T05:06:43+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 158
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0836"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010216782456295494",
+      "text": "CVE-2026-0837 A vulnerability was identified in UTT 进取 520W 1.7.7-180627. This affects the function strcpy of the file /goform/formFireWall. Such manipulation of the argument GroupNa… https://t.co/0p7ZCCPNMd",
+      "created_at": "2026-01-11T05:06:43+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 162
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0837"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010208519031828492",
+      "text": "CVE-2025-15505 A vulnerability was found in Luxul XWR-600 up to 4.0.1. The affected element is an unknown function of the component Web Administration Interface. The manipulation of… https://t.co/Ykxd2HGhkI",
+      "created_at": "2026-01-11T04:33:53+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 147
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15505"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010207301911867441",
+      "text": "Dangling pointers, fragile memory – from an undisclosed vulnerability to a Pixel 9 Pro escalation:\n\nhttps://t.co/0PshvREJ76\n\n#android #vulnerability #eop #cybersecurity #infosec #informationsecurity #cve https://t.co/5WU4bCgyb9",
+      "created_at": "2026-01-11T04:29:03+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 1,
+        "impression_count": 50
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010204195761119574",
+      "text": "@vikrantbhatt_27 This GitHub advisory (GHSA-3cgp-3xvw-98x8, CVE-2025-59057) describes a high-severity XSS vulnerability in React Router's meta() / &lt;Meta&gt; APIs when generating script:ld+json tags in Framework Mode. It could allow arbitrary JS execution during SSR with untrusted content.\n\nAffected:",
+      "created_at": "2026-01-11T04:16:42+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 42
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-59057"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010200043618177288",
+      "text": "Critical RCE vulnerability Ni8mare (CVE-2026-21858) in n8n exploits improper Content-Type handling on webhooks and Form nodes, allowing file theft and admin token creation. CVSS 10.0. #Ni8mare #RemoteCodeExec #TechEurope\nhttps://t.co/VGoNoXUqqO",
+      "created_at": "2026-01-11T04:00:12+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 1,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 65
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-21858"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010186587561144695",
+      "text": "Apple Backports Fix for CVE-2025-43300 Exploited in Sophisticated Spyware Attack\n\nApple on Monday backported fixes for a recently patched security flaw that has been actively exploited in the wild.\nThe vulnerability in question is CVE-2025-43300 (CVSS s...\nhttps://t.co/ybeyeHRyxW",
+      "created_at": "2026-01-11T03:06:44+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 39
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-43300",
+        "CVE-2025-43300"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010184776892997639",
+      "text": "#VulnerabilityReport The PDF Trap: Critical Vulnerability (CVE-2025-66516, CVSS 10.0) Hits Apache Tika Core https://t.co/aLQcpc6u0L",
+      "created_at": "2026-01-11T02:59:32+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 42
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-66516"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010146584231624957",
+      "text": "❗️CVE-2026-21440: A critical path traversal vulnerability affecting the AdonisJS framework, specifically its multipart file upload handling.\n\nPoC Exploit: https://t.co/B10KN2f5YL\n\n▪️CVSS: 9.2\n▪️CVE Published: January 2nd, 2026\n▪️Exploit Published: January 5th, 2026\n\nDetails: https://t.co/pJNFjVfxXe",
+      "created_at": "2026-01-11T00:27:47+00:00",
+      "metrics": {
+        "retweet_count": 4,
+        "reply_count": 0,
+        "like_count": 14,
+        "quote_count": 0,
+        "bookmark_count": 5,
+        "impression_count": 2277
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-21440"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010143906579480806",
+      "text": "Attention, We Found a Security Vulnerability CVE-2017-1001000 on the Following Website: https://t.co/GrluDS3Zec. We Have Currently Taken the Website Offline 😈🔥 https://t.co/NJHD8bZE7S",
+      "created_at": "2026-01-11T00:17:08+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 13
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2017-1001000"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010123490481918385",
+      "text": "If you're interested in Arm64 security and VBS internals, I would suggest looking into CVE-2025-21325, quite a spectacular vulnerability @33y0re https://t.co/OGLQJmFnnr https://t.co/8O6oC0rK4o",
+      "created_at": "2026-01-10T22:56:01+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 3,
+        "quote_count": 0,
+        "bookmark_count": 1,
+        "impression_count": 242
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-21325"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010110890486427661",
+      "text": "@thyroot @foundring1 Yes, being blocked by many large accounts can reduce your reach on X. The algorithm treats blocks as negative signals, potentially lowering an account's reputation score and visibility (see CVE-2023-29218 vulnerability, still relevant per recent analyses). It also prevents",
+      "created_at": "2026-01-10T22:05:57+00:00",
+      "metrics": {
+        "retweet_count": 1,
+        "reply_count": 1,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 69
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2023-29218"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010107334476136760",
+      "text": "🚨 Critical n8n Security Alert 🚨\n\nA CVSS 10.0 vulnerability (CVE-2026-21858) allows attackers to fully take over n8n instances.\nAttackers can read server files, bypass login, and execute commands remotely.\n\n#CyberSecurity #n8n #Vulnerability #ZeroDay #DevSecOps #Automation #Inf",
+      "created_at": "2026-01-10T21:51:49+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 60
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-21858"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010106382838874359",
+      "text": "FortiGate CVE-2020-12812: Authentication Bypass Still Active\n\nThis 3-year-old SSL VPN vulnerability allows 2FA bypass through simple username case manipulation (Admin → admin). Despite being patched in 2020, thousands of devices remain vulnerable. https://t.co/JZX817fafh",
+      "created_at": "2026-01-10T21:48:02+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 1,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 54
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2020-12812"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010092527588913244",
+      "text": "🚨 THREAD: Critical libpcap vulnerability CVE-2025-11961 threatens network security infrastructure.  Read more:  👉 https://t.co/hlVc6M6yXj  #Security  #Mageia https://t.co/cQ2x9LYRdH",
+      "created_at": "2026-01-10T20:52:58+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 55
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-11961"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010085280707989647",
+      "text": "Katana Network Development Starter Kit executeCommand Command Injection Remote Code Execution Vulnerability (CVE-2026-0759) #CVE20260759 #CyberSecurity #KatanaNetwork #RemoteCodeExecutionVulnerability\nhttps://t.co/saiu6fVXpB https://t.co/yfKO7SQd5k",
+      "created_at": "2026-01-10T20:24:11+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 52
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0759"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010084029391888614",
+      "text": "gemini-mcp-tool execAsync Command Injection Remote Code Execution Vulnerability (CVE-2026-0755) #CVE20260755 #CyberSecurity #RemoteCodeExecutionVulnerability\nhttps://t.co/kM5la81zeE https://t.co/BlpFjBHo2Q",
+      "created_at": "2026-01-10T20:19:12+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 65
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0755"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010082656923557912",
+      "text": "Note this is a version based scan. If you receive an alert from us make sure to update!\n\nVulnerability details: https://t.co/CcvBzEisQx",
+      "created_at": "2026-01-10T20:13:45+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 1,
+        "quote_count": 0,
+        "bookmark_count": 1,
+        "impression_count": 510
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010064197816561965",
+      "text": "HackerOne Bug Bounty Disclosure: crlf-injection-in-http-header-values-allows-arbitrary-header-injection-unknowperson - https://t.co/8ZdWDzk2Xx\n\n#HackerOne #CVE #Vulnerability #OSINT #ThreatIntel #Cyber",
+      "created_at": "2026-01-10T19:00:24+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 66
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010064192825414104",
+      "text": "After analyzing 60% of vulnerabilities from past week, CVE-2025-52691 has 6 articles published from different internet sources, no other cve has these many articles. More information here: https://t.co/SyyDujjO8C #vulnerability #CyberSecurity #ThreatIntel #CVE #SecurityAlert",
+      "created_at": "2026-01-10T19:00:23+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 56
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-52691"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010055582867181960",
+      "text": "[ Blog ] VMware Tools vulnerability CVE-2025-22247 https://t.co/lrGgy0T7WK #CVE #securityadvisory #vulnerabilità https://t.co/m5Wc9Eq1ps",
+      "created_at": "2026-01-10T18:26:10+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 51
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-22247"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010038547819168240",
+      "text": "A critical MongoDB vulnerability (“Mongoled,” CVE-2025-14847) allows unauthenticated attackers to exfiltrate residual memory from exposed MongoDB instances via a malformed BSON message, with no authentication or user interaction required\n#MongoDB",
+      "created_at": "2026-01-10T17:18:29+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 1,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 54
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-14847"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010035799321129431",
+      "text": "There is a new vulnerability with elevated criticality in UTT 进取 520W (CVE-2026-0841) https://t.co/l5nQgG6lzl",
+      "created_at": "2026-01-10T17:07:33+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 60
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0841"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010033111380201740",
+      "text": "CVE-2025-15504\n\nLocal Null Pointer Dereference Vulnerability in LIEF ELF Binary Parser\n\nhttps://t.co/QQsjP17FH4",
+      "created_at": "2026-01-10T16:56:53+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 75
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15504"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010025432247136385",
+      "text": "CVE-2026-0821\n\nHeap-Based Buffer Overflow in QuickJS-ng up to 0.11.0 via Typed Array Con...\n\nhttps://t.co/jwhGiGboGX\n\nVulnerability Notification: https://t.co/xhLrNnfyrO",
+      "created_at": "2026-01-10T16:26:22+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 1,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 117
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0821"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010022058160427231",
+      "text": "🚨 New Critical CVE: CVE-2025-52691\n📊 Score:10.0\n‼️Remote Code Execution\n⚡️Smartermail\n📝 Successful exploitation of the vulnerability could allow an unauthenticated attacker to upload arbitrary files...\n\n🔗 Read Details: https://t.co/CqzeDRH07p\n\n#CVE #CyberSecurity #WatchStack",
+      "created_at": "2026-01-10T16:12:57+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 3,
+        "quote_count": 0,
+        "bookmark_count": 3,
+        "impression_count": 5
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-52691"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010021398316769325",
+      "text": "#PoC #Exploit Released for #Android/#Linux Kernel Vulnerability CVE-2025-38352 https://t.co/aLTYN7Cl4o\n#cve #vulnerability #CyberSecurity",
+      "created_at": "2026-01-10T16:10:20+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 54
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-38352"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010020703140278470",
+      "text": "In December, I discovered a very simple yet critical vulnerability in @elysiaJS (CVE pending). \n\nThe bug has been fixed for almost a month now, so I'm sharing the details: \n\nElysiaJS Cookie Signature Validation Bypass \n\nhttps://t.co/Sg8jUodudO https://t.co/22XDlIQ976",
+      "created_at": "2026-01-10T16:07:34+00:00",
+      "metrics": {
+        "retweet_count": 11,
+        "reply_count": 1,
+        "like_count": 89,
+        "quote_count": 0,
+        "bookmark_count": 53,
+        "impression_count": 3700
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010018801312501842",
+      "text": "The #EchoLeak vulnerability (CVE-2025-32711) exposes how AI CoPilots like #Microsoft365 can become silent conduits for data theft and hybrid warfare: @SoumyaAwasthi17  https://t.co/kaifoaXcE9",
+      "created_at": "2026-01-10T16:00:01+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 77
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-32711"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010017752463863934",
+      "text": "CVE-2026-0822\n\nQuickJS-ng Remote Heap Buffer Overflow Vulnerability in Typed Array Sort Function\n\nhttps://t.co/KKhryZjGt3",
+      "created_at": "2026-01-10T15:55:51+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 63
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0822"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010015192566972839",
+      "text": "CVE-2026-0824\n\nCross-Site Scripting Vulnerability in QuestDB UI Web Console Before 1.1.10\n\nhttps://t.co/JFNlR26Fch",
+      "created_at": "2026-01-10T15:45:40+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 71
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0824"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010010069639770493",
+      "text": "CVE-2026-22685\n\nPath Traversal in DevToys Extension Installation Mechanism Before...\n\nhttps://t.co/ET1wM7dZDt\n\nVulnerability Alert Subscriptions: https://t.co/hrQhy5uz4x",
+      "created_at": "2026-01-10T15:25:19+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 58
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22685"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010007509600260536",
+      "text": "CVE-2026-22689\n\nCross-Site WebSocket Hijacking in Mailpit WebSocket Server Before...\n\nhttps://t.co/M82W3AcJRR\n\nCustomizable Vulnerability Alerts: https://t.co/U7998fz7yk",
+      "created_at": "2026-01-10T15:15:09+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 60
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22689"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010004949711626636",
+      "text": "CVE-2026-22611\n\nAWS SDK for .NET Improper Region Routing Vulnerability in Versions 4.0.0-4.0.3.2\n\nhttps://t.co/We5p8y9Bul",
+      "created_at": "2026-01-10T15:04:58+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 65
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22611"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2010002390217318873",
+      "text": "CVE-2026-22698\n\nCritical Entropy Reduction Vulnerability in RustCrypto SM2 Public Key Encryption\n\nhttps://t.co/VMVMInVzTa",
+      "created_at": "2026-01-10T14:54:48+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 68
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22698"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009996646550253866",
+      "text": "A stack-based buffer overflow affects GNU Wget2 (DEBIAN-CVE-2025-69195) during filename sanitization. A remote attacker could exploit this #vulnerability. Monitor official #wget2 releases for patches. #infosec https://t.co/8PCPTp1szw",
+      "created_at": "2026-01-10T14:31:59+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 139
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-69195"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009995397343916556",
+      "text": "Salvo is affected by a stored XSS vulnerability (CVE-2026-22257) through file uploads with malicious names. This impacts the list_html function. #salvo #XSS #infosec https://t.co/4NOO9b9YE0",
+      "created_at": "2026-01-10T14:27:01+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 57
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22257"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009995223037030671",
+      "text": "React Router is vulnerable to XSS via Open Redirects (CVE-2026-22029). This #XSS vulnerability affects previous versions. Remediation involves updating your #ReactRouter package. More details: https://t.co/mmeiGunu1h",
+      "created_at": "2026-01-10T14:26:19+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 66
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22029"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009995053876556251",
+      "text": "GhostCMS is affected by a Staff Token permission bypass (CVE-2026-22595). This #AuthBypass vulnerability poses a high security risk. Update to 6.11.0 or later. #GhostCMS #infosec https://t.co/OHvVgda6tN",
+      "created_at": "2026-01-10T14:25:39+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 58
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22595"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009994882782531597",
+      "text": "A Cross-site Scripting (XSS) vulnerability, CVE-2025-13761, impacts #GitLab. Upgrade to the patched version to mitigate this #infosec risk. https://t.co/lmA7Tdaqi9",
+      "created_at": "2026-01-10T14:24:58+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 60
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-13761"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009994712279601643",
+      "text": "CVE-2026-22701\n\nRace Condition Vulnerability in Filelock Python Package Before 3.20.3\n\nhttps://t.co/0aK8TV7pnt",
+      "created_at": "2026-01-10T14:24:17+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 83
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22701"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009994671842541732",
+      "text": "GNU wget2 is affected by a path traversal vulnerability (DEBIAN-CVE-2025-69194) when processing Metalink files, potentially leading to arbitrary file writes. #wget2 #infosec https://t.co/QIAx70xYSl",
+      "created_at": "2026-01-10T14:24:08+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 55
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-69194"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009994496260645190",
+      "text": "GitLab (gitlab-org/gitlab) has a high-severity cross-site scripting (XSS) vulnerability, CVE-2025-9222. Improper input neutralization enables script injection. #GitLab #XSS #infosec https://t.co/F6dIv2JIkU",
+      "created_at": "2026-01-10T14:23:26+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 54
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-9222"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009994317461631362",
+      "text": "Alibaba Fastjson versions prior to 1.2.48 are affected by a critical deserialization vulnerability (CVE-2025-70974) due to autoType mishandling, potentially leading to remote code execution. #Java #Deserialization #Infosec https://t.co/pSpiPwVna8",
+      "created_at": "2026-01-10T14:22:43+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 58
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-70974"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009989281528590718",
+      "text": "CISA urges emergency patching after a critical HPE OneView vulnerability (CVE-2025-37164) with active exploitation - Check your versions and update to OneView v11.00 or later now.\n\nRead: https://t.co/Hu71jRjP9s\n\n#Cybersecurity #HPE #OneView #CISA #Vulnerability",
+      "created_at": "2026-01-10T14:02:43+00:00",
+      "metrics": {
+        "retweet_count": 1,
+        "reply_count": 0,
+        "like_count": 2,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 551
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-37164"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009986896898748649",
+      "text": "CVE-2026-0822 A vulnerability was identified in quickjs-ng quickjs up to 0.11.0. This issue affects the function js_typed_array_sort of the file quickjs.c. The manipulation leads to … https://t.co/DA0AR6FQ5T",
+      "created_at": "2026-01-10T13:53:14+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 292
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0822"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009984472620417071",
+      "text": "CVE-2026-22702\n\nVirtualenv Local Symlink Race Condition Vulnerability Prior to 20.36.1\n\nhttps://t.co/5NnsMWlq6c",
+      "created_at": "2026-01-10T13:43:36+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 67
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22702"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009979352721568254",
+      "text": "CVE-2026-22704\n\nStored XSS Vulnerability in HAX CMS Versions 11.0.6 to 24.x\n\nhttps://t.co/c0mqmSvWuc\n\nVulnerability Notification: https://t.co/xhLrNnfyrO",
+      "created_at": "2026-01-10T13:23:15+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 50
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22704"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009974232961183938",
+      "text": "CVE-2026-22705\n\nTiming Side-Channel Vulnerability in RustCrypto Signatures Before 0.1.0-rc.2\n\nhttps://t.co/ZRzHrN4fHf",
+      "created_at": "2026-01-10T13:02:55+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 59
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22705"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009969113246859631",
+      "text": "CVE-2025-15502\n\nRemote OS Command Injection in Sangfor Operation and Main...\n\nhttps://t.co/49sw3Uuuvs\n\nDon't wait vulnerability scanning results: https://t.co/oh1APvMMnd",
+      "created_at": "2026-01-10T12:42:34+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 64
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15502"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009963993926971696",
+      "text": "CVE-2025-15503\n\nSangfor O&amp;amp;M Management System Remote Unrestricted File Upload Vulnerability\n\nhttps://t.co/Rkik2oybOs",
+      "created_at": "2026-01-10T12:22:14+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 50
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15503"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009961434000609321",
+      "text": "CVE-2026-0831\n\nArbitrary File Write Vulnerability in WordPress Templately Plugin Before 3.4.9\n\nhttps://t.co/kajsKiCDEP",
+      "created_at": "2026-01-10T12:12:03+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 63
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0831"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009958437367767392",
+      "text": "🚨 CVE-2025-69200 - high 🚨\n\nphpMyFAQ - Configuration Backup Disclosure\n\n&gt; phpMyFAQ &lt;= 4.0.16 contains an information disclosure vulnerability caused by unauthe...\n\n👾 https://t.co/zVw3G0R8Z6\n\n@pdnuclei #NucleiTemplates #cve",
+      "created_at": "2026-01-10T12:00:09+00:00",
+      "metrics": {
+        "retweet_count": 3,
+        "reply_count": 0,
+        "like_count": 2,
+        "quote_count": 0,
+        "bookmark_count": 1,
+        "impression_count": 153
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-69200"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009956312063381637",
+      "text": "CVE-2026-22601\n\nCommand Injection Vulnerability in OpenProject Versions 16.6.1 and Below\n\nhttps://t.co/kjtVtgFqEg",
+      "created_at": "2026-01-10T11:51:42+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 78
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22601"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009953751834988823",
+      "text": "CVE-2026-22600\n\nLocal File Read Vulnerability in OpenProject via Malicious SVG At...\n\nhttps://t.co/qdna40lIhB\n\nVulnerability Alert Subscriptions: https://t.co/hrQhy5uz4x",
+      "created_at": "2026-01-10T11:41:32+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 66
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22600"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009948633001505063",
+      "text": "CVE-2026-22604\n\nUser Enumeration Vulnerability in OpenProject Versions 11.2.1 to 16.6.2\n\nhttps://t.co/gFNA4lOXFJ",
+      "created_at": "2026-01-10T11:21:11+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 64
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22604"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009946072978792704",
+      "text": "CVE-2026-22602\n\nInformation Disclosure in OpenProject Before 16.6.2 via User Enumeration\n\nhttps://t.co/RYspJ3jT3Z\n\nVulnerability Notification: https://t.co/xhLrNnfyrO",
+      "created_at": "2026-01-10T11:11:01+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 68
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22602"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943907493458177",
+      "text": "\"Critical n8n Security Vulnerability (CVE-2026–21858) Demands Immediate Action\" by Dhanush N\n\n#BugBounty #Cybersecurity #Hacking #InfoSec\n\nhttps://t.co/G5ekNwTbIT",
+      "created_at": "2026-01-10T11:02:25+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 80
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943373655036227",
+      "text": "CVE-2025-31048 (CVSS:9.9, CRITICAL) is Awaiting Analysis. Unrestricted Upload of File with Dangerous Type vulnerability in Themify Shopo allows Upload a Web Shell to a Web Server..https://t.co/mD3xbx1y54 #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:17+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 227
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-31048"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943371973083557",
+      "text": "CVE-2025-31047 (CVSS:8.8, HIGH) is Awaiting Analysis. Deserialization of Untrusted Data vulnerability in Themify Themify Edmin allows Object Injection.This issue affects Them..https://t.co/H9ARRBVifD #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:17+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 140
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-31047"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943370207248555",
+      "text": "CVE-2025-31044 (CVSS:8.5, HIGH) is Awaiting Analysis. Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in AA-Team Premium SE..https://t.co/qWfpqOxt2u #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:17+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 134
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-31044"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943368474976577",
+      "text": "CVE-2025-30633 (CVSS:9.3, CRITICAL) is Awaiting Analysis. Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in AA-Team Amazon Nat..https://t.co/bNkTnAkFSw #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:16+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 135
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-30633"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943366717612159",
+      "text": "CVE-2026-0585 (CVSS:6.9, HIGH) is Analyzed. A security vulnerability has been detected in code-projects Online Product Reservation System 1.0. Impacted is an unknow..https://t.co/wMb6C6VvpK #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:16+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 37
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0585"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943364968558707",
+      "text": "CVE-2026-0583 (CVSS:6.9, HIGH) is Analyzed. A security flaw has been discovered in code-projects Online Product Reservation System 1.0. This vulnerability affects u..https://t.co/UJerCuPf62 #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:15+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 33
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-0583"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943361529286926",
+      "text": "CVE-2025-15240 (CVSS:8.7, HIGH) is Awaiting Analysis. QOCA aim AI Medical Cloud Platform developed by Quanta Computer has an Arbitrary File Upload vulnerability, allowing aut..https://t.co/0isYFhKa9g #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:14+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 33
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15240"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943359624995320",
+      "text": "CVE-2025-15462 (CVSS:7.4, HIGH) is Undergoing Analysis. A vulnerability has been found in UTT 进取 520W 1.7.7-180627. This issue affects the function strcpy of the file /goform/C..https://t.co/JwRfPN3BfC #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:14+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 31
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15462"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943357804748888",
+      "text": "CVE-2025-15461 (CVSS:7.4, HIGH) is Undergoing Analysis. A flaw has been found in UTT 进取 520W 1.7.7-180627. This vulnerability affects the function strcpy of the file /goform/fo..https://t.co/g3rhCWi58s #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:14+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 28
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15461"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943356143784105",
+      "text": "CVE-2025-15460 (CVSS:7.4, HIGH) is Undergoing Analysis. A vulnerability was detected in UTT 进取 520W 1.7.7-180627. This affects the function strcpy of the file /goform/formPptpC..https://t.co/w7MQQkzBwv #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:13+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 28
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15460"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943354474410467",
+      "text": "CVE-2025-15459 (CVSS:7.4, HIGH) is Undergoing Analysis. A security vulnerability has been detected in UTT 进取 520W 1.7.7-180627. Affected by this issue is the function strcpy of..https://t.co/YoeM3oQoPG #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:13+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 31
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15459"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943351152521433",
+      "text": "CVE-2025-15458 (CVSS:6.9, HIGH) is Undergoing Analysis. A vulnerability was determined in bg5sbk MiniCMS up to 1.8. This affects an unknown function of the file /mc-admin/post-..https://t.co/lbl4GnYPZ3 #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:12+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 29
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15458"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943349462282350",
+      "text": "CVE-2025-15457 (CVSS:6.9, HIGH) is Undergoing Analysis. A vulnerability was found in bg5sbk MiniCMS up to 1.8. The impacted element is an unknown function of the file /minicms/..https://t.co/x28EZ1dyzF #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:12+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 27
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15457"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943347797139665",
+      "text": "CVE-2025-15456 (CVSS:6.9, HIGH) is Undergoing Analysis. A vulnerability has been found in bg5sbk MiniCMS up to 1.8. The affected element is an unknown function of the file /mc-..https://t.co/VfwDbHl92k #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:11+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 25
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15456"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943346140328388",
+      "text": "CVE-2025-15447 (CVSS:6.9, HIGH) is Awaiting Analysis. A vulnerability has been found in Seeyon Zhiyuan OA Web Application System up to 20251223. This affects an unknown funct..https://t.co/yrw8z3euXM #cybersecurityawareness #cybersecurity #CVE #infosec #hacker #nvd #mitre",
+      "created_at": "2026-01-10T11:00:11+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 30
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15447"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009943331263132130",
+      "text": "🚨 CVE-2021-28799 - critical 🚨\n\nQNAP HBS 3 - Broken Access Control\n\n&gt; An improper authorization vulnerability has been reported to affect QNAP NAS running ...\n\n👾 https://t.co/kTzGD4FCVC\n\n@pdnuclei #NucleiTemplates #cve",
+      "created_at": "2026-01-10T11:00:07+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 150
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2021-28799"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009940953180569734",
+      "text": "CVE-2026-22603\n\nUnauthenticated Password Change Vulnerability in OpenProject Before 16.6.2\n\nhttps://t.co/4Y1S66VBsE",
+      "created_at": "2026-01-10T10:50:40+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 70
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22603"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009938393711468747",
+      "text": "CVE-2026-22607\n\nFickling Pickle Deserialization Vulnerability in Versions Up to 0.1.6\n\nhttps://t.co/LRnbWrbI3z",
+      "created_at": "2026-01-10T10:40:30+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 54
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22607"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009935833621565918",
+      "text": "CVE-2026-22608\n\nRemote Code Execution in Fickling Python Decompiler Befor...\n\nhttps://t.co/2GplImY3HW\n\nDon't wait vulnerability scanning results: https://t.co/oh1APvMMnd",
+      "created_at": "2026-01-10T10:30:20+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 62
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22608"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009933273783304329",
+      "text": "CVE-2026-22612\n\nFickling Decompiler Detection Bypass Vulnerability Prior to Version 0.1.7\n\nhttps://t.co/fo5piYSbaW",
+      "created_at": "2026-01-10T10:20:09+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 48
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22612"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009932537049522320",
+      "text": "CVE-2025-53470 Out-of-bounds Read vulnerability in Apache  NimBLE HCI H4 driver. Specially crafted HCI event could lead to invalid memory read in H4 driver.\n\nThis issue affects Apac… https://t.co/g5VziDDBdq",
+      "created_at": "2026-01-10T10:17:14+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 297
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-53470"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009932535782924490",
+      "text": "CVE-2025-52435 J2EE Misconfiguration: Data Transmission Without Encryption vulnerability in Apache NimBLE.\n\nImproper handling of Pause Encryption procedure on Link Layer results in … https://t.co/M1lLp2ZfUo",
+      "created_at": "2026-01-10T10:17:13+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 256
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-52435"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009926038881525824",
+      "text": "CVE-2025-62235 Authentication Bypass by Spoofing vulnerability in Apache NimBLE.\n\nReceiving specially crafted Security Request could lead to removal of original bond and re-bond wit… https://t.co/WaAMdO16bg",
+      "created_at": "2026-01-10T09:51:24+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 227
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-62235"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009926038009049496",
+      "text": "CVE-2025-53477 NULL Pointer Dereference vulnerability in Apache Nimble.\n\nMissing validation of HCI connection complete or HCI command TX buffer could lead to NULL pointer dereferenc… https://t.co/cMSZIFdPtE",
+      "created_at": "2026-01-10T09:51:24+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 203
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-53477"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009925595174461819",
+      "text": "CVE-2026-22029\n\nOpen Redirect Vulnerability in React Router Versions 7.0.0 Through 7.11....\n\nhttps://t.co/pJANHagzmT\n\nVulnerability Notification: https://t.co/xhLrNnfyrO",
+      "created_at": "2026-01-10T09:49:39+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 82
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22029"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009923035487195428",
+      "text": "CVE-2025-59057\n\nXSS Vulnerability in React Router Meta APIs During Server-Side Rendering\n\nhttps://t.co/RQWSi0NRGP",
+      "created_at": "2026-01-10T09:39:28+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 75
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-59057"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009920854272999677",
+      "text": "🚨 New Critical Vulnerability Alert\n\n🆔 CVE-2026-22600\n📊 Score: 9.1\n\n🔗 Read Intel: https://t.co/75rtspNi5v\n\n#CVE #CyberSecurity #WatchStack",
+      "created_at": "2026-01-10T09:30:48+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 0
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22600"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009920475464380582",
+      "text": "CVE-2025-61686\n\nPath Traversal Vulnerability in React Router and Remix Session Storage Mechanisms\n\nhttps://t.co/ygvk3Hn0aq",
+      "created_at": "2026-01-10T09:29:18+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 67
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-61686"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009917916012069108",
+      "text": "CVE-2026-21884\n\nXSS Vulnerability in React Router's ScrollRestoration API During Server-Side Rendering\n\nhttps://t.co/aW4r3Gd6ie",
+      "created_at": "2026-01-10T09:19:08+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 55
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-21884"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009915356144455950",
+      "text": "CVE-2026-22030\n\nCSRF Vulnerability in React Router Server-Side Route Action Handlers\n\nhttps://t.co/4ytuJ6B6O3",
+      "created_at": "2026-01-10T09:08:57+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 64
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22030"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009914971237322760",
+      "text": "🚨 New Critical Vulnerability Alert\n\n🆔 CVE-2026-22601\n📊 Score: 8.6\n\n🔗 Read Intel: https://t.co/0JFI1u5dCY\n\n#CVE #CyberSecurity #WatchStack",
+      "created_at": "2026-01-10T09:07:26+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 1
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2026-22601"
+      ],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009913858916253745",
+      "text": "Question for CTI folks:\n\nDo you let threat intelligence drive vulnerability patching priority?\n\nOr is a critical CVE always a critical CVE regardless of who's exploiting it?\n\nGenuinely curious where people land on this.\n\n#cybersecurity #cyberthreatintelligence #threatintelligence",
+      "created_at": "2026-01-10T09:03:01+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 41
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [],
+      "source": "twitter"
+    },
+    {
+      "tweet_id": "2009910331427180759",
+      "text": "CVE-2025-15502 A vulnerability was identified in Sangfor Operation and Maintenance Management System up to 3.0.8. The affected element is the function SessionController of the file … https://t.co/DBj3tTPp8J",
+      "created_at": "2026-01-10T08:48:59+00:00",
+      "metrics": {
+        "retweet_count": 0,
+        "reply_count": 0,
+        "like_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 262
+      },
+      "query_matched": "CVE vulnerability -is:retweet lang:en",
+      "mentioned_cves": [
+        "CVE-2025-15502"
+      ],
+      "source": "twitter"
+    }
+  ]
+}
