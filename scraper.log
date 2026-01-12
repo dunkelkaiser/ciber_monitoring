@@ -517,3 +517,158 @@ playwright._impl._errors.Error: Executable doesn't exist at /ms-playwright/chrom
 ╚═══════════════════════════════════════════════════════════════╝
 [2026-01-11 08:20:04,027] [openai] [INFO] Finished scraper: openai
 [2026-01-11 08:20:04,027] [Orchestrator] [INFO] Orchestration complete.
+[2026-01-11 08:23:37,597] [Orchestrator] [INFO] Starting execution of 5 scrapers...
+[2026-01-11 08:23:37,597] [cve_mitre] [INFO] Starting scraper: cve_mitre
+[2026-01-11 08:23:37,781] [cve_mitre] [ERROR] Scraper failed: Executable doesn't exist at /ms-playwright/chromium-1091/chrome-linux/chrome
+╔═══════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just updated to 1.40.0.             ║
+║ Please update docker image as well.                           ║
+║ -  current: mcr.microsoft.com/playwright/python:v1.44.0-jammy ║
+║ - required: mcr.microsoft.com/playwright/python:v1.40.0-jammy ║
+║                                                               ║
+║ <3 Playwright Team                                            ║
+╚═══════════════════════════════════════════════════════════════╝
+Traceback (most recent call last):
+  File "/app/agents/scrapers/base_scraper.py", line 195, in run
+    await self._setup_playwright()
+  File "/app/agents/scrapers/base_scraper.py", line 94, in _setup_playwright
+    self.browser = await self.playwright.chromium.launch(
+  File "/usr/local/lib/python3.10/dist-packages/playwright/async_api/_generated.py", line 14740, in launch
+    await self._impl_obj.launch(
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_browser_type.py", line 95, in launch
+    Browser, from_channel(await self._channel.send("launch", params))
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_connection.py", line 62, in send
+    return await self._connection.wrap_api_call(
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_connection.py", line 492, in wrap_api_call
+    return await cb()
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_connection.py", line 100, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._errors.Error: Executable doesn't exist at /ms-playwright/chromium-1091/chrome-linux/chrome
+╔═══════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just updated to 1.40.0.             ║
+║ Please update docker image as well.                           ║
+║ -  current: mcr.microsoft.com/playwright/python:v1.44.0-jammy ║
+║ - required: mcr.microsoft.com/playwright/python:v1.40.0-jammy ║
+║                                                               ║
+║ <3 Playwright Team                                            ║
+╚═══════════════════════════════════════════════════════════════╝
+[2026-01-11 08:23:37,787] [cve_mitre] [INFO] Finished scraper: cve_mitre
+[2026-01-11 08:23:37,788] [nvidia] [INFO] Starting scraper: nvidia
+[2026-01-11 08:23:37,954] [nvidia] [ERROR] Scraper failed: Executable doesn't exist at /ms-playwright/chromium-1091/chrome-linux/chrome
+╔═══════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just updated to 1.40.0.             ║
+║ Please update docker image as well.                           ║
+║ -  current: mcr.microsoft.com/playwright/python:v1.44.0-jammy ║
+║ - required: mcr.microsoft.com/playwright/python:v1.40.0-jammy ║
+║                                                               ║
+║ <3 Playwright Team                                            ║
+╚═══════════════════════════════════════════════════════════════╝
+Traceback (most recent call last):
+  File "/app/agents/scrapers/base_scraper.py", line 195, in run
+    await self._setup_playwright()
+  File "/app/agents/scrapers/base_scraper.py", line 94, in _setup_playwright
+    self.browser = await self.playwright.chromium.launch(
+  File "/usr/local/lib/python3.10/dist-packages/playwright/async_api/_generated.py", line 14740, in launch
+    await self._impl_obj.launch(
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_browser_type.py", line 95, in launch
+    Browser, from_channel(await self._channel.send("launch", params))
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_connection.py", line 62, in send
+    return await self._connection.wrap_api_call(
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_connection.py", line 492, in wrap_api_call
+    return await cb()
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_connection.py", line 100, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._errors.Error: Executable doesn't exist at /ms-playwright/chromium-1091/chrome-linux/chrome
+╔═══════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just updated to 1.40.0.             ║
+║ Please update docker image as well.                           ║
+║ -  current: mcr.microsoft.com/playwright/python:v1.44.0-jammy ║
+║ - required: mcr.microsoft.com/playwright/python:v1.40.0-jammy ║
+║                                                               ║
+║ <3 Playwright Team                                            ║
+╚═══════════════════════════════════════════════════════════════╝
+[2026-01-11 08:23:37,960] [nvidia] [INFO] Finished scraper: nvidia
+[2026-01-11 08:23:37,960] [intel] [INFO] Starting scraper: intel
+[2026-01-11 08:23:38,121] [intel] [ERROR] Scraper failed: Executable doesn't exist at /ms-playwright/chromium-1091/chrome-linux/chrome
+╔═══════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just updated to 1.40.0.             ║
+║ Please update docker image as well.                           ║
+║ -  current: mcr.microsoft.com/playwright/python:v1.44.0-jammy ║
+║ - required: mcr.microsoft.com/playwright/python:v1.40.0-jammy ║
+║                                                               ║
+║ <3 Playwright Team                                            ║
+╚═══════════════════════════════════════════════════════════════╝
+Traceback (most recent call last):
+  File "/app/agents/scrapers/base_scraper.py", line 195, in run
+    await self._setup_playwright()
+  File "/app/agents/scrapers/base_scraper.py", line 94, in _setup_playwright
+    self.browser = await self.playwright.chromium.launch(
+  File "/usr/local/lib/python3.10/dist-packages/playwright/async_api/_generated.py", line 14740, in launch
+    await self._impl_obj.launch(
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_browser_type.py", line 95, in launch
+    Browser, from_channel(await self._channel.send("launch", params))
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_connection.py", line 62, in send
+    return await self._connection.wrap_api_call(
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_connection.py", line 492, in wrap_api_call
+    return await cb()
+  File "/usr/local/lib/python3.10/dist-packages/playwright/_impl/_connection.py", line 100, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._errors.Error: Executable doesn't exist at /ms-playwright/chromium-1091/chrome-linux/chrome
+╔═══════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just updated to 1.40.0.             ║
+║ Please update docker image as well.                           ║
+║ -  current: mcr.microsoft.com/playwright/python:v1.44.0-jammy ║
+║ - required: mcr.microsoft.com/playwright/python:v1.40.0-jammy ║
+║                                                               ║
+║ <3 Playwright Team                                            ║
+╚═══════════════════════════════════════════════════════════════╝
+[2026-01-11 08:23:38,127] [intel] [INFO] Finished scraper: intel
+[2026-01-11 08:23:38,127] [twitter] [INFO] Starting scraper: twitter
+[2026-01-11 08:23:38,128] [twitter] [INFO] Searching Twitter for: CVE vulnerability -is:retweet lang:en
+[2026-01-11 08:23:38,442] [twitter] [ERROR] Twitter search failed for CVE vulnerability -is:retweet lang:en: 429 Too Many Requests
+Too Many Requests
+[2026-01-11 08:23:38,442] [twitter] [INFO] Searching Twitter for: zero-day exploit -is:retweet lang:en
+[2026-01-11 08:24:08,256] [twitter] [ERROR] Twitter search failed for zero-day exploit -is:retweet lang:en: 429 Too Many Requests
+Too Many Requests
+[2026-01-11 08:24:08,257] [twitter] [INFO] Searching Twitter for: NVIDIA security -is:retweet lang:en
+[2026-01-11 08:24:38,282] [twitter] [ERROR] Twitter search failed for NVIDIA security -is:retweet lang:en: 429 Too Many Requests
+Too Many Requests
+[2026-01-11 08:24:38,283] [twitter] [INFO] Searching Twitter for: Intel vulnerability -is:retweet lang:en
+[2026-01-11 08:30:21,921] [Orchestrator] [INFO] Starting execution of 5 scrapers...
+[2026-01-11 08:30:21,922] [cve_mitre] [INFO] Starting scraper: cve_mitre
+[2026-01-11 08:30:23,146] [cve_mitre] [INFO] Searching for keyword: artificial intelligence
+[2026-01-11 08:30:23,146] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=artificial intelligence
+[2026-01-11 08:30:25,953] [cve_mitre] [INFO] Found 50 results for artificial intelligence
+[2026-01-11 08:30:25,955] [cve_mitre] [INFO] Searching for keyword: GPU
+[2026-01-11 08:30:25,956] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=GPU
+[2026-01-11 08:30:27,773] [cve_mitre] [INFO] Found 50 results for GPU
+[2026-01-11 08:30:27,774] [cve_mitre] [INFO] Searching for keyword: neural network
+[2026-01-11 08:30:27,774] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=neural network
+[2026-01-11 08:30:29,021] [cve_mitre] [INFO] Found 4 results for neural network
+[2026-01-11 08:30:29,021] [cve_mitre] [INFO] Searching for keyword: LLM
+[2026-01-11 08:30:29,022] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=LLM
+[2026-01-11 08:30:30,881] [cve_mitre] [INFO] Found 50 results for LLM
+[2026-01-11 08:30:30,881] [cve_mitre] [INFO] Searching for keyword: machine learning
+[2026-01-11 08:30:30,882] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=machine learning
+[2026-01-11 08:30:32,775] [cve_mitre] [INFO] Found 50 results for machine learning
+[2026-01-11 08:30:32,835] [cve_mitre] [INFO] Saved 204 records to data_engineering/bronze/cve_mitre_raw_2026-01-11T08-30-32.819042.json
+[2026-01-11 08:30:32,974] [cve_mitre] [INFO] Finished scraper: cve_mitre
+[2026-01-11 08:30:32,975] [nvidia] [INFO] Starting scraper: nvidia
+[2026-01-11 08:30:33,354] [nvidia] [INFO] Navigating to https://www.nvidia.com/en-us/research/publications/
+[2026-01-11 08:30:38,707] [nvidia] [INFO] Found 2 potential research items.
+[2026-01-11 08:30:38,753] [nvidia] [INFO] Saved 2 records to data_engineering/bronze/nvidia_raw_2026-01-11T08-30-38.746590.json
+[2026-01-11 08:30:38,901] [nvidia] [INFO] Finished scraper: nvidia
+[2026-01-11 08:30:38,901] [intel] [INFO] Starting scraper: intel
+[2026-01-11 08:30:39,366] [intel] [INFO] Navigating to https://www.intel.com/content/www/us/en/security-center/default.html
+[2026-01-12 01:30:44,915] [intel] [INFO] Saved 969 records to data_engineering/bronze/intel_raw_2026-01-12T01-30-44.893343.json
+[2026-01-12 01:30:45,036] [intel] [INFO] Finished scraper: intel
+[2026-01-12 01:30:45,037] [twitter] [INFO] Starting scraper: twitter
+[2026-01-12 01:30:45,037] [twitter] [WARNING] No Twitter Bearer Token found. Skipping.
+[2026-01-12 01:30:45,038] [twitter] [WARNING] No data to save.
+[2026-01-12 01:30:45,038] [twitter] [INFO] Finished scraper: twitter
+[2026-01-12 01:30:45,038] [openai] [INFO] Starting scraper: openai
+[2026-01-12 01:30:45,336] [openai] [INFO] Navigating to https://openai.com/research
+[2026-01-12 01:30:49,687] [openai] [INFO] Found 19 potential research items.
+[2026-01-12 01:30:49,731] [openai] [INFO] Saved 19 records to data_engineering/bronze/openai_raw_2026-01-12T01-30-49.723447.json
+[2026-01-12 01:30:49,869] [openai] [INFO] Finished scraper: openai
+[2026-01-12 01:30:49,869] [Orchestrator] [INFO] Orchestration complete.
