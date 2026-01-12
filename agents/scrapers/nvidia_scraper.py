@@ -1,6 +1,7 @@
 from typing import List, Dict
 from base_scraper import BaseScraper
 import asyncio
+from datetime import datetime, timezone
 
 class NVIDIAScraper(BaseScraper):
     def __init__(self):
@@ -15,6 +16,8 @@ class NVIDIAScraper(BaseScraper):
         self.logger.info(f"Navigating to {self.base_url}")
         page = await self.context.new_page()
         page.set_default_timeout(self.timeout)
+        
+        scraped_date = datetime.now(timezone.utc).isoformat()
         
         try:
             await page.goto(self.base_url, wait_until="domcontentloaded", timeout=self.timeout)
@@ -59,6 +62,12 @@ class NVIDIAScraper(BaseScraper):
             }""")
             
             self.logger.info(f"Found {len(results)} potential research items.")
+            
+            # Enrich with date info
+            for res in results:
+                res['published_date'] = None # Website extraction specific
+                res['scraped_date'] = scraped_date
+
             return results
 
         except Exception as e:

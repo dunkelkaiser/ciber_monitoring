@@ -1,6 +1,7 @@
 from typing import List, Dict
 from base_scraper import BaseScraper
 import asyncio
+from datetime import datetime, timezone
 
 class OpenAIScraper(BaseScraper):
     def __init__(self):
@@ -16,36 +17,25 @@ class OpenAIScraper(BaseScraper):
         page = await self.context.new_page()
         page.set_default_timeout(self.timeout)
         
+        scraped_date = datetime.now(timezone.utc).isoformat()
+
         try:
             await page.goto(self.base_url, wait_until="domcontentloaded", timeout=self.timeout)
             
             # Wait for content
-            # Try to identify article previews or list items.
-            # OpenAI research page usually has listing of papers.
-            # Selector might be 'ul > li' or article tags.
-            # We'll use a broad check and then refine with JS.
-            await page.wait_for_selector('main', state="visible", timeout=15000) # wait for main content roughly
+            await page.wait_for_selector('main', state="visible", timeout=15000) 
             await page.wait_for_selector('a[href*="/research/"]', state="visible", timeout=10000)
-            await page.wait_for_timeout(3000) # Short wait for JS rendering
+            await page.wait_for_timeout(3000) 
 
             results = await page.evaluate("""() => {
                 const items = [];
-                // Look for links that seemingly point to research posts or pdfs
-                // Typical OpenAI research page structure: A grid or list of cards.
-                // We'll look for headings and associated links.
-                
-                // Select all links
                 const links = Array.from(document.querySelectorAll('a'));
                 
                 links.forEach(link => {
                     const href = link.href;
                     if (href.includes('/research/') || href.includes('/index') || href.includes('.pdf') || href.includes('arxiv.org')) {
-                        // Avoid navbar links if possible. 
-                        // Check if it has substantial text (title).
                         const title = link.innerText.trim();
                         if (title.length > 10 && !title.includes("Sign up") && !title.includes("Login")) {
-                             // Check for date visually near the link? relatively hard.
-                             // We'll capture title and link.
                              items.push({
                                  title: title,
                                  url: href,
@@ -68,6 +58,11 @@ class OpenAIScraper(BaseScraper):
             }""")
             
             self.logger.info(f"Found {len(results)} potential research items.")
+            
+            for res in results:
+                res['published_date'] = None 
+                res['scraped_date'] = scraped_date
+
             return results
 
         except Exception as e:

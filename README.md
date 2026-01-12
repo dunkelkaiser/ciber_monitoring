@@ -16,6 +16,35 @@
 
 ---
 
+## Actualizaciones Recientes
+
+### 2026-01-12 - Expansión de Scrapers y Mejoras Temporales
+
+#### Nuevos Scrapers Implementados
+
+**Reddit Scraper**
+- Descripción: Recolecta posts y comentarios de subreddits específicos (ej. r/cybersecurity).
+- Fuente de datos: Reddit API (PRAW)
+- Datos capturados: Título, contenido, autor, puntuación, URL, fecha de publicación, fecha de recolección.
+- Configuración: Requiere `client_id` y `client_secret` en `agents/scrapers/config.yaml`.
+
+**arXiv Scraper**
+- Descripción: Recolecta papers académicos de categorías de Ciencias de la Computación (AI, Criptografía).
+- Fuente de datos: arXiv API
+- Datos capturados: Título, abstract, autores, URL PDF, fecha de publicación, fecha de recolección.
+- Configuración: Palabras clave y categorías en `agents/scrapers/config.yaml`.
+
+#### Mejoras en Sistema de Fechas
+
+Todos los scrapers ahora incluyen:
+- **`published_date`**: Fecha original de publicación (ISO 8601).
+- **`scraped_date`**: Timestamp UTC del momento de la extracción.
+
+#### Cambios en la Base de Datos / Salida
+- Los archivos JSON en `data_engineering/bronze` ahora incluyen estos nuevos campos, manteniendo compatibilidad con pipelines existentes.
+
+---
+
 ## 🏗️ Arquitectura del Sistema
 
 ```mermaid

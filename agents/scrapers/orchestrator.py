@@ -13,6 +13,8 @@ from nvidia_scraper import NVIDIAScraper
 from intel_scraper import IntelScraper
 from twitter_scraper import TwitterScraper
 from openai_blog_scraper import OpenAIScraper
+from reddit_scraper import RedditScraper
+from arxiv_scraper import ArxivScraper
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
@@ -40,7 +42,9 @@ async def main():
         "nvidia": NVIDIAScraper,
         "intel": IntelScraper,
         "twitter": TwitterScraper,
-        "openai": OpenAIScraper
+        "openai": OpenAIScraper,
+        "reddit": RedditScraper,
+        "arxiv": ArxivScraper
     }
     
     to_run = []

@@ -1,5 +1,6 @@
 from typing import List, Dict
 from base_scraper import BaseScraper
+from datetime import datetime, timezone
 
 class IntelScraper(BaseScraper):
     def __init__(self):
@@ -12,6 +13,8 @@ class IntelScraper(BaseScraper):
 
         results = []
         page = await self.context.new_page()
+        
+        scraped_date = datetime.now(timezone.utc).isoformat()
         
         try:
             self.logger.info(f"Navigating to {self.base_url}")
@@ -38,12 +41,18 @@ class IntelScraper(BaseScraper):
                 # Naive mapping based on typical security table columns
                 # ID | Title | Date | Severity
                 if len(texts) >= 4:
+                    # Attempt to parse date from texts[2]
+                    raw_date = texts[2].strip()
+                    # Keep raw, but also put in published_date if parsable
+                    
                     results.append({
                         "advisory_id": texts[0].strip(),
                         "title": texts[1].strip(),
-                        "date": texts[2].strip(),
+                        "date": raw_date,
                         "severity": texts[3].strip(),
-                        "source_url": self.base_url
+                        "source_url": self.base_url,
+                        "published_date": raw_date, # Ideally parse to ISO
+                        "scraped_date": scraped_date
                     })
 
         except Exception as e:

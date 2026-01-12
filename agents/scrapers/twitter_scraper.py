@@ -3,6 +3,7 @@ import tweepy
 import os
 import re
 from base_scraper import BaseScraper
+from datetime import datetime, timezone
 
 class TwitterScraper(BaseScraper):
     def __init__(self):
@@ -22,6 +23,8 @@ class TwitterScraper(BaseScraper):
             self.client = tweepy.Client(bearer_token=self.bearer_token)
         
         results = []
+        scraped_date = datetime.now(timezone.utc).isoformat()
+
         for query in self.queries:
             self.logger.info(f"Searching Twitter for: {query}")
             try:
@@ -38,10 +41,15 @@ class TwitterScraper(BaseScraper):
                     continue
 
                 for tweet in tweets.data:
+                    # Parse created_at to ISO string if it isn't already (tweepy usually returns datetime object)
+                    published_date = tweet.created_at.isoformat() if tweet.created_at else None
+
                     results.append({
                         "tweet_id": str(tweet.id),
                         "text": tweet.text,
-                        "created_at": tweet.created_at.isoformat() if tweet.created_at else None,
+                        "created_at": published_date, # keeping legacy field
+                        "published_date": published_date, # New standard field
+                        "scraped_date": scraped_date,
                         "metrics": tweet.public_metrics,
                         "query_matched": query,
                         "mentioned_cves": self._extract_cves(tweet.text),

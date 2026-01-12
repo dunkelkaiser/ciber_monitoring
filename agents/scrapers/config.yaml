@@ -37,6 +37,20 @@ scrapers:
     base_url: "https://openai.com/research"
     output_dir: "data_engineering/bronze"
 
+  reddit:
+    client_id: "CHANGE_ME"
+    client_secret: "CHANGE_ME" 
+    user_agent: "python:ciber_monitoring:v1.0 (by /u/YOUR_USERNAME)"
+    subreddits: ["cybersecurity", "netsec", "MachineLearning", "ArtificialInteligence"]
+    limit: 100
+    output_dir: "data_engineering/bronze"
+
+  arxiv:
+    categories: ["cs.CR", "cs.AI", "cs.LG"] # Cryptography and Security, AI, Machine Learning
+    keywords: ["LLM", "security", "vulnerability", "adversarial"]
+    max_results: 50
+    output_dir: "data_engineering/bronze"
+
 system:
   user_agents:
     - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"

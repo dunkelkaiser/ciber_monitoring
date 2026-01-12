@@ -8,3 +8,5 @@ pyyaml==6.0.1
 pandas==2.1.4
 tenacity==8.2.3
 fake-useragent==1.4.0
+praw==7.7.1
+arxiv==2.1.0

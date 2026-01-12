@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import re
 from base_scraper import BaseScraper
 import asyncio
+from datetime import datetime, timezone
 
 class CVEMitreScraper(BaseScraper):
     def __init__(self):
@@ -17,6 +18,9 @@ class CVEMitreScraper(BaseScraper):
 
         results = []
         page = await self.context.new_page()
+        
+        # Consistent scrape timestamp
+        scraped_date = datetime.now(timezone.utc).isoformat()
         
         for keyword in self.keywords:
             self.logger.info(f"Searching for keyword: {keyword}")
@@ -86,7 +90,8 @@ class CVEMitreScraper(BaseScraper):
                 for item in page_results:
                     item['keyword_matched'] = keyword
                     item['severity'] = "UNKNOWN" 
-                    item['published_date'] = "UNKNOWN"
+                    item['published_date'] = None # CVE list usually doesn't show date easily, marking as None/Null
+                    item['scraped_date'] = scraped_date
                     item['affected_products'] = []
                     results.append(item)
                     
