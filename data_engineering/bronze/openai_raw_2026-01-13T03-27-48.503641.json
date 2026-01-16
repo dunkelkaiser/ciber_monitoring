@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "source": "openai",
+    "timestamp": "2026-01-13T03:27:48.506376",
+    "record_count": 19
+  },
+  "data": [
+    {
+      "title": "Skip to main content",
+      "url": "https://openai.com/research/#main",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Research Index",
+      "url": "https://openai.com/research/index/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Research Overview",
+      "url": "https://openai.com/research/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "OpenAI o3 and o4-mini",
+      "url": "https://openai.com/index/introducing-o3-and-o4-mini/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Advanced frontier model for professional work and long-running agents\n\nRelease\nDec 11, 2025\n7 min read",
+      "url": "https://openai.com/index/introducing-gpt-5-2/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "A smarter, more conversational ChatGPT\n\nRelease\nNov 12, 2025\n8 min read",
+      "url": "https://openai.com/index/gpt-5-1/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Our smartest, fastest, and most useful model yet, with thinking built in\n\nRelease\nAug 7, 2025\n15 min read",
+      "url": "https://openai.com/index/introducing-gpt-5/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Pushing the frontier of cost-effective reasoning\n\nOpenAI o3-mini\nJan 31, 2025\n6 min read",
+      "url": "https://openai.com/index/openai-o3-mini/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Learning to reason with LLMs\n\nOpenAI o1\nSep 12, 2024\n9 min read",
+      "url": "https://openai.com/index/learning-to-reason-with-llms/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Physically accurate, realistic, and controllable with synchronized dialogue and sound effects\n\nSora 2\nSep 30, 2025\n8 min read",
+      "url": "https://openai.com/index/sora-2/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "A natively multimodal model capable of precise, accurate, photorealistic outputs\n\nImage Generation\nMar 25, 2025\n6 min read",
+      "url": "https://openai.com/index/introducing-4o-image-generation/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Simulating worlds with video generation models\n\nSora 1\nFeb 15, 2024\n11 min read",
+      "url": "https://openai.com/index/video-generation-models-as-world-simulators/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Introducing next-generation audio models in the API\n\nVoice Agents\nMar 20, 2025\n6 min read",
+      "url": "https://openai.com/index/introducing-our-next-generation-audio-models/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Navigating the challenges and opportunities of synthetic voices\n\nVoice Engine\nMar 29, 2024\n8 min read",
+      "url": "https://openai.com/index/navigating-the-challenges-and-opportunities-of-synthetic-voices/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Approaching human-level robustness and accuracy on English speech recognition\n\nWhisper\nSep 21, 2022\n2 min read",
+      "url": "https://openai.com/index/whisper/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Aligning language models to follow instructions\n\nPublication\nJan 27, 2022\n8 min read",
+      "url": "https://openai.com/index/instruction-following/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Summarizing books with human feedback\n\nPublication\nSep 23, 2021\n4 min read",
+      "url": "https://openai.com/index/summarizing-books/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "Language models are few-shot learners\n\nMilestone\nMay 28, 2020\n3 min read",
+      "url": "https://openai.com/index/language-models-are-few-shot-learners/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    },
+    {
+      "title": "GPT-4o mini",
+      "url": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+      "date": "Unknown",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:27:44.166778+00:00"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "source": "nvidia",
+    "timestamp": "2026-01-13T03:24:10.592054",
+    "record_count": 2
+  },
+  "data": [
+    {
+      "title": "Skip to main content",
+      "url": "https://www.nvidia.com/en-us/research/publications/#page-content",
+      "type": "Research Publication",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:24:03.836091+00:00"
+    },
+    {
+      "title": "Company Overview",
+      "url": "https://images.nvidia.com/aem-dam/Solutions/homepage/pdf/NVIDIA-Story.pdf",
+      "type": "Research Publication",
+      "published_date": null,
+      "scraped_date": "2026-01-13T03:24:03.836091+00:00"
+    }
+  ]
+}

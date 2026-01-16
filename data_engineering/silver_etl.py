@@ -125,15 +125,15 @@ class SilverCleaner:
         logger.info(f"Saved {len(combined_df)} rows to {output_path}")
 
     def run_pipeline(self):
-        # 1. Pipeline: Research Papers (Nvidia + OpenAI) (Basis for Tech Edge Score)
+        # 1. Pipeline: Research Papers (Nvidia + OpenAI + ArXiv)
         logger.info("--- Processing RESEARCH Schema ---")
         nvidia_df = self.load_bronze_files("nvidia")
         openai_df = self.load_bronze_files("openai")
+        arxiv_df = self.load_bronze_files("arxiv")
         
         # Standardization
         if not nvidia_df.empty:
             nvidia_df['source_entity'] = 'NVIDIA'
-            # Normalize column names if needed
             if 'url' in nvidia_df.columns:
                 nvidia_df.rename(columns={'url': 'link'}, inplace=True)
                 
@@ -142,7 +142,21 @@ class SilverCleaner:
             if 'url' in openai_df.columns:
                  openai_df.rename(columns={'url': 'link'}, inplace=True)
 
-        research_df = pd.concat([nvidia_df, openai_df], ignore_index=True)
+        if not arxiv_df.empty:
+            logger.info(f"ArXiv Columns Pre-Rename: {arxiv_df.columns.tolist()}")
+            arxiv_df['source_entity'] = 'ArXiv'
+            # Map ArXiv columns: {id, title, summary, published, updated} -> {link, title, text, publication_date}
+            # ArXiv ID often serves as link base, but raw usually has 'id' as url http://arxiv.org/abs/...
+            if 'id' in arxiv_df.columns:
+                arxiv_df.rename(columns={'id': 'link'}, inplace=True)
+            if 'summary' in arxiv_df.columns:
+                 arxiv_df.rename(columns={'summary': 'text'}, inplace=True)
+            if 'published' in arxiv_df.columns:
+                 arxiv_df.rename(columns={'published': 'publication_date'}, inplace=True)
+            elif 'updated' in arxiv_df.columns:
+                 arxiv_df.rename(columns={'updated': 'publication_date'}, inplace=True)
+
+        research_df = pd.concat([nvidia_df, openai_df, arxiv_df], ignore_index=True)
         
         # Expectations for Research
         research_expectations = [
@@ -175,11 +189,41 @@ class SilverCleaner:
 
         self.validate_and_save(vuln_df, "vuln_suite", "silver_vulnerabilities", vuln_expectations)
 
-        # 3. Pipeline: Social Signals (Twitter) (Correlation Matrix)
+        # 3. Pipeline: Social Signals (Twitter + Reddit)
         logger.info("--- Processing SOCIAL Schema ---")
         twitter_df = self.load_bronze_files("twitter")
+        reddit_df = self.load_bronze_files("reddit")
         
+        social_dfs = []
+
         if not twitter_df.empty:
+            twitter_df['source_entity'] = 'Twitter'
+            social_dfs.append(twitter_df)
+        
+        if not reddit_df.empty:
+            reddit_df['source_entity'] = 'Reddit'
+            # Map Reddit: {title, selftext, created_utc, url} -> {text, created_at, link}
+            if 'selftext' in reddit_df.columns:
+                # fillna('') is important for concating strings
+                reddit_df['text'] = reddit_df['title'].fillna('') + " " + reddit_df['selftext'].fillna('')
+            elif 'title' in reddit_df.columns:
+                reddit_df['text'] = reddit_df['title']
+            
+            if 'created_utc' in reddit_df.columns:
+                # Convert UTC timestamp to datetime
+                reddit_df['created_at'] = pd.to_datetime(reddit_df['created_utc'], unit='s', errors='coerce')
+            
+            if 'url' in reddit_df.columns:
+                 reddit_df.rename(columns={'url': 'link'}, inplace=True)
+
+            social_dfs.append(reddit_df)
+
+        if social_dfs:
+            social_df = pd.concat(social_dfs, ignore_index=True)
+        else:
+            social_df = pd.DataFrame()
+
+        if not social_df.empty:
             social_expectations = [
                  {'method': 'expect_column_values_to_not_be_null', 'kwargs': {'column': 'text'}}
             ]

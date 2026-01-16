@@ -1,0 +1,2049 @@
+{
+  "metadata": {
+    "source": "cve_mitre",
+    "timestamp": "2026-01-15T02:14:25.054079",
+    "record_count": 204
+  },
+  "data": [
+    {
+      "cve_id": "CVE-2025-68669",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68669",
+      "description": "5ire is a cross-platform desktop artificial intelligence assistant and model context protocol client. In versions 0.15.2 and prior, an RCE vulnerability exists in useMarkdown.ts, where the markdown-it-mermaid plugin is initialized...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68669",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68669",
+      "description": "5ire is a cross-platform desktop artificial intelligence assistant and model context protocol client. In versions 0.15.2 and prior, an RCE vulnerability exists in useMarkdown.ts, where the markdown-it-mermaid plugin is initialized...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68472",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68472",
+      "description": "MindsDB is a platform for building artificial intelligence from enterprise data. Prior to version 25.11.1, an unauthenticated path traversal in the file upload API lets any caller read arbitrary files...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68472",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68472",
+      "description": "MindsDB is a platform for building artificial intelligence from enterprise data. Prior to version 25.11.1, an unauthenticated path traversal in the file upload API lets any caller read arbitrary files...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-67744",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-67744",
+      "description": "DeepChat is an open-source artificial intelligence agent platform that unifies models, tools, and agents. Prior to version 0.5.3, a security vulnerability exists in the Mermaid diagram rendering component that allows...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-67744",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-67744",
+      "description": "DeepChat is an open-source artificial intelligence agent platform that unifies models, tools, and agents. Prior to version 0.5.3, a security vulnerability exists in the Mermaid diagram rendering component that allows...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-66222",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-66222",
+      "description": "DeepChat is a smart assistant uses artificial intelligence. In 0.5.0 and earlier, there is a Stored Cross-Site Scripting (XSS) vulnerability in the Mermaid diagram renderer allows an attacker to execute...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-66222",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-66222",
+      "description": "DeepChat is a smart assistant uses artificial intelligence. In 0.5.0 and earlier, there is a Stored Cross-Site Scripting (XSS) vulnerability in the Mermaid diagram renderer allows an attacker to execute...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-65959",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-65959",
+      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.6.37, a Stored XSS vulnerability was discovered in Open-WebUI's Notes PDF download functionality. An attacker...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-65959",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-65959",
+      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.6.37, a Stored XSS vulnerability was discovered in Open-WebUI's Notes PDF download functionality. An attacker...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-65958",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-65958",
+      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.6.37, a Server-Side Request Forgery (SSRF) vulnerability in Open WebUI allows any authenticated user to...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-65958",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-65958",
+      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.6.37, a Server-Side Request Forgery (SSRF) vulnerability in Open WebUI allows any authenticated user to...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-64496",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-64496",
+      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Versions 0.6.224 and prior contain a code injection vulnerability in the Direct Connections feature that allows malicious...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-64496",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-64496",
+      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Versions 0.6.224 and prior contain a code injection vulnerability in the Direct Connections feature that allows malicious...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-64495",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-64495",
+      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. In versions 0.6.34 and below, the functionality that inserts custom prompts into the chat window is vulnerable...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-64495",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-64495",
+      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. In versions 0.6.34 and below, the functionality that inserts custom prompts into the chat window is vulnerable...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-62155",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-62155",
+      "description": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. Prior to version 0.9.6, a recently patched SSRF vulnerability contains a bypass method that...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-62155",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-62155",
+      "description": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. Prior to version 0.9.6, a recently patched SSRF vulnerability contains a bypass method that...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-59426",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-59426",
+      "description": "Lobe Chat is an open-source artificial intelligence chat framework. Prior to version 1.130.1, the project's OIDC redirect handling logic constructs the host and protocol of the final redirect URL based...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-59426",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-59426",
+      "description": "Lobe Chat is an open-source artificial intelligence chat framework. Prior to version 1.130.1, the project's OIDC redirect handling logic constructs the host and protocol of the final redirect URL based...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-59417",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-59417",
+      "description": "Lobe Chat is an open-source artificial intelligence chat framework. Prior to version 1.129.4, there is a a cross-site scripting (XSS) vulnerability when handling chat message in lobe-chat that can be...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-59417",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-59417",
+      "description": "Lobe Chat is an open-source artificial intelligence chat framework. Prior to version 1.129.4, there is a a cross-site scripting (XSS) vulnerability when handling chat message in lobe-chat that can be...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-59146",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-59146",
+      "description": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. An authenticated Server-Side Request Forgery (SSRF) vulnerability exists in versions prior to 0.9.0.5. A...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-59146",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-59146",
+      "description": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. An authenticated Server-Side Request Forgery (SSRF) vulnerability exists in versions prior to 0.9.0.5. A...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-59053",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-59053",
+      "description": "AIRI is a self-hosted, artificial intelligence based Grok Companion. In v0.7.2-beta.2 in the `packages/stage-ui/src/components/MarkdownRenderer.vue` path, the Markdown content is processed using the useMarkdown composable, and the processed HTML is rendered...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-59053",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-59053",
+      "description": "AIRI is a self-hosted, artificial intelligence based Grok Companion. In v0.7.2-beta.2 in the `packages/stage-ui/src/components/MarkdownRenderer.vue` path, the Markdown content is processed using the useMarkdown composable, and the processed HTML is rendered...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-58768",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-58768",
+      "description": "DeepChat is a smart assistant uses artificial intelligence. Prior to version 0.3.5, in the Mermaid chart rendering component, there is a risky operation of directly using `innerHTML` to set user...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-58768",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-58768",
+      "description": "DeepChat is a smart assistant uses artificial intelligence. Prior to version 0.3.5, in the Mermaid chart rendering component, there is a risky operation of directly using `innerHTML` to set user...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-58357",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-58357",
+      "description": "5ire is a cross-platform desktop artificial intelligence assistant and model context protocol client. Version 0.13.2 contains a vulnerability in the chat page's script gadgets that enables content injection attacks through...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-58357",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-58357",
+      "description": "5ire is a cross-platform desktop artificial intelligence assistant and model context protocol client. Version 0.13.2 contains a vulnerability in the chat page's script gadgets that enables content injection attacks through...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-5519",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-5519",
+      "description": "Insertion of Sensitive Information Into Sent Data vulnerability in ArgusTech BILGER allows Choosing Message Identifier.This issue affects BILGER: before 2.4.6.",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-5519",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-5519",
+      "description": "Insertion of Sensitive Information Into Sent Data vulnerability in ArgusTech BILGER allows Choosing Message Identifier.This issue affects BILGER: before 2.4.6.",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-5518",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-5518",
+      "description": "Authorization Bypass Through User-Controlled Key vulnerability with user privileges in ArgusTech BILGER allows Exploitation of Trusted Identifiers.This issue affects BILGER: before 2.4.6.",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-5518",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-5518",
+      "description": "Authorization Bypass Through User-Controlled Key vulnerability with user privileges in ArgusTech BILGER allows Exploitation of Trusted Identifiers.This issue affects BILGER: before 2.4.6.",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-53944",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-53944",
+      "description": "AutoGPT is a platform that allows users to create, deploy, and manage continuous artificial intelligence agents. In v0.6.15 and below, the external API's get_graph_execution_results endpoint has an authorization bypass vulnerability....",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-53944",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-53944",
+      "description": "AutoGPT is a platform that allows users to create, deploy, and manage continuous artificial intelligence agents. In v0.6.15 and below, the external API's get_graph_execution_results endpoint has an authorization bypass vulnerability....",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-50029",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-50029",
+      "description": "Missing Authorization vulnerability in Ashish AI Tools allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects AI Tools: from n/a through 4.0.7.",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-50029",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-50029",
+      "description": "Missing Authorization vulnerability in Ashish AI Tools allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects AI Tools: from n/a through 4.0.7.",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-47777",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-47777",
+      "description": "5ire is a cross-platform desktop artificial intelligence assistant and model context protocol client. Versions prior to 0.11.1 are vulnerable to stored cross-site scripting in chatbot responses due to insufficient sanitization....",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-47777",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-47777",
+      "description": "5ire is a cross-platform desktop artificial intelligence assistant and model context protocol client. Versions prior to 0.11.1 are vulnerable to stored cross-site scripting in chatbot responses due to insufficient sanitization....",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-46719",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-46719",
+      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to version 0.6.6, a vulnerability in the way certain html tags in chat messages are rendered...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-46719",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-46719",
+      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to version 0.6.6, a vulnerability in the way certain html tags in chat messages are rendered...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-46571",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-46571",
+      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to version 0.6.6, low privileged users can upload HTML files which contain JavaScript code via the...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-46571",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-46571",
+      "description": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to version 0.6.6, low privileged users can upload HTML files which contain JavaScript code via the...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-31693",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-31693",
+      "description": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Drupal AI (Artificial Intelligence) allows OS Command Injection.This issue affects AI (Artificial Intelligence): from 0.0.0...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-31693",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-31693",
+      "description": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Drupal AI (Artificial Intelligence) allows OS Command Injection.This issue affects AI (Artificial Intelligence): from 0.0.0...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-31692",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-31692",
+      "description": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Drupal AI (Artificial Intelligence) allows OS Command Injection.This issue affects AI (Artificial Intelligence): from 0.0.0...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-31692",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-31692",
+      "description": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Drupal AI (Artificial Intelligence) allows OS Command Injection.This issue affects AI (Artificial Intelligence): from 0.0.0...",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-31678",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-31678",
+      "description": "Missing Authorization vulnerability in Drupal AI (Artificial Intelligence) allows Forceful Browsing.This issue affects AI (Artificial Intelligence): from 0.0.0 before 1.0.3.",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-31678",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-31678",
+      "description": "Missing Authorization vulnerability in Drupal AI (Artificial Intelligence) allows Forceful Browsing.This issue affects AI (Artificial Intelligence): from 0.0.0 before 1.0.3.",
+      "keyword_matched": "artificial intelligence",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-8109",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-8109",
+      "description": "Software installed and run as a non-privileged user may conduct ptrace system calls to issue writes to GPU origin read only memory.",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-8109",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-8109",
+      "description": "Software installed and run as a non-privileged user may conduct ptrace system calls to issue writes to GPU origin read only memory.",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-8045",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-8045",
+      "description": "Use After Free vulnerability in Arm Ltd Valhall GPU Kernel Driver, Arm Ltd Arm 5th Gen GPU Architecture Kernel Driver allows a local non-privileged user process to perform improper GPU...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-8045",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-8045",
+      "description": "Use After Free vulnerability in Arm Ltd Valhall GPU Kernel Driver, Arm Ltd Arm 5th Gen GPU Architecture Kernel Driver allows a local non-privileged user process to perform improper GPU...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71141",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71141",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/tilcdc: Fix removal actions in case of failed probe The drm_kms_helper_poll_fini() and drm_atomic_helper_shutdown() helpers should only be called when the...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71141",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71141",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/tilcdc: Fix removal actions in case of failed probe The drm_kms_helper_poll_fini() and drm_atomic_helper_shutdown() helpers should only be called when the...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71138",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71138",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/msm/dpu: Add missing NULL pointer check for pingpong interface It is checked almost always in dpu_encoder_phys_wb_setup_ctl(), but in a single...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71138",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71138",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/msm/dpu: Add missing NULL pointer check for pingpong interface It is checked almost always in dpu_encoder_phys_wb_setup_ctl(), but in a single...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71130",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71130",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/i915/gem: Zero-initialize the eb.vma array in i915_gem_do_execbuffer Initialize the eb.vma array with values of 0 when the eb structure is...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71130",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71130",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/i915/gem: Zero-initialize the eb.vma array in i915_gem_do_execbuffer Initialize the eb.vma array with values of 0 when the eb structure is...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71124",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71124",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/msm/a6xx: move preempt_prepare_postamble after error check Move the call to preempt_prepare_postamble() after verifying that preempt_postamble_ptr is valid. If preempt_postamble_ptr is...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71124",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71124",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/msm/a6xx: move preempt_prepare_postamble after error check Move the call to preempt_prepare_postamble() after verifying that preempt_postamble_ptr is valid. If preempt_postamble_ptr is...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71103",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71103",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/msm: adreno: fix deferencing ifpc_reglist when not declared On plaforms with an a7xx GPU not supporting IFPC, the ifpc_reglist if...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71103",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71103",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/msm: adreno: fix deferencing ifpc_reglist when not declared On plaforms with an a7xx GPU not supporting IFPC, the ifpc_reglist if...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71099",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71099",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/xe/oa: Fix potential UAF in xe_oa_add_config_ioctl() In xe_oa_add_config_ioctl(), we accessed oa_config->id after dropping metrics_lock. Since this lock protects the lifetime...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71099",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71099",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/xe/oa: Fix potential UAF in xe_oa_add_config_ioctl() In xe_oa_add_config_ioctl(), we accessed oa_config->id after dropping metrics_lock. Since this lock protects the lifetime...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71083",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71083",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/ttm: Avoid NULL pointer deref for evicted BOs It is possible for a BO to exist that is not currently...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71083",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71083",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/ttm: Avoid NULL pointer deref for evicted BOs It is possible for a BO to exist that is not currently...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71076",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71076",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/xe/oa: Limit num_syncs to prevent oversized allocations The OA open parameters did not validate num_syncs, allowing userspace to pass arbitrarily...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-71076",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-71076",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/xe/oa: Limit num_syncs to prevent oversized allocations The OA open parameters did not validate num_syncs, allowing userspace to pass arbitrarily...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68802",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68802",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/xe: Limit num_syncs to prevent oversized allocations The exec and vm_bind ioctl allow userspace to specify an arbitrary num_syncs value....",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68802",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68802",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/xe: Limit num_syncs to prevent oversized allocations The exec and vm_bind ioctl allow userspace to specify an arbitrary num_syncs value....",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68793",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68793",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/amdgpu: fix a job->pasid access race in gpu recovery Avoid a possible UAF in GPU recovery due to a race...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68793",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68793",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/amdgpu: fix a job->pasid access race in gpu recovery Avoid a possible UAF in GPU recovery due to a race...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68757",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68757",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/vgem-fence: Fix potential deadlock on release A timer that expires a vgem fence automatically in 10 seconds is now released...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68757",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68757",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/vgem-fence: Fix potential deadlock on release A timer that expires a vgem fence automatically in 10 seconds is now released...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68748",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68748",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/panthor: Fix UAF race between device unplug and FW event processing The function panthor_fw_unplug() will free the FW memory sections....",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68748",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68748",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/panthor: Fix UAF race between device unplug and FW event processing The function panthor_fw_unplug() will free the FW memory sections....",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68747",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68747",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/panthor: Fix UAF on kernel BO VA nodes If the MMU is down, panthor_vm_unmap_range() might return an error. We expect...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68747",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68747",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/panthor: Fix UAF on kernel BO VA nodes If the MMU is down, panthor_vm_unmap_range() might return an error. We expect...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68735",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68735",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/panthor: Prevent potential UAF in group creation This commit prevents the possibility of a use after free issue in the...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68735",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68735",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/panthor: Prevent potential UAF in group creation This commit prevents the possibility of a use after free issue in the...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68732",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68732",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: gpu: host1x: Fix race in syncpt alloc/free Fix race condition between host1x_syncpt_alloc() and host1x_syncpt_put() by using kref_put_mutex() instead of kref_put()...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68732",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68732",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: gpu: host1x: Fix race in syncpt alloc/free Fix race condition between host1x_syncpt_alloc() and host1x_syncpt_put() by using kref_put_mutex() instead of kref_put()...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68334",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68334",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: platform/x86/amd/pmc: Add support for Van Gogh SoC The ROG Xbox Ally (non-X) SoC features a similar architecture to the Steam...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68334",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68334",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: platform/x86/amd/pmc: Add support for Van Gogh SoC The ROG Xbox Ally (non-X) SoC features a similar architecture to the Steam...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68326",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68326",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/xe/guc: Fix stack_depot usage Add missing stack_depot_init() call when CONFIG_DRM_XE_DEBUG_GUC is enabled to fix the following call stack: [] BUG:...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68326",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68326",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/xe/guc: Fix stack_depot usage Add missing stack_depot_init() call when CONFIG_DRM_XE_DEBUG_GUC is enabled to fix the following call stack: [] BUG:...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68314",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68314",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/msm: make sure last_fence is always updated Update last_fence in the vm-bind path instead of kernel managed path. last_fence is...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68314",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68314",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/msm: make sure last_fence is always updated Update last_fence in the vm-bind path instead of kernel managed path. last_fence is...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68296",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68296",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm, fbcon, vga_switcheroo: Avoid race condition in fbcon setup Protect vga_switcheroo_client_fb_set() with console lock. Avoids OOB access in fbcon_remap_all(). Without...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68296",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68296",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm, fbcon, vga_switcheroo: Avoid race condition in fbcon setup Protect vga_switcheroo_client_fb_set() with console lock. Avoids OOB access in fbcon_remap_all(). Without...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68286",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68286",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/amd/display: Check NULL before accessing [WHAT] IGT kms_cursor_legacy's long-nonblocking-modeset-vs-cursor-atomic fails with NULL pointer dereference. This can be reproduced with both...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68286",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68286",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/amd/display: Check NULL before accessing [WHAT] IGT kms_cursor_legacy's long-nonblocking-modeset-vs-cursor-atomic fails with NULL pointer dereference. This can be reproduced with both...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68244",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68244",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/i915: Avoid lock inversion when pinning to GGTT on CHV/BXT+VTD On completion of i915_vma_pin_ww(), a synchronous variant of dma_fence_work_commit() is...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68244",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68244",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/i915: Avoid lock inversion when pinning to GGTT on CHV/BXT+VTD On completion of i915_vma_pin_ww(), a synchronous variant of dma_fence_work_commit() is...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68235",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68235",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: nouveau/firmware: Add missing kfree() of nvkm_falcon_fw::boot nvkm_falcon_fw::boot is allocated, but no one frees it. This causes a kmemleak warning. Make...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68235",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68235",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: nouveau/firmware: Add missing kfree() of nvkm_falcon_fw::boot nvkm_falcon_fw::boot is allocated, but no one frees it. This causes a kmemleak warning. Make...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68233",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68233",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/tegra: Add call to put_pid() Add a call to put_pid() corresponding to get_task_pid(). host1x_memory_context_alloc() does not take ownership of the...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68233",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68233",
+      "description": "In the Linux kernel, the following vulnerability has been resolved: drm/tegra: Add call to put_pid() Add a call to put_pid() corresponding to get_task_pid(). host1x_memory_context_alloc() does not take ownership of the...",
+      "keyword_matched": "GPU",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2022-26076",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2022-26076",
+      "description": "Uncontrolled search path element in the Intel(R) oneAPI Deep Neural Network (oneDNN) before version 2022.1 may allow an authenticated user to potentially enable escalation of privilege via local access.",
+      "keyword_matched": "neural network",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2022-26076",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2022-26076",
+      "description": "Uncontrolled search path element in the Intel(R) oneAPI Deep Neural Network (oneDNN) before version 2022.1 may allow an authenticated user to potentially enable escalation of privilege via local access.",
+      "keyword_matched": "neural network",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2019-10844",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2019-10844",
+      "description": "nbla/logger.cpp in libnnabla.a in Sony Neural Network Libraries (aka nnabla) through v1.0.14 relies on the HOME environment variable, which might be untrusted.",
+      "keyword_matched": "neural network",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2019-10844",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2019-10844",
+      "description": "nbla/logger.cpp in libnnabla.a in Sony Neural Network Libraries (aka nnabla) through v1.0.14 relies on the HOME environment variable, which might be untrusted.",
+      "keyword_matched": "neural network",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2026-22813",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2026-22813",
+      "description": "OpenCode is an open source AI coding agent. The markdown renderer used for LLM responses will insert arbitrary HTML into the DOM. There is no sanitization with DOMPurify or even...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2026-22813",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2026-22813",
+      "description": "OpenCode is an open source AI coding agent. The markdown renderer used for LLM responses will insert arbitrary HTML into the DOM. There is no sanitization with DOMPurify or even...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2026-22688",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2026-22688",
+      "description": "WeKnora is an LLM-powered framework designed for deep document understanding and semantic retrieval. Prior to version 0.2.5, there is a command injection vulnerability that allows authenticated users to inject stdio_config.command/args...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2026-22688",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2026-22688",
+      "description": "WeKnora is an LLM-powered framework designed for deep document understanding and semantic retrieval. Prior to version 0.2.5, there is a command injection vulnerability that allows authenticated users to inject stdio_config.command/args...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2026-22687",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2026-22687",
+      "description": "WeKnora is an LLM-powered framework designed for deep document understanding and semantic retrieval. Prior to version 0.2.5, after WeKnora enables the Agent service, it allows users to call the database...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2026-22687",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2026-22687",
+      "description": "WeKnora is an LLM-powered framework designed for deep document understanding and semantic retrieval. Prior to version 0.2.5, after WeKnora enables the Agent service, it allows users to call the database...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2026-21869",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2026-21869",
+      "description": "llama.cpp is an inference of several LLM models in C/C++. In commits 55d4206c8 and prior, the n_discard parameter is parsed directly from JSON input in the llama.cpp server's completion endpoints...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2026-21869",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2026-21869",
+      "description": "llama.cpp is an inference of several LLM models in C/C++. In commits 55d4206c8 and prior, the n_discard parameter is parsed directly from JSON input in the llama.cpp server's completion endpoints...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2026-21484",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2026-21484",
+      "description": "AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. Prior to commit e287fab56089cf8fcea9ba579a3ecdeca0daa313, the password recovery endpoint returns different...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2026-21484",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2026-21484",
+      "description": "AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. Prior to commit e287fab56089cf8fcea9ba579a3ecdeca0daa313, the password recovery endpoint returns different...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68665",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68665",
+      "description": "LangChain is a framework for building LLM-powered applications. Prior to @langchain/core versions 0.3.80 and 1.1.8, and prior to langchain versions 0.3.37 and 1.2.3, a serialization injection vulnerability exists in LangChain...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68665",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68665",
+      "description": "LangChain is a framework for building LLM-powered applications. Prior to @langchain/core versions 0.3.80 and 1.1.8, and prior to langchain versions 0.3.37 and 1.2.3, a serialization injection vulnerability exists in LangChain...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68664",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68664",
+      "description": "LangChain is a framework for building agents and LLM-powered applications. Prior to versions 0.3.81 and 1.2.5, a serialization injection vulnerability exists in LangChain's dumps() and dumpd() functions. The functions do...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-68664",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-68664",
+      "description": "LangChain is a framework for building agents and LLM-powered applications. Prior to versions 0.3.81 and 1.2.5, a serialization injection vulnerability exists in LangChain's dumps() and dumpd() functions. The functions do...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-67732",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-67732",
+      "description": "Dify is an open-source LLM app development platform. Prior to version 1.11.0, the API key is exposed in plaintext to the frontend, allowing non-administrator users to view and reuse it....",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-67732",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-67732",
+      "description": "Dify is an open-source LLM app development platform. Prior to version 1.11.0, the API key is exposed in plaintext to the frontend, allowing non-administrator users to view and reuse it....",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-67510",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-67510",
+      "description": "Neuron is a PHP framework for creating and orchestrating AI Agents. In versions 2.8.11 and below, the MySQLWriteTool executes arbitrary SQL provided by the caller using PDO::prepare() + execute() without...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-67510",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-67510",
+      "description": "Neuron is a PHP framework for creating and orchestrating AI Agents. In versions 2.8.11 and below, the MySQLWriteTool executes arbitrary SQL provided by the caller using PDO::prepare() + execute() without...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-67509",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-67509",
+      "description": "Neuron is a PHP framework for creating and orchestrating AI Agents. Versions 2.8.11 and below use MySQLSelectTool, which is vulnerable to Read-Only Bypass. MySQLSelectTool is intended to be a read-only...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-67509",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-67509",
+      "description": "Neuron is a PHP framework for creating and orchestrating AI Agents. Versions 2.8.11 and below use MySQLSelectTool, which is vulnerable to Read-Only Bypass. MySQLSelectTool is intended to be a read-only...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-66201",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-66201",
+      "description": "LibreChat is a ChatGPT clone with additional features. Prior to version 0.8.1-rc2, LibreChat is vulnerable to Server-side Request Forgery (SSRF), by passing specially crafted OpenAPI specs to its \"Actions\" feature...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-66201",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-66201",
+      "description": "LibreChat is a ChatGPT clone with additional features. Prior to version 0.8.1-rc2, LibreChat is vulnerable to Server-side Request Forgery (SSRF), by passing specially crafted OpenAPI specs to its \"Actions\" feature...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-6518",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-6518",
+      "description": "A vulnerability was found in PySpur-Dev pyspur up to 0.1.18. It has been classified as critical. Affected is the function SingleLLMCallNode of the file backend/pyspur/nodes/llm/single_llm_call.py of the component Jinja2 Template...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-6518",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-6518",
+      "description": "A vulnerability was found in PySpur-Dev pyspur up to 0.1.18. It has been classified as critical. Affected is the function SingleLLMCallNode of the file backend/pyspur/nodes/llm/single_llm_call.py of the component Jinja2 Template...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-65106",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-65106",
+      "description": "LangChain is a framework for building agents and LLM-powered applications. From versions 0.3.79 and prior and 1.0.0 to 1.0.6, a template injection vulnerability exists in LangChain's prompt template system that...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-65106",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-65106",
+      "description": "LangChain is a framework for building agents and LLM-powered applications. From versions 0.3.79 and prior and 1.0.0 to 1.0.6, a template injection vulnerability exists in LangChain's prompt template system that...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-64321",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-64321",
+      "description": "Improper Neutralization of Input Used for LLM Prompting vulnerability in Salesforce Agentforce Vibes Extension allows Manipulating Writeable Configuration Files.This issue affects Agentforce Vibes Extension: before 3.3.0.",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-64321",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-64321",
+      "description": "Improper Neutralization of Input Used for LLM Prompting vulnerability in Salesforce Agentforce Vibes Extension allows Manipulating Writeable Configuration Files.This issue affects Agentforce Vibes Extension: before 3.3.0.",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-64320",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-64320",
+      "description": "Improper Neutralization of Input Used for LLM Prompting vulnerability in Salesforce Agentforce Vibes Extension allows Code Injection.This issue affects Agentforce Vibes Extension: before 3.2.0.",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-64320",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-64320",
+      "description": "Improper Neutralization of Input Used for LLM Prompting vulnerability in Salesforce Agentforce Vibes Extension allows Code Injection.This issue affects Agentforce Vibes Extension: before 3.2.0.",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-64318",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-64318",
+      "description": "Improper Neutralization of Input Used for LLM Prompting vulnerability in Salesforce Mulesoft Anypoint Code Builder allows Manipulating Writeable Configuration Files.This issue affects Mulesoft Anypoint Code Builder: before 1.12.1.",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-64318",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-64318",
+      "description": "Improper Neutralization of Input Used for LLM Prompting vulnerability in Salesforce Mulesoft Anypoint Code Builder allows Manipulating Writeable Configuration Files.This issue affects Mulesoft Anypoint Code Builder: before 1.12.1.",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-63681",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-63681",
+      "description": "open-webui v0.6.33 is vulnerable to Incorrect Access Control. The API /api/tasks/stop/ directly accesses and cancels tasks without verifying user ownership, enabling attackers (a normal user) to stop arbitrary LLM response...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-63681",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-63681",
+      "description": "open-webui v0.6.33 is vulnerable to Incorrect Access Control. The API /api/tasks/stop/ directly accesses and cancels tasks without verifying user ownership, enabling attackers (a normal user) to stop arbitrary LLM response...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-63390",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-63390",
+      "description": "An authentication bypass vulnerability exists in AnythingLLM v1.8.5 in via the /api/workspaces endpoint. The endpoint fails to implement proper authentication checks, allowing unauthenticated remote attackers to enumerate and retrieve detailed...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-63390",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-63390",
+      "description": "An authentication bypass vulnerability exists in AnythingLLM v1.8.5 in via the /api/workspaces endpoint. The endpoint fails to implement proper authentication checks, allowing unauthenticated remote attackers to enumerate and retrieve detailed...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-62327",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-62327",
+      "description": "In HCL DevOps Deploy 8.1.2.0 through 8.1.2.3, a user with LLM configuration privileges may be able to recover a credential previously saved for performing authenticated LLM Queries.",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-62327",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-62327",
+      "description": "In HCL DevOps Deploy 8.1.2.0 through 8.1.2.3, a user with LLM configuration privileges may be able to recover a credential previously saved for performing authenticated LLM Queries.",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-62155",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-62155",
+      "description": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. Prior to version 0.9.6, a recently patched SSRF vulnerability contains a bypass method that...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-62155",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-62155",
+      "description": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. Prior to version 0.9.6, a recently patched SSRF vulnerability contains a bypass method that...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-61929",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-61929",
+      "description": "Cherry Studio is a desktop client that supports for multiple LLM providers. Cherry Studio registers a custom protocol called `cherrystudio://`. When handling the MCP installation URL, it parses the base64-encoded...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-61929",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-61929",
+      "description": "Cherry Studio is a desktop client that supports for multiple LLM providers. Cherry Studio registers a custom protocol called `cherrystudio://`. When handling the MCP installation URL, it parses the base64-encoded...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-59422",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-59422",
+      "description": "Dify is an open-source LLM app development platform. In version 1.8.1, a broken access control vulnerability on the /console/api/apps/<APP_ID>chat-messages?conversation_id=<CONVERSATION_ID>&limit=10 endpoint allows users in the same workspace to read chat messages...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-59422",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-59422",
+      "description": "Dify is an open-source LLM app development platform. In version 1.8.1, a broken access control vulnerability on the /console/api/apps/<APP_ID>chat-messages?conversation_id=<CONVERSATION_ID>&limit=10 endpoint allows users in the same workspace to read chat messages...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-59146",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-59146",
+      "description": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. An authenticated Server-Side Request Forgery (SSRF) vulnerability exists in versions prior to 0.9.0.5. A...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-59146",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-59146",
+      "description": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. An authenticated Server-Side Request Forgery (SSRF) vulnerability exists in versions prior to 0.9.0.5. A...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-58747",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-58747",
+      "description": "Dify is an LLM application development platform. In Dify versions through 1.9.1, the MCP OAuth component is vulnerable to cross-site scripting when a victim connects to an attacker-controlled remote MCP...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-58747",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-58747",
+      "description": "Dify is an LLM application development platform. In Dify versions through 1.9.1, the MCP OAuth component is vulnerable to cross-site scripting when a victim connects to an attacker-controlled remote MCP...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-58361",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-58361",
+      "description": "Promptcraft Forge Studio is a toolkit for evaluating, optimizing, and maintaining LLM-powered applications. All versions contain an non-exhaustive URL scheme check that does not protect against XSS. User-controlled URLs pass...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-58361",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-58361",
+      "description": "Promptcraft Forge Studio is a toolkit for evaluating, optimizing, and maintaining LLM-powered applications. All versions contain an non-exhaustive URL scheme check that does not protect against XSS. User-controlled URLs pass...",
+      "keyword_matched": "LLM",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-6921",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-6921",
+      "description": "The huggingface/transformers library, versions prior to 4.53.0, is vulnerable to Regular Expression Denial of Service (ReDoS) in the AdamWeightDecay optimizer. The vulnerability arises from the _do_use_weight_decay method, which processes user-controlled...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-6921",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-6921",
+      "description": "The huggingface/transformers library, versions prior to 4.53.0, is vulnerable to Regular Expression Denial of Service (ReDoS) in the AdamWeightDecay optimizer. The vulnerability arises from the _do_use_weight_decay method, which processes user-controlled...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-62609",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-62609",
+      "description": "MLX is an array framework for machine learning on Apple silicon. Prior to version 0.29.4, there is a segmentation fault in mlx::core::load_gguf() when loading malicious GGUF files. Untrusted pointer from...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-62609",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-62609",
+      "description": "MLX is an array framework for machine learning on Apple silicon. Prior to version 0.29.4, there is a segmentation fault in mlx::core::load_gguf() when loading malicious GGUF files. Untrusted pointer from...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-62608",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-62608",
+      "description": "MLX is an array framework for machine learning on Apple silicon. Prior to version 0.29.4, there is a heap buffer overflow in mlx::core::load() when parsing malicious NumPy .npy files. Attacker-controlled...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-62608",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-62608",
+      "description": "MLX is an array framework for machine learning on Apple silicon. Prior to version 0.29.4, there is a heap buffer overflow in mlx::core::load() when parsing malicious NumPy .npy files. Attacker-controlled...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-62376",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-62376",
+      "description": "pwn.college DOJO is an education platform for learning cybersecurity. Prior to commit 467db0b9ea0d9a929dc89b41f6eb59f7cfc68bef, the /workspace endpoint contains an improper authentication vulnerability that allows an attacker to access any active Windows...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-62376",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-62376",
+      "description": "pwn.college DOJO is an education platform for learning cybersecurity. Prior to commit 467db0b9ea0d9a929dc89b41f6eb59f7cfc68bef, the /workspace endpoint contains an improper authentication vulnerability that allows an attacker to access any active Windows...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-54430",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-54430",
+      "description": "dedupe is a python library that uses machine learning to perform fuzzy matching, deduplication and entity resolution quickly on structured data. Before commit 3f61e79, a critical severity vulnerability has been...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-54430",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-54430",
+      "description": "dedupe is a python library that uses machine learning to perform fuzzy matching, deduplication and entity resolution quickly on structured data. Before commit 3f61e79, a critical severity vulnerability has been...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-49747",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-49747",
+      "description": "Missing authorization in Azure Machine Learning allows an authorized attacker to elevate privileges over a network.",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-49747",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-49747",
+      "description": "Missing authorization in Azure Machine Learning allows an authorized attacker to elevate privileges over a network.",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-49746",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-49746",
+      "description": "Improper authorization in Azure Machine Learning allows an authorized attacker to elevate privileges over a network.",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-49746",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-49746",
+      "description": "Improper authorization in Azure Machine Learning allows an authorized attacker to elevate privileges over a network.",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-48889",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-48889",
+      "description": "Gradio is an open-source Python package that allows quick building of demos and web application for machine learning models, API, or any arbitrary Python function. Prior to version 5.31.0, an...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-48889",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-48889",
+      "description": "Gradio is an open-source Python package that allows quick building of demos and web application for machine learning models, API, or any arbitrary Python function. Prior to version 5.31.0, an...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-47995",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-47995",
+      "description": "Weak authentication in Azure Machine Learning allows an authorized attacker to elevate privileges over a network.",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-47995",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-47995",
+      "description": "Weak authentication in Azure Machine Learning allows an authorized attacker to elevate privileges over a network.",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-30390",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-30390",
+      "description": "Improper authorization in Azure allows an authorized attacker to elevate privileges over a network.",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-30390",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-30390",
+      "description": "Improper authorization in Azure allows an authorized attacker to elevate privileges over a network.",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-25014",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-25014",
+      "description": "A Prototype pollution vulnerability in Kibana leads to arbitrary code execution via crafted HTTP requests to machine learning and reporting endpoints.",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-25014",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-25014",
+      "description": "A Prototype pollution vulnerability in Kibana leads to arbitrary code execution via crafted HTTP requests to machine learning and reporting endpoints.",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-23042",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-23042",
+      "description": "Gradio is an open-source Python package that allows quick building of demos and web application for machine learning models, API, or any arbitrary Python function. Gradio's Access Control List (ACL)...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2025-23042",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2025-23042",
+      "description": "Gradio is an open-source Python package that allows quick building of demos and web application for machine learning models, API, or any arbitrary Python function. Gradio's Access Control List (ACL)...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-6960",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-6960",
+      "description": "The H2O machine learning platform uses \"Iced\" classes as the primary means of moving Java Objects around the cluster. The Iced format supports inclusion of serialized Java objects. When a...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-6960",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-6960",
+      "description": "The H2O machine learning platform uses \"Iced\" classes as the primary means of moving Java Objects around the cluster. The Iced format supports inclusion of serialized Java objects. When a...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-49375",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-49375",
+      "description": "Open source machine learning framework. A vulnerability has been identified in Rasa that enables an attacker who has the ability to load a maliciously crafted model remotely into a Rasa...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-49375",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-49375",
+      "description": "Open source machine learning framework. A vulnerability has been identified in Rasa that enables an attacker who has the ability to load a maliciously crafted model remotely into a Rasa...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-49361",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-49361",
+      "description": "ACON is a widely-used library of tools for machine learning that focuses on adaptive correlation optimization. A potential vulnerability has been identified in the input validation process, which could lead...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-49361",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-49361",
+      "description": "ACON is a widely-used library of tools for machine learning that focuses on adaptive correlation optimization. A potential vulnerability has been identified in the input validation process, which could lead...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-47833",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-47833",
+      "description": "Taipy is an open-source Python library for easy, end-to-end application development for data scientists and machine learning engineers. In affected versions session cookies are served without Secure and HTTPOnly flags....",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-47833",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-47833",
+      "description": "Taipy is an open-source Python library for easy, end-to-end application development for data scientists and machine learning engineers. In affected versions session cookies are served without Secure and HTTPOnly flags....",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-4181",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-4181",
+      "description": "A command injection vulnerability exists in the RunGptLLM class of the llama_index library, version 0.9.47, used by the RunGpt framework from JinaAI to connect to Language Learning Models (LLMs). The...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-4181",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-4181",
+      "description": "A command injection vulnerability exists in the RunGptLLM class of the llama_index library, version 0.9.47, used by the RunGpt framework from JinaAI to connect to Language Learning Models (LLMs). The...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-40442",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-40442",
+      "description": "An issue in Doccano Open source annotation tools for machine learning practitioners v.1.8.4 and Doccano Auto Labeling Pipeline module to annotate a document automatically v.0.1.23 allows a remote attacker to...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-40442",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-40442",
+      "description": "An issue in Doccano Open source annotation tools for machine learning practitioners v.1.8.4 and Doccano Auto Labeling Pipeline module to annotate a document automatically v.0.1.23 allows a remote attacker to...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-40441",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-40441",
+      "description": "An issue in Doccano Open source annotation tools for machine learning practitioners v.1.8.4 and Doccano Auto Labeling Pipeline module to annotate a document automatically v.0.1.23 allows a remote attacker to...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-40441",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-40441",
+      "description": "An issue in Doccano Open source annotation tools for machine learning practitioners v.1.8.4 and Doccano Auto Labeling Pipeline module to annotate a document automatically v.0.1.23 allows a remote attacker to...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-34359",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-34359",
+      "description": "llama-cpp-python is the Python bindings for llama.cpp. `llama-cpp-python` depends on class `Llama` in `llama.py` to load `.gguf` llama.cpp or Latency Machine Learning Models. The `__init__` constructor built in the `Llama`...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-34359",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-34359",
+      "description": "llama-cpp-python is the Python bindings for llama.cpp. `llama-cpp-python` depends on class `Llama` in `llama.py` to load `.gguf` llama.cpp or Latency Machine Learning Models. The `__init__` constructor built in the `Llama`...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-34073",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-34073",
+      "description": "sagemaker-python-sdk is a library for training and deploying machine learning models on Amazon SageMaker. In affected versions the capture_dependencies function in `sagemaker.serve.save_retrive.version_1_0_0.save.utils` module allows for potentially unsafe Operating System (OS)...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-34073",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-34073",
+      "description": "sagemaker-python-sdk is a library for training and deploying machine learning models on Amazon SageMaker. In affected versions the capture_dependencies function in `sagemaker.serve.save_retrive.version_1_0_0.save.utils` module allows for potentially unsafe Operating System (OS)...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-34072",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-34072",
+      "description": "sagemaker-python-sdk is a library for training and deploying machine learning models on Amazon SageMaker. The sagemaker.base_deserializers.NumpyDeserializer module before v2.218.0 allows potentially unsafe deserialization when untrusted data is passed as pickled...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-34072",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-34072",
+      "description": "sagemaker-python-sdk is a library for training and deploying machine learning models on Amazon SageMaker. The sagemaker.base_deserializers.NumpyDeserializer module before v2.218.0 allows potentially unsafe deserialization when untrusted data is passed as pickled...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-25723",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-25723",
+      "description": "ZenML Server in the ZenML machine learning package before 0.46.7 for Python allows remote privilege escalation because the /api/v1/users/{user_name_or_id}/activate REST API endpoint allows access on the basis of a valid...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2024-25723",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2024-25723",
+      "description": "ZenML Server in the ZenML machine learning package before 0.46.7 for Python allows remote privilege escalation because the /api/v1/users/{user_name_or_id}/activate REST API endpoint allows access on the basis of a valid...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2023-51449",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2023-51449",
+      "description": "Gradio is an open-source Python package that allows you to quickly build a demo or web application for your machine learning model, API, or any arbitary Python function. Versions of...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2023-51449",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2023-51449",
+      "description": "Gradio is an open-source Python package that allows you to quickly build a demo or web application for your machine learning model, API, or any arbitary Python function. Versions of...",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2023-35625",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2023-35625",
+      "description": "Azure Machine Learning Compute Instance for SDK Users Information Disclosure Vulnerability",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    },
+    {
+      "cve_id": "CVE-2023-35625",
+      "source_url": "https://www.cve.org/CVERecord?id=CVE-2023-35625",
+      "description": "Azure Machine Learning Compute Instance for SDK Users Information Disclosure Vulnerability",
+      "keyword_matched": "machine learning",
+      "severity": "UNKNOWN",
+      "published_date": null,
+      "scraped_date": "2026-01-15T02:14:16.317018+00:00",
+      "affected_products": []
+    }
+  ]
+}
