@@ -947,3 +947,295 @@ See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.htm
 [2026-01-15 02:18:24,255] [arxiv] [INFO] Saved 50 records to data_engineering/bronze/arxiv_raw_2026-01-15T02-18-24.236226.json
 [2026-01-15 02:18:24,255] [arxiv] [INFO] Finished scraper: arxiv
 [2026-01-15 02:18:24,256] [Orchestrator] [INFO] Orchestration complete.
+[2026-01-16 05:47:42,142] [Orchestrator] [INFO] Starting execution of 7 scrapers...
+[2026-01-16 05:47:42,142] [cve_mitre] [INFO] Starting scraper: cve_mitre
+[2026-01-16 05:47:43,050] [cve_mitre] [INFO] Searching for keyword: artificial intelligence
+[2026-01-16 05:47:43,050] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=artificial intelligence
+[2026-01-16 05:47:45,524] [cve_mitre] [INFO] Found 50 results for artificial intelligence
+[2026-01-16 05:47:45,524] [cve_mitre] [INFO] Searching for keyword: GPU
+[2026-01-16 05:47:45,525] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=GPU
+[2026-01-16 05:47:47,205] [cve_mitre] [INFO] Found 50 results for GPU
+[2026-01-16 05:47:47,205] [cve_mitre] [INFO] Searching for keyword: neural network
+[2026-01-16 05:47:47,205] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=neural network
+[2026-01-16 05:47:48,026] [cve_mitre] [INFO] Found 4 results for neural network
+[2026-01-16 05:47:48,026] [cve_mitre] [INFO] Searching for keyword: LLM
+[2026-01-16 05:47:48,026] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=LLM
+[2026-01-16 05:47:49,520] [cve_mitre] [INFO] Found 50 results for LLM
+[2026-01-16 05:47:49,520] [cve_mitre] [INFO] Searching for keyword: machine learning
+[2026-01-16 05:47:49,521] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=machine learning
+[2026-01-16 05:47:50,920] [cve_mitre] [INFO] Found 50 results for machine learning
+[2026-01-16 05:47:50,963] [cve_mitre] [INFO] Saved 204 records to data_engineering/bronze/cve_mitre_raw_2026-01-16T05-47-50.953108.json
+[2026-01-16 05:47:51,083] [cve_mitre] [INFO] Finished scraper: cve_mitre
+[2026-01-16 05:47:51,084] [nvidia] [INFO] Starting scraper: nvidia
+[2026-01-16 05:47:51,386] [nvidia] [INFO] Navigating to https://www.nvidia.com/en-us/research/publications/
+[2026-01-16 05:47:56,450] [nvidia] [INFO] Found 2 potential research items.
+[2026-01-16 05:47:56,490] [nvidia] [INFO] Saved 2 records to data_engineering/bronze/nvidia_raw_2026-01-16T05-47-56.483767.json
+[2026-01-16 05:47:56,611] [nvidia] [INFO] Finished scraper: nvidia
+[2026-01-16 05:47:56,612] [intel] [INFO] Starting scraper: intel
+[2026-01-16 05:47:56,985] [intel] [INFO] Navigating to https://www.intel.com/content/www/us/en/security-center/default.html
+[2026-01-16 05:51:30,800] [intel] [INFO] Saved 969 records to data_engineering/bronze/intel_raw_2026-01-16T05-51-30.778153.json
+[2026-01-16 05:51:30,920] [intel] [INFO] Finished scraper: intel
+[2026-01-16 05:51:30,920] [twitter] [INFO] Starting scraper: twitter
+[2026-01-16 05:51:30,920] [twitter] [WARNING] No Twitter Bearer Token found. Skipping.
+[2026-01-16 05:51:30,921] [twitter] [WARNING] No data to save.
+[2026-01-16 05:51:30,921] [twitter] [INFO] Finished scraper: twitter
+[2026-01-16 05:51:30,921] [openai] [INFO] Starting scraper: openai
+[2026-01-16 05:51:31,216] [openai] [INFO] Navigating to https://openai.com/research
+[2026-01-16 05:51:35,428] [openai] [INFO] Found 19 potential research items.
+[2026-01-16 05:51:35,522] [openai] [INFO] Saved 19 records to data_engineering/bronze/openai_raw_2026-01-16T05-51-35.483247.json
+[2026-01-16 05:51:35,667] [openai] [INFO] Finished scraper: openai
+[2026-01-16 05:51:35,668] [reddit] [INFO] Starting scraper: reddit
+[2026-01-16 05:51:35,876] [reddit] [INFO] Scraping subreddit: cybersecurity
+[2026-01-16 05:51:35,877] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-16 05:51:36,146] [reddit] [ERROR] Error scraping subreddit cybersecurity: received 401 HTTP response
+[2026-01-16 05:51:36,146] [reddit] [INFO] Scraping subreddit: netsec
+[2026-01-16 05:51:36,147] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-16 05:51:36,384] [reddit] [ERROR] Error scraping subreddit netsec: received 401 HTTP response
+[2026-01-16 05:51:36,385] [reddit] [INFO] Scraping subreddit: MachineLearning
+[2026-01-16 05:51:36,386] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-16 05:51:36,653] [reddit] [ERROR] Error scraping subreddit MachineLearning: received 401 HTTP response
+[2026-01-16 05:51:36,654] [reddit] [INFO] Scraping subreddit: ArtificialInteligence
+[2026-01-16 05:51:36,655] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-16 05:51:36,921] [reddit] [ERROR] Error scraping subreddit ArtificialInteligence: received 401 HTTP response
+[2026-01-16 05:51:36,921] [reddit] [INFO] Collected 0 posts from Reddit.
+[2026-01-16 05:51:36,922] [reddit] [WARNING] No data to save.
+[2026-01-16 05:51:36,922] [reddit] [INFO] Finished scraper: reddit
+[2026-01-16 05:51:36,922] [arxiv] [INFO] Starting scraper: arxiv
+[2026-01-16 05:51:36,922] [arxiv] [INFO] Querying arXiv with: (cat:cs.CR OR cat:cs.AI OR cat:cs.LG) AND (all:"LLM" OR all:"security" OR all:"vulnerability" OR all:"adversarial")
+[2026-01-16 05:51:36,923] [arxiv] [INFO] Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CR+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22LLM%22+OR+all%3A%22security%22+OR+all%3A%22vulnerability%22+OR+all%3A%22adversarial%22%29&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100
+[2026-01-16 05:51:38,590] [arxiv] [INFO] Got first page: 100 of 95735 total results
+[2026-01-16 05:51:38,593] [arxiv] [INFO] Collected 50 papers from arXiv.
+[2026-01-16 05:51:38,605] [arxiv] [INFO] Saved 50 records to data_engineering/bronze/arxiv_raw_2026-01-16T05-51-38.594006.json
+[2026-01-16 05:51:38,605] [arxiv] [INFO] Finished scraper: arxiv
+[2026-01-16 05:51:38,606] [Orchestrator] [INFO] Orchestration complete.
+[2026-01-17 04:52:31,675] [Orchestrator] [INFO] Starting execution of 7 scrapers...
+[2026-01-17 04:52:31,677] [cve_mitre] [INFO] Starting scraper: cve_mitre
+[2026-01-17 04:52:32,766] [cve_mitre] [INFO] Searching for keyword: artificial intelligence
+[2026-01-17 04:52:32,767] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=artificial intelligence
+[2026-01-17 04:52:35,587] [cve_mitre] [INFO] Found 50 results for artificial intelligence
+[2026-01-17 04:52:35,589] [cve_mitre] [INFO] Searching for keyword: GPU
+[2026-01-17 04:52:35,589] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=GPU
+[2026-01-17 04:52:36,737] [cve_mitre] [INFO] Found 50 results for GPU
+[2026-01-17 04:52:36,738] [cve_mitre] [INFO] Searching for keyword: neural network
+[2026-01-17 04:52:36,738] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=neural network
+[2026-01-17 04:52:38,372] [cve_mitre] [INFO] Found 4 results for neural network
+[2026-01-17 04:52:38,372] [cve_mitre] [INFO] Searching for keyword: LLM
+[2026-01-17 04:52:38,373] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=LLM
+[2026-01-17 04:52:40,028] [cve_mitre] [INFO] Found 50 results for LLM
+[2026-01-17 04:52:40,029] [cve_mitre] [INFO] Searching for keyword: machine learning
+[2026-01-17 04:52:40,029] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=machine learning
+[2026-01-17 04:52:41,206] [cve_mitre] [INFO] Found 50 results for machine learning
+[2026-01-17 04:52:41,283] [cve_mitre] [INFO] Saved 204 records to data_engineering/bronze/cve_mitre_raw_2026-01-17T04-52-41.257632.json
+[2026-01-17 04:52:41,462] [cve_mitre] [INFO] Finished scraper: cve_mitre
+[2026-01-17 04:52:41,464] [nvidia] [INFO] Starting scraper: nvidia
+[2026-01-17 04:52:41,800] [nvidia] [INFO] Navigating to https://www.nvidia.com/en-us/research/publications/
+[2026-01-17 04:52:48,579] [nvidia] [INFO] Found 2 potential research items.
+[2026-01-17 04:52:48,628] [nvidia] [INFO] Saved 2 records to data_engineering/bronze/nvidia_raw_2026-01-17T04-52-48.620052.json
+[2026-01-17 04:52:48,771] [nvidia] [INFO] Finished scraper: nvidia
+[2026-01-17 04:52:48,772] [intel] [INFO] Starting scraper: intel
+[2026-01-17 04:52:49,250] [intel] [INFO] Navigating to https://www.intel.com/content/www/us/en/security-center/default.html
+[2026-01-17 04:56:32,657] [intel] [INFO] Saved 969 records to data_engineering/bronze/intel_raw_2026-01-17T04-56-32.622446.json
+[2026-01-17 04:56:32,799] [intel] [INFO] Finished scraper: intel
+[2026-01-17 04:56:32,799] [twitter] [INFO] Starting scraper: twitter
+[2026-01-17 04:56:32,799] [twitter] [WARNING] No Twitter Bearer Token found. Skipping.
+[2026-01-17 04:56:32,800] [twitter] [WARNING] No data to save.
+[2026-01-17 04:56:32,800] [twitter] [INFO] Finished scraper: twitter
+[2026-01-17 04:56:32,800] [openai] [INFO] Starting scraper: openai
+[2026-01-17 04:56:33,139] [openai] [INFO] Navigating to https://openai.com/research
+[2026-01-17 04:56:37,577] [openai] [INFO] Found 19 potential research items.
+[2026-01-17 04:56:37,622] [openai] [INFO] Saved 19 records to data_engineering/bronze/openai_raw_2026-01-17T04-56-37.615373.json
+[2026-01-17 04:56:37,759] [openai] [INFO] Finished scraper: openai
+[2026-01-17 04:56:37,760] [reddit] [INFO] Starting scraper: reddit
+[2026-01-17 04:56:38,200] [reddit] [INFO] Scraping subreddit: cybersecurity
+[2026-01-17 04:56:38,200] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-17 04:56:38,956] [reddit] [ERROR] Error scraping subreddit cybersecurity: received 401 HTTP response
+[2026-01-17 04:56:38,957] [reddit] [INFO] Scraping subreddit: netsec
+[2026-01-17 04:56:38,957] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-17 04:56:39,230] [reddit] [ERROR] Error scraping subreddit netsec: received 401 HTTP response
+[2026-01-17 04:56:39,231] [reddit] [INFO] Scraping subreddit: MachineLearning
+[2026-01-17 04:56:39,231] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-17 04:56:39,632] [reddit] [ERROR] Error scraping subreddit MachineLearning: received 401 HTTP response
+[2026-01-17 04:56:39,633] [reddit] [INFO] Scraping subreddit: ArtificialInteligence
+[2026-01-17 04:56:39,634] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-17 04:56:39,878] [reddit] [ERROR] Error scraping subreddit ArtificialInteligence: received 401 HTTP response
+[2026-01-17 04:56:39,881] [reddit] [INFO] Collected 0 posts from Reddit.
+[2026-01-17 04:56:39,881] [reddit] [WARNING] No data to save.
+[2026-01-17 04:56:39,882] [reddit] [INFO] Finished scraper: reddit
+[2026-01-17 04:56:39,882] [arxiv] [INFO] Starting scraper: arxiv
+[2026-01-17 04:56:39,882] [arxiv] [INFO] Querying arXiv with: (cat:cs.CR OR cat:cs.AI OR cat:cs.LG) AND (all:"LLM" OR all:"security" OR all:"vulnerability" OR all:"adversarial")
+[2026-01-17 04:56:39,883] [arxiv] [INFO] Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CR+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22LLM%22+OR+all%3A%22security%22+OR+all%3A%22vulnerability%22+OR+all%3A%22adversarial%22%29&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100
+[2026-01-17 04:56:41,301] [arxiv] [INFO] Got first page: 100 of 95735 total results
+[2026-01-17 04:56:41,303] [arxiv] [INFO] Collected 50 papers from arXiv.
+[2026-01-17 04:56:41,316] [arxiv] [INFO] Saved 50 records to data_engineering/bronze/arxiv_raw_2026-01-17T04-56-41.304889.json
+[2026-01-17 04:56:41,316] [arxiv] [INFO] Finished scraper: arxiv
+[2026-01-17 04:56:41,317] [Orchestrator] [INFO] Orchestration complete.
+[2026-01-19 05:14:10,949] [Orchestrator] [INFO] Starting execution of 7 scrapers...
+[2026-01-19 05:14:10,950] [cve_mitre] [INFO] Starting scraper: cve_mitre
+[2026-01-19 05:14:11,947] [cve_mitre] [INFO] Searching for keyword: artificial intelligence
+[2026-01-19 05:14:11,947] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=artificial intelligence
+[2026-01-19 05:14:14,408] [cve_mitre] [INFO] Found 50 results for artificial intelligence
+[2026-01-19 05:14:14,411] [cve_mitre] [INFO] Searching for keyword: GPU
+[2026-01-19 05:14:14,414] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=GPU
+[2026-01-19 05:14:16,246] [cve_mitre] [INFO] Found 50 results for GPU
+[2026-01-19 05:14:16,246] [cve_mitre] [INFO] Searching for keyword: neural network
+[2026-01-19 05:14:16,246] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=neural network
+[2026-01-19 05:14:17,239] [cve_mitre] [INFO] Found 4 results for neural network
+[2026-01-19 05:14:17,239] [cve_mitre] [INFO] Searching for keyword: LLM
+[2026-01-19 05:14:17,240] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=LLM
+[2026-01-19 05:14:18,751] [cve_mitre] [INFO] Found 50 results for LLM
+[2026-01-19 05:14:18,751] [cve_mitre] [INFO] Searching for keyword: machine learning
+[2026-01-19 05:14:18,751] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=machine learning
+[2026-01-19 05:14:20,237] [cve_mitre] [INFO] Found 50 results for machine learning
+[2026-01-19 05:14:20,322] [cve_mitre] [INFO] Saved 204 records to data_engineering/bronze/cve_mitre_raw_2026-01-19T05-14-20.297564.json
+[2026-01-19 05:14:20,502] [cve_mitre] [INFO] Finished scraper: cve_mitre
+[2026-01-19 05:14:20,503] [nvidia] [INFO] Starting scraper: nvidia
+[2026-01-19 05:14:20,854] [nvidia] [INFO] Navigating to https://www.nvidia.com/en-us/research/publications/
+[2026-01-19 05:14:26,115] [nvidia] [INFO] Found 2 potential research items.
+[2026-01-19 05:14:26,166] [nvidia] [INFO] Saved 2 records to data_engineering/bronze/nvidia_raw_2026-01-19T05-14-26.158437.json
+[2026-01-19 05:14:26,325] [nvidia] [INFO] Finished scraper: nvidia
+[2026-01-19 05:14:26,325] [intel] [INFO] Starting scraper: intel
+[2026-01-19 05:14:26,748] [intel] [INFO] Navigating to https://www.intel.com/content/www/us/en/security-center/default.html
+[2026-01-19 05:18:30,170] [intel] [INFO] Saved 969 records to data_engineering/bronze/intel_raw_2026-01-19T05-18-30.148221.json
+[2026-01-19 05:18:30,305] [intel] [INFO] Finished scraper: intel
+[2026-01-19 05:18:30,305] [twitter] [INFO] Starting scraper: twitter
+[2026-01-19 05:18:30,306] [twitter] [WARNING] No Twitter Bearer Token found. Skipping.
+[2026-01-19 05:18:30,306] [twitter] [WARNING] No data to save.
+[2026-01-19 05:18:30,306] [twitter] [INFO] Finished scraper: twitter
+[2026-01-19 05:18:30,306] [openai] [INFO] Starting scraper: openai
+[2026-01-19 05:18:30,665] [openai] [INFO] Navigating to https://openai.com/research
+[2026-01-19 05:18:34,954] [openai] [INFO] Found 19 potential research items.
+[2026-01-19 05:18:35,005] [openai] [INFO] Saved 19 records to data_engineering/bronze/openai_raw_2026-01-19T05-18-34.996354.json
+[2026-01-19 05:18:35,164] [openai] [INFO] Finished scraper: openai
+[2026-01-19 05:18:35,164] [reddit] [INFO] Starting scraper: reddit
+[2026-01-19 05:18:35,443] [reddit] [INFO] Scraping subreddit: cybersecurity
+[2026-01-19 05:18:35,443] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-19 05:18:35,715] [reddit] [ERROR] Error scraping subreddit cybersecurity: received 401 HTTP response
+[2026-01-19 05:18:35,716] [reddit] [INFO] Scraping subreddit: netsec
+[2026-01-19 05:18:35,716] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-19 05:18:35,963] [reddit] [ERROR] Error scraping subreddit netsec: received 401 HTTP response
+[2026-01-19 05:18:35,964] [reddit] [INFO] Scraping subreddit: MachineLearning
+[2026-01-19 05:18:35,965] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-19 05:18:36,231] [reddit] [ERROR] Error scraping subreddit MachineLearning: received 401 HTTP response
+[2026-01-19 05:18:36,231] [reddit] [INFO] Scraping subreddit: ArtificialInteligence
+[2026-01-19 05:18:36,232] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-19 05:18:36,512] [reddit] [ERROR] Error scraping subreddit ArtificialInteligence: received 401 HTTP response
+[2026-01-19 05:18:36,514] [reddit] [INFO] Collected 0 posts from Reddit.
+[2026-01-19 05:18:36,516] [reddit] [WARNING] No data to save.
+[2026-01-19 05:18:36,516] [reddit] [INFO] Finished scraper: reddit
+[2026-01-19 05:18:36,517] [arxiv] [INFO] Starting scraper: arxiv
+[2026-01-19 05:18:36,517] [arxiv] [INFO] Querying arXiv with: (cat:cs.CR OR cat:cs.AI OR cat:cs.LG) AND (all:"LLM" OR all:"security" OR all:"vulnerability" OR all:"adversarial")
+[2026-01-19 05:18:36,517] [arxiv] [INFO] Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CR+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22LLM%22+OR+all%3A%22security%22+OR+all%3A%22vulnerability%22+OR+all%3A%22adversarial%22%29&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100
+[2026-01-19 05:18:37,996] [arxiv] [INFO] Got first page: 100 of 95811 total results
+[2026-01-19 05:18:37,998] [arxiv] [INFO] Collected 50 papers from arXiv.
+[2026-01-19 05:18:38,011] [arxiv] [INFO] Saved 50 records to data_engineering/bronze/arxiv_raw_2026-01-19T05-18-37.999215.json
+[2026-01-19 05:18:38,011] [arxiv] [INFO] Finished scraper: arxiv
+[2026-01-19 05:18:38,012] [Orchestrator] [INFO] Orchestration complete.
+[2026-01-19 05:34:17,644] [Orchestrator] [INFO] Starting execution of 7 scrapers...
+[2026-01-19 05:34:17,645] [cve_mitre] [INFO] Starting scraper: cve_mitre
+[2026-01-19 05:34:18,525] [cve_mitre] [INFO] Searching for keyword: artificial intelligence
+[2026-01-19 05:34:18,525] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=artificial intelligence
+[2026-01-19 05:34:20,775] [cve_mitre] [INFO] Found 50 results for artificial intelligence
+[2026-01-19 05:34:20,776] [cve_mitre] [INFO] Searching for keyword: GPU
+[2026-01-19 05:34:20,776] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=GPU
+[2026-01-19 05:34:21,706] [cve_mitre] [INFO] Found 50 results for GPU
+[2026-01-19 05:34:21,706] [cve_mitre] [INFO] Searching for keyword: neural network
+[2026-01-19 05:34:21,706] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=neural network
+[2026-01-19 05:34:22,479] [cve_mitre] [INFO] Found 4 results for neural network
+[2026-01-19 05:34:22,479] [cve_mitre] [INFO] Searching for keyword: LLM
+[2026-01-19 05:34:22,479] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=LLM
+[2026-01-19 05:34:23,952] [cve_mitre] [INFO] Found 50 results for LLM
+[2026-01-19 05:34:23,958] [cve_mitre] [INFO] Searching for keyword: machine learning
+[2026-01-19 05:34:23,960] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=machine learning
+[2026-01-19 05:34:25,643] [cve_mitre] [INFO] Found 50 results for machine learning
+[2026-01-19 05:34:25,688] [cve_mitre] [INFO] Saved 204 records to data_engineering/bronze/cve_mitre_raw_2026-01-19T05-34-25.674216.json
+[2026-01-19 05:34:25,809] [cve_mitre] [INFO] Finished scraper: cve_mitre
+[2026-01-19 05:34:25,810] [nvidia] [INFO] Starting scraper: nvidia
+[2026-01-19 05:34:26,130] [nvidia] [INFO] Navigating to https://www.nvidia.com/en-us/research/publications/
+[2026-01-19 05:34:31,973] [nvidia] [INFO] Found 2 potential research items.
+[2026-01-19 05:34:32,019] [nvidia] [INFO] Saved 2 records to data_engineering/bronze/nvidia_raw_2026-01-19T05-34-32.012798.json
+[2026-01-19 05:34:32,187] [nvidia] [INFO] Finished scraper: nvidia
+[2026-01-19 05:34:32,188] [intel] [INFO] Starting scraper: intel
+[2026-01-19 05:34:32,596] [intel] [INFO] Navigating to https://www.intel.com/content/www/us/en/security-center/default.html
+[2026-01-19 05:38:28,635] [intel] [INFO] Saved 969 records to data_engineering/bronze/intel_raw_2026-01-19T05-38-28.606009.json
+[2026-01-19 05:38:28,793] [intel] [INFO] Finished scraper: intel
+[2026-01-19 05:38:28,793] [twitter] [INFO] Starting scraper: twitter
+[2026-01-19 05:38:28,795] [twitter] [WARNING] No Twitter Bearer Token found. Skipping.
+[2026-01-19 05:38:28,796] [twitter] [WARNING] No data to save.
+[2026-01-19 05:38:28,797] [twitter] [INFO] Finished scraper: twitter
+[2026-01-19 05:38:28,797] [openai] [INFO] Starting scraper: openai
+[2026-01-19 05:38:29,166] [openai] [INFO] Navigating to https://openai.com/research
+[2026-01-19 05:38:33,635] [openai] [INFO] Found 19 potential research items.
+[2026-01-19 05:38:33,691] [openai] [INFO] Saved 19 records to data_engineering/bronze/openai_raw_2026-01-19T05-38-33.682603.json
+[2026-01-19 05:38:33,869] [openai] [INFO] Finished scraper: openai
+[2026-01-19 05:38:33,869] [reddit] [INFO] Starting scraper: reddit
+[2026-01-19 05:38:33,872] [reddit] [INFO] Scraping subreddit: cybersecurity
+[2026-01-19 05:38:33,872] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-19 05:38:34,169] [reddit] [ERROR] Error scraping subreddit cybersecurity: received 401 HTTP response
+[2026-01-19 05:38:34,169] [reddit] [INFO] Scraping subreddit: netsec
+[2026-01-19 05:38:34,170] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-19 05:38:34,434] [reddit] [ERROR] Error scraping subreddit netsec: received 401 HTTP response
+[2026-01-19 05:38:34,435] [reddit] [INFO] Scraping subreddit: MachineLearning
+[2026-01-19 05:38:34,435] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-19 05:38:34,692] [reddit] [ERROR] Error scraping subreddit MachineLearning: received 401 HTTP response
+[2026-01-19 05:38:34,693] [reddit] [INFO] Scraping subreddit: ArtificialInteligence
+[2026-01-19 05:38:34,694] [praw] [WARNING] It appears that you are using PRAW in an asynchronous environment.
+It is strongly recommended to use Async PRAW: https://asyncpraw.readthedocs.io.
+See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.html#discord-bots-and-asynchronous-environments for more info.
+
+[2026-01-19 05:38:35,036] [reddit] [ERROR] Error scraping subreddit ArtificialInteligence: received 401 HTTP response
+[2026-01-19 05:38:35,036] [reddit] [INFO] Collected 0 posts from Reddit.
+[2026-01-19 05:38:35,037] [reddit] [WARNING] No data to save.
+[2026-01-19 05:38:35,037] [reddit] [INFO] Finished scraper: reddit
+[2026-01-19 05:38:35,037] [arxiv] [INFO] Starting scraper: arxiv
+[2026-01-19 05:38:35,038] [arxiv] [INFO] Querying arXiv with: (cat:cs.CR OR cat:cs.AI OR cat:cs.LG) AND (all:"LLM" OR all:"security" OR all:"vulnerability" OR all:"adversarial")
+[2026-01-19 05:38:35,038] [arxiv] [INFO] Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CR+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22LLM%22+OR+all%3A%22security%22+OR+all%3A%22vulnerability%22+OR+all%3A%22adversarial%22%29&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100
+[2026-01-19 05:38:35,676] [arxiv] [INFO] Got first page: 100 of 95811 total results
+[2026-01-19 05:38:35,678] [arxiv] [INFO] Collected 50 papers from arXiv.
+[2026-01-19 05:38:35,691] [arxiv] [INFO] Saved 50 records to data_engineering/bronze/arxiv_raw_2026-01-19T05-38-35.679255.json
+[2026-01-19 05:38:35,691] [arxiv] [INFO] Finished scraper: arxiv
+[2026-01-19 05:38:35,691] [Orchestrator] [INFO] Orchestration complete.
