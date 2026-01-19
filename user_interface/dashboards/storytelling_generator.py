@@ -18,7 +18,18 @@ GOLD_DIR = PROJECT_ROOT / "data_engineering" / "gold"
 RAG_DIR = PROJECT_ROOT / "rag_system"
 HISTORY_FILE = GOLD_DIR / "gold_storytelling_history.parquet"
 API_URL = "http://localhost:8000/api/v1"
-LLM_API_KEY = os.getenv("OPENAI_API_KEY", "") # Or hardcode if secure env
+
+# API Keys (Loaded from environment or hardcoded safe storage)
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "") 
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
+
+# Model Config
+MODELS = {
+    "gemini": "gemini-3-flash-preview",
+    "openai": "gpt-5-nano-2025-08-07",
+    "claude": "claude-haiku-4-5-20251001"
+}
 
 # Setup Logging
 logging.basicConfig(level=logging.INFO)
@@ -29,7 +40,7 @@ logger = logging.getLogger("Storyteller")
 def get_api_metric(endpoint):
     """Fetch data from API Gateway."""
     try:
-        response = requests.get(f"{API_URL}/{endpoint}", timeout=2)
+        response = requests.get(f"{API_URL}/{endpoint}", timeout=5)
         if response.status_code == 200:
             data = response.json()
             if isinstance(data, list) and len(data) > 0:
@@ -61,31 +72,104 @@ def get_rag_context(query_text):
         logger.warning(f"RAG Error: {e}")
         return "No RAG context available (Error)."
 
-def generate_llm_insight(risk_idx, innovation_score, context):
-    """Generate insight using LLM (OpenAI or Mock)."""
+# --- LLM API Calls ---
+
+def call_gemini(prompt, model):
+    """Call Google Gemini API."""
+    if not GOOGLE_API_KEY: return None
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GOOGLE_API_KEY}"
+    headers = {"Content-Type": "application/json"}
+    payload = {
+        "contents": [{"parts": [{"text": prompt}]}]
+    }
+    try:
+        resp = requests.post(url, headers=headers, json=payload, timeout=10)
+        if resp.status_code == 200:
+            return resp.json()['candidates'][0]['content']['parts'][0]['text']
+        logger.warning(f"Gemini Error {resp.status_code}: {resp.text}")
+    except Exception as e:
+        logger.warning(f"Gemini Exception: {e}")
+    return None
+
+def call_openai(prompt, model):
+    """Call OpenAI API."""
+    if not OPENAI_API_KEY: return None
+    url = "https://api.openai.com/v1/chat/completions"
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {OPENAI_API_KEY}"
+    }
+    payload = {
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.7
+    }
+    try:
+        resp = requests.post(url, headers=headers, json=payload, timeout=10)
+        if resp.status_code == 200:
+            return resp.json()['choices'][0]['message']['content']
+        logger.warning(f"OpenAI Error {resp.status_code}: {resp.text}")
+    except Exception as e:
+        logger.warning(f"OpenAI Exception: {e}")
+    return None
+
+def call_claude(prompt, model):
+    """Call Anthropic Claude API."""
+    if not ANTHROPIC_API_KEY: return None
+    url = "https://api.anthropic.com/v1/messages"
+    headers = {
+        "x-api-key": ANTHROPIC_API_KEY,
+        "anthropic-version": "2023-06-01",
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "model": model,
+        "max_tokens": 300,
+        "messages": [{"role": "user", "content": prompt}]
+    }
+    try:
+        resp = requests.post(url, headers=headers, json=payload, timeout=10)
+        if resp.status_code == 200:
+            return resp.json()['content'][0]['text']
+        logger.warning(f"Claude Error {resp.status_code}: {resp.text}")
+    except Exception as e:
+        logger.warning(f"Claude Exception: {e}")
+    return None
+
+def generate_insight_with_fallback(risk_idx, innovation_score, context):
+    """Generate insight using Multi-Model Fallback: Gemini -> OpenAI -> Claude."""
+    
     prompt = f"""
     You are a CISO Assistant.
     Today's Metrics:
     - Tech Edge Score: {innovation_score.get('score', 'N/A')} (Innovation)
     - Vulnerability Index: {risk_idx.get('count', 'N/A')} (Risk Level)
     
-    Context from Intelligence:
+    Context:
     {context}
     
-    Task: Write a 2-sentence executive summary. 
-    Sentence 1: State the current threat/innovation balance.
-    Sentence 2: Mention one key driver from context.
-    Language: Spanish.
+    Task: Write a 2-sentence executive summary in Spanish.
+    1. Threat/Innovation balance.
+    2. Key driver from context.
     """
     
-    if LLM_API_KEY:
-        # Real Call (Simulated for this snippet)
-        # response = openai.ChatCompletion.create(...)
-        # return response...
-        return f"[Generated Insight] El riesgo es alto debido a {risk_idx.get('count')} vulnerabilidades activas. Contexto clave: {context[:50]}..."
-    else:
-        # Mock Response
-        return f"El índice de riesgo ({risk_idx.get('count', 0)}) muestra una tendencia preocupante frente a la innovación ({innovation_score.get('score', 0)}). Se detectan múltiples menciones críticas en papers recientes."
+    # 1. Gemini
+    logger.info(f"Attempting Gemini ({MODELS['gemini']})...")
+    result = call_gemini(prompt, MODELS['gemini'])
+    if result: return (f"[Gemini] {result}", MODELS['gemini'])
+    
+    # 2. OpenAI
+    logger.info(f"Fallback to OpenAI ({MODELS['openai']})...")
+    result = call_openai(prompt, MODELS['openai'])
+    if result: return (f"[OpenAI] {result}", MODELS['openai'])
+    
+    # 3. Claude
+    logger.info(f"Fallback to Claude ({MODELS['claude']})...")
+    result = call_claude(prompt, MODELS['claude'])
+    if result: return (f"[Claude] {result}", MODELS['claude'])
+    
+    # Final Fallback
+    return ("No se pudo generar el insight con nungún modelo (APIs fallaron o no disponibles).", "None")
 
 # --- Main Logic ---
 
@@ -99,18 +183,19 @@ def run_storytelling():
     # 2. RAG Context
     context = get_rag_context("critical vulnerabilities and AI innovation high risk")
     
-    # 3. Generate Insight
-    insight_text = generate_llm_insight(risk_data, innovation_data, context)
+    # 3. Generate Insight (Multi-Model)
+    insight_text, model_used = generate_insight_with_fallback(risk_data, innovation_data, context)
     
     new_entry = {
         "date": today_str,
         "insight": insight_text,
+        "model_used": model_used,
         "risk_value": str(risk_data.get('count', 0)),
         "innovation_value": str(innovation_data.get('score', 0)),
         "run_id": str(uuid.uuid4())
     }
     
-    # 4. History Management
+    # 4. History Management (Load -> Append -> Save -> Return ONLY Today)
     df_history = pd.DataFrame()
     if HISTORY_FILE.exists():
         try:
@@ -118,35 +203,33 @@ def run_storytelling():
         except:
             pass
             
-    # Check if today exists to avoid duplicate append on refresh
-    if not df_history.empty and 'date' in df_history.columns and today_str in df_history['date'].values:
-        logger.info("Insight for today already exists.")
-        # Optional: Update it? For now, keep first.
-    else:
-        # Append
-        new_df = pd.DataFrame([new_entry])
-        df_history = pd.concat([df_history, new_df], ignore_index=True)
-        # Save
-        if not GOLD_DIR.exists(): GOLD_DIR.mkdir(parents=True)
-        df_history.to_parquet(HISTORY_FILE, index=False)
+    # Deduplicate: If today exists, drop it and append new (or keep old? defaulting to replace for latest insight)
+    if not df_history.empty and 'date' in df_history.columns:
+        df_history = df_history[df_history['date'] != today_str]
         
-    return df_history
+    # Append
+    new_df = pd.DataFrame([new_entry])
+    df_history = pd.concat([df_history, new_df], ignore_index=True)
+    
+    # Save Full History to Gold
+    if not GOLD_DIR.exists(): GOLD_DIR.mkdir(parents=True)
+    df_history.to_parquet(HISTORY_FILE, index=False)
+    
+    # Return Only Today's Insight for Power BI Step
+    return new_df
 
 # Execute logic
 try:
-    insight_history = run_storytelling()
+    # Power BI expects a dataframe output
+    current_insight_df = run_storytelling()
     
-    # Create the 'current_insight' dataframe (latest row)
-    if not insight_history.empty:
-        current_insight = insight_history.tail(1).copy()
-    else:
-        current_insight = pd.DataFrame(columns=["date", "insight", "risk_value", "innovation_value", "run_id"])
-        
-    print("Storytelling Script Completed Successfully.")
-    print("Dataframes 'insight_history' and 'current_insight' are ready for Power BI.")
+    # For Power BI "Python Script" visual/transform:
+    # It scans for dataframes. We expose 'current_insight_df'.
+    # Note: 'insight_history' is saved to disk, but not exposed to avoid giant memory load in this specific query step if not needed.
+    
+    print("Storytelling Generated:", current_insight_df.iloc[0]['insight'])
+    print("Model Used:", current_insight_df.iloc[0]['model_used'])
     
 except Exception as e:
-    logger.error(f"Script construction failed: {e}")
-    # Fallback for Power BI to not crash
-    insight_history = pd.DataFrame()
-    current_insight = pd.DataFrame()
+    logger.error(f"Script failed: {e}")
+    current_insight_df = pd.DataFrame({"Error": [str(e)]})

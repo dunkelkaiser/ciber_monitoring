@@ -60,6 +60,11 @@ def get_correlation_values():
     """Returns the calculated Correlation Coefficients."""
     return load_gold_data("gold_correlation_values")
 
+@app.get("/api/v1/storytelling-history", tags=["Insights"])
+def get_storytelling_history():
+    """Returns the full history of AI-generated insights."""
+    return load_gold_data("gold_storytelling_history")
+
 if __name__ == "__main__":
     import uvicorn
     # Run dev server

@@ -1239,3 +1239,97 @@ See https://praw.readthedocs.io/en/latest/getting_started/multiple_instances.htm
 [2026-01-19 05:38:35,691] [arxiv] [INFO] Saved 50 records to data_engineering/bronze/arxiv_raw_2026-01-19T05-38-35.679255.json
 [2026-01-19 05:38:35,691] [arxiv] [INFO] Finished scraper: arxiv
 [2026-01-19 05:38:35,691] [Orchestrator] [INFO] Orchestration complete.
+[2026-01-18 23:49:30,426] [WDM] [INFO] ====== WebDriver manager ======
+[2026-01-18 23:49:31,633] [WDM] [INFO] Get LATEST chromedriver version for google-chrome
+[2026-01-18 23:49:32,181] [WDM] [INFO] Get LATEST chromedriver version for google-chrome
+[2026-01-18 23:49:32,604] [WDM] [INFO] There is no [win64] chromedriver "143.0.7499.192" for browser google-chrome "143.0.7499" in cache
+[2026-01-18 23:49:32,604] [WDM] [INFO] Get LATEST chromedriver version for google-chrome
+[2026-01-18 23:49:33,599] [WDM] [INFO] WebDriver version 143.0.7499.192 selected
+[2026-01-18 23:49:33,603] [WDM] [INFO] Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/143.0.7499.192/win32/chromedriver-win32.zip
+[2026-01-18 23:49:33,603] [WDM] [INFO] About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/143.0.7499.192/win32/chromedriver-win32.zip
+[2026-01-18 23:49:33,984] [WDM] [INFO] Driver downloading response is 200
+[2026-01-18 23:49:35,435] [WDM] [INFO] Get LATEST chromedriver version for google-chrome
+[2026-01-18 23:49:35,954] [WDM] [INFO] Driver has been saved in cache [C:\Users\jagua\.wdm\drivers\chromedriver\win64\143.0.7499.192]
+[2026-01-18 23:49:38,279] [reddit] [INFO] Starting Google Login Flow...
+[2026-01-18 23:49:39,739] [reddit] [INFO] Waiting for login page...
+[2026-01-18 23:49:42,810] [reddit] [ERROR] Login failed: Message: no such element: Unable to locate element: {"method":"partial link text","selector":"Google"}
+  (Session info: chrome=143.0.7499.193); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xa11213
+	0xa11254
+	0x7fe6dd
+	0x8493a5
+	0x84977b
+	0x890382
+	0x86b534
+	0x88db13
+	0x86b2e6
+	0x83d321
+	0x83e1d4
+	0xc65254
+	0xc6080b
+	0xc7d0ea
+	0xa2b118
+	0xa3311d
+	0xa19518
+	0xa196d9
+	0xa03a68
+	0x768b5d49
+	0x77d8d5db
+	0x77d8d561
+
+[2026-01-18 23:49:42,811] [reddit] [ERROR] Critical Scraping Error: Message: no such element: Unable to locate element: {"method":"partial link text","selector":"Google"}
+  (Session info: chrome=143.0.7499.193); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xa11213
+	0xa11254
+	0x7fe6dd
+	0x8493a5
+	0x84977b
+	0x890382
+	0x86b534
+	0x88db13
+	0x86b2e6
+	0x83d321
+	0x83e1d4
+	0xc65254
+	0xc6080b
+	0xc7d0ea
+	0xa2b118
+	0xa3311d
+	0xa19518
+	0xa196d9
+	0xa03a68
+	0x768b5d49
+	0x77d8d5db
+	0x77d8d561
+
+[2026-01-18 23:49:45,292] [reddit] [INFO] Scrape collected 0 items.
+[2026-01-18 23:50:54,574] [WDM] [INFO] ====== WebDriver manager ======
+[2026-01-18 23:50:55,340] [WDM] [INFO] Get LATEST chromedriver version for google-chrome
+[2026-01-18 23:50:55,819] [WDM] [INFO] Get LATEST chromedriver version for google-chrome
+[2026-01-18 23:50:56,274] [WDM] [INFO] Driver [C:\Users\jagua\.wdm\drivers\chromedriver\win64\143.0.7499.192\chromedriver-win32/chromedriver.exe] found in cache
+[2026-01-18 23:50:57,325] [reddit] [INFO] Starting Google Login Flow...
+[2026-01-18 23:51:03,688] [reddit] [INFO] Comparing selectors...
+[2026-01-18 23:51:03,744] [reddit] [INFO] Checking iframes...
+[2026-01-18 23:51:03,787] [reddit] [ERROR] Login failed: Could not find Google Login button. Page source saved.
+[2026-01-18 23:51:03,788] [reddit] [ERROR] Critical Scraping Error: Could not find Google Login button. Page source saved.
+[2026-01-18 23:51:06,290] [reddit] [INFO] Scrape collected 0 items.
+[2026-01-18 23:51:57,387] [WDM] [INFO] ====== WebDriver manager ======
+[2026-01-18 23:51:58,153] [WDM] [INFO] Get LATEST chromedriver version for google-chrome
+[2026-01-18 23:51:58,623] [WDM] [INFO] Get LATEST chromedriver version for google-chrome
+[2026-01-18 23:51:59,101] [WDM] [INFO] Driver [C:\Users\jagua\.wdm\drivers\chromedriver\win64\143.0.7499.192\chromedriver-win32/chromedriver.exe] found in cache
+[2026-01-18 23:52:00,154] [reddit] [INFO] Attempting public scrape without login (Login blocked by Captcha)...
+[2026-01-18 23:52:00,154] [reddit] [INFO] Scraping r/cybersecurity...
+[2026-01-18 23:52:04,494] [reddit] [WARNING] Blocked from r/cybersecurity (Redirected to login/captcha).
+[2026-01-18 23:52:04,495] [reddit] [INFO] Scraping r/intel...
+[2026-01-18 23:52:10,825] [reddit] [INFO] Found 53 potential posts in r/intel
+[2026-01-18 23:52:10,993] [reddit] [INFO] Scraping r/amd...
+[2026-01-18 23:52:17,472] [reddit] [INFO] Found 53 potential posts in r/amd
+[2026-01-18 23:52:17,635] [reddit] [INFO] Scraping r/nvidia...
+[2026-01-18 23:52:23,714] [reddit] [INFO] Found 53 potential posts in r/nvidia
+[2026-01-18 23:52:23,895] [reddit] [INFO] Scraping r/hardware...
+[2026-01-18 23:52:30,049] [reddit] [INFO] Found 53 potential posts in r/hardware
+[2026-01-18 23:52:32,536] [reddit] [INFO] Scrape collected 40 items.
