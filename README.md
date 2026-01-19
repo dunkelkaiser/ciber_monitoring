@@ -18,30 +18,29 @@
 
 ## Actualizaciones Recientes
 
-### 2026-01-12 - Expansión de Scrapers y Mejoras Temporales
+### 2026-01-19 - Multi-Modelo y Web Scraping 2.0
 
-#### Nuevos Scrapers Implementados
+#### 🧠 Multi-Model AI Storytelling
+Un nuevo generador de narrativas ha sido integrado en el Dashboard, impulsado por una arquitectura de **relevo de modelos** para máxima resiliencia:
+- **Flujo de Trabajo**: Intenta generar insights con **Gemini 3 Flash**, si falla recurre a **OpenAI GPT-5**, y finalmente a **Claude Haiku**.
+- **Trazabilidad**: Cada insight generado guarda el registro de qué modelo lo creó, visible en el Dashboard.
+- **API History**: Endpoint `/api/v1/storytelling-history` expone toda la memoria histórica de insights generados.
 
-**Reddit Scraper**
-- Descripción: Recolecta posts y comentarios de subreddits específicos (ej. r/cybersecurity).
-- Fuente de datos: Reddit API (PRAW)
-- Datos capturados: Título, contenido, autor, puntuación, URL, fecha de publicación, fecha de recolección.
-- Configuración: Requiere `client_id` y `client_secret` en `agents/scrapers/config.yaml`.
+#### 🕷️ Web Scraping 2.0 (Selenium)
+Se ha migrado la recolección de datos de Reddit de la API oficial a una solución robusta basada en **Selenium**:
+- **Bypass de Restricciones**: Sortea limitaciones de API y bloqueos básicos mediante navegación pública inteligente.
+- **Fuentes**: Scrapea activamente `r/cybersecurity`, `r/hardware`, `r/intel`, `r/amd`, `r/nvidia`.
+- **Datos**: Extrae discusiones sobre vulnerabilidades y lanzamientos de hardware en tiempo real.
 
+#### Nuevos Scrapers Implementados (Legacy)
 **arXiv Scraper**
 - Descripción: Recolecta papers académicos de categorías de Ciencias de la Computación (AI, Criptografía).
 - Fuente de datos: arXiv API
 - Datos capturados: Título, abstract, autores, URL PDF, fecha de publicación, fecha de recolección.
-- Configuración: Palabras clave y categorías en `agents/scrapers/config.yaml`.
 
 #### Mejoras en Sistema de Fechas
-
-Todos los scrapers ahora incluyen:
-- **`published_date`**: Fecha original de publicación (ISO 8601).
-- **`scraped_date`**: Timestamp UTC del momento de la extracción.
-
-#### Cambios en la Base de Datos / Salida
-- Los archivos JSON en `data_engineering/bronze` ahora incluyen estos nuevos campos, manteniendo compatibilidad con pipelines existentes.
+- Todos los scrapers normalizan a UTC ISO 8601.
+- Pipeline Silver unifica fuentes heterogéneas (Tweets, Posts, Papers).
 
 ---
 

@@ -20,6 +20,7 @@ La plataforma ofrece dos interfaces principales para el consumo de inteligencia:
 | `/api/v1/tech-edge-score` | GET | Recupera el ranking de papers más innovadores. | KPI de Innovación |
 | `/api/v1/vulnerability-index` | GET | Serie temporal de volumen de riesgo. | Gráfico de Líneas |
 | `/api/v1/correlation/matrix` | GET | Datos de correlación Social-Riesgo. | Scatter Plot |
+| `/api/v1/storytelling-history` | GET | Historial de insights generados con metadatos del modelo. | Narrativa / Tabla |
 | `/docs` | GET | Swagger UI interactivo. | Documentación |
 
 ---

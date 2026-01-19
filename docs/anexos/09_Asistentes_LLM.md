@@ -37,3 +37,16 @@ Aportan perspectivas laterales. Gemini para multimodalidad (entender imágenes/d
 5.  **Documentación**: Los modelos generan borradores de la documentación (como este anexo) para revisión final.
 
 Esta simbiosis permite acelerar el desarrollo de semanas a días, manteniendo un estándar de calidad senior.
+
+---
+
+## 4. Arquitectura Multi-Modelo (Storytelling)
+
+Para la generación de narrativas ejecutivas en el Dashboard, se ha implementado una arquitectura de **"Relevo de Modelos"** para garantizar disponibilidad absoluta:
+
+### Cadena de Responsabilidad
+1.  **Primario**: **Gemini 3 Flash** (Google). Priorizado por su ventana de contexto y velocidad.
+2.  **Secundario**: **GPT-5 Nano** (OpenAI). Se activa si Gemini falla o devuelve error 4xx/5xx.
+3.  **Terciario**: **Claude Haiku 3.5** (Anthropic). Última línea de defensa si los anteriores fallan.
+
+Esta lógica está encapsulada en `storytelling_generator.py` y reporta qué modelo fue utilizado en la columna `model_used` del historial.
