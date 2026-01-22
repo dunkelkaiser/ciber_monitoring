@@ -20,7 +20,7 @@ El módulo de ingesta (`agents/scrapers`) es responsable de la recolección aut�
 | **CVEMitreScraper** | CVE Mitre / NIST | Playwright (Search) | Diario | CVE ID, descripción, severidad. |
 | **IntelScraper** | Intel Security | Playwright (DOM) | Diario | Advisories, parches. |
 | **TwitterScraper** | Twitter/X API | API (Tweepy) | Tiempo Real | Discusión social, tendencias. |
-| **RedditScraper** | Reddit Web | Selenium (Headless) | Diario | Posts, comentarios, sentimiento. |
+| **RedditScraper** | Reddit API | API (PRAW) [Standby] | Diario | Posts, comentarios, sentimiento. |
 | **ArxivScraper** | arXiv.org | API (xml) | Semanal | Papers académicos (CS, AI, Crypto). |
 
 ---

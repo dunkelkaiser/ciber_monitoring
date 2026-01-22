@@ -33,11 +33,26 @@ def run_ingestion():
 
     # 2. Initialize ChromaDB (Persistent)
     logger.info(f"Initializing Vector Store at {CHROMA_PATH}...")
-    vector_store = Chroma(
-        collection_name="cyber_intel_collection",
-        embedding_function=embeddings_model,
-        persist_directory=str(CHROMA_PATH)
-    )
+    try:
+        vector_store = Chroma(
+            collection_name="cyber_intel_collection",
+            embedding_function=embeddings_model,
+            persist_directory=str(CHROMA_PATH)
+        )
+    except Exception as e:
+        logger.error(f"Failed to initialize ChromaDB: {e}")
+        if "compaction" in str(e).lower() or "internal" in str(e).lower():
+            logger.warning("Corrupted database detected. Deleting and recreating...")
+            import shutil
+            if CHROMA_PATH.exists():
+                shutil.rmtree(CHROMA_PATH)
+            vector_store = Chroma(
+                collection_name="cyber_intel_collection",
+                embedding_function=embeddings_model,
+                persist_directory=str(CHROMA_PATH)
+            )
+        else:
+            raise e
 
     # 3. Load & Process Datasets
     # We load Silver data because it has the raw text content needed for context.
@@ -117,7 +132,17 @@ def run_ingestion():
         batch_size = 100
         for i in tqdm(range(0, len(splits), batch_size), desc="Indexing Chunks"):
             batch = splits[i:i + batch_size]
-            vector_store.add_documents(documents=batch)
+            try:
+                vector_store.add_documents(documents=batch)
+            except Exception as e:
+                logger.error(f"Error adding batch to ChromaDB: {e}")
+                if "compaction" in str(e).lower() or "internal" in str(e).lower():
+                    logger.warning("Internal ChromaDB error during indexing. Aborting batch and suggesting reset.")
+                    # We could auto-reset here, but it's dangerous mid-loop. 
+                    # For now, just raise and let the user know, or we can try to re-init.
+                    raise e
+                else:
+                    raise e
             
         logger.info("✅ Vector Database Successfully Updated!")
     else:

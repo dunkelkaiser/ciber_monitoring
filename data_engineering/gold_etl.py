@@ -253,6 +253,16 @@ class GoldRefiner:
 
         # Merge for Correlation (Fact Table)
         # Outer join to capture days where we have signals but no risk, or vice versa
+        
+        # FIX: Ensure both are Timezone Naive before merge to avoid ValueError
+        if not daily_risk.empty and 'event_date' in daily_risk.columns:
+             if hasattr(daily_risk['event_date'].dt, 'tz_localize'):
+                  daily_risk['event_date'] = daily_risk['event_date'].apply(lambda x: x.replace(tzinfo=None) if pd.notnull(x) else x)
+
+        if not daily_sentiment.empty and 'event_date' in daily_sentiment.columns:
+             if hasattr(daily_sentiment['event_date'].dt, 'tz_localize'):
+                  daily_sentiment['event_date'] = daily_sentiment['event_date'].apply(lambda x: x.replace(tzinfo=None) if pd.notnull(x) else x)
+
         merged = pd.merge(daily_risk, daily_sentiment, on='event_date', how='outer')
         
         # Fill missing values:

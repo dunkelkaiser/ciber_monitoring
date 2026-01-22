@@ -26,11 +26,12 @@ Un nuevo generador de narrativas ha sido integrado en el Dashboard, impulsado po
 - **Trazabilidad**: Cada insight generado guarda el registro de qué modelo lo creó, visible en el Dashboard.
 - **API History**: Endpoint `/api/v1/storytelling-history` expone toda la memoria histórica de insights generados.
 
-#### 🕷️ Web Scraping 2.0 (Selenium)
-Se ha migrado la recolección de datos de Reddit de la API oficial a una solución robusta basada en **Selenium**:
-- **Bypass de Restricciones**: Sortea limitaciones de API y bloqueos básicos mediante navegación pública inteligente.
-- **Fuentes**: Scrapea activamente `r/cybersecurity`, `r/hardware`, `r/intel`, `r/amd`, `r/nvidia`.
-- **Datos**: Extrae discusiones sobre vulnerabilidades y lanzamientos de hardware en tiempo real.
+#### 🕷️ Reddit API Integration (Standby)
+Se ha migrado la recolección de datos de Reddit de Selenium a la **API oficial (PRAW)**:
+- **Estado**: **Standby** (En espera de aprobación de credenciales por parte de Reddit).
+- **Cumplimiento**: El scraper está preparado para operar bajo el framework oficial v3 de Reddit, garantizando estabilidad y respeto a los límites de tráfico.
+- **Fuentes**: `r/cybersecurity`, `r/hardware`, `r/intel`, `r/amd`, `r/nvidia`.
+- **Datos**: Extrae títulos, contenido y metadatos de posts mediante el cliente oficial.
 
 #### Nuevos Scrapers Implementados (Legacy)
 **arXiv Scraper**

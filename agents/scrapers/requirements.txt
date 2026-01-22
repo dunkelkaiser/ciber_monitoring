@@ -10,3 +10,5 @@ tenacity==8.2.3
 fake-useragent==1.4.0
 praw==7.7.1
 arxiv==2.1.0
+selenium==4.16.0
+webdriver-manager==4.0.1

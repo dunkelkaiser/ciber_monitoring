@@ -1333,3 +1333,93 @@ Symbols not available. Dumping unresolved backtrace:
 [2026-01-18 23:52:23,895] [reddit] [INFO] Scraping r/hardware...
 [2026-01-18 23:52:30,049] [reddit] [INFO] Found 53 potential posts in r/hardware
 [2026-01-18 23:52:32,536] [reddit] [INFO] Scrape collected 40 items.
+[2026-01-21 05:19:46,877] [Orchestrator] [INFO] Starting execution of 6 scrapers...
+[2026-01-21 05:19:46,878] [cve_mitre] [INFO] Starting scraper: cve_mitre
+[2026-01-21 05:19:47,985] [cve_mitre] [INFO] Searching for keyword: artificial intelligence
+[2026-01-21 05:19:47,985] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=artificial intelligence
+[2026-01-21 05:19:50,630] [cve_mitre] [INFO] Found 50 results for artificial intelligence
+[2026-01-21 05:19:50,630] [cve_mitre] [INFO] Searching for keyword: GPU
+[2026-01-21 05:19:50,630] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=GPU
+[2026-01-21 05:19:52,184] [cve_mitre] [INFO] Found 50 results for GPU
+[2026-01-21 05:19:52,184] [cve_mitre] [INFO] Searching for keyword: neural network
+[2026-01-21 05:19:52,185] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=neural network
+[2026-01-21 05:19:53,382] [cve_mitre] [INFO] Found 4 results for neural network
+[2026-01-21 05:19:53,383] [cve_mitre] [INFO] Searching for keyword: LLM
+[2026-01-21 05:19:53,383] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=LLM
+[2026-01-21 05:19:54,906] [cve_mitre] [INFO] Found 50 results for LLM
+[2026-01-21 05:19:54,914] [cve_mitre] [INFO] Searching for keyword: machine learning
+[2026-01-21 05:19:54,917] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=machine learning
+[2026-01-21 05:19:56,359] [cve_mitre] [INFO] Found 50 results for machine learning
+[2026-01-21 05:19:56,409] [cve_mitre] [INFO] Saved 204 records to data_engineering/bronze/cve_mitre_raw_2026-01-21T05-19-56.398325.json
+[2026-01-21 05:19:56,541] [cve_mitre] [INFO] Finished scraper: cve_mitre
+[2026-01-21 05:19:56,542] [nvidia] [INFO] Starting scraper: nvidia
+[2026-01-21 05:19:56,822] [nvidia] [INFO] Navigating to https://www.nvidia.com/en-us/research/publications/
+[2026-01-21 05:20:01,868] [nvidia] [INFO] Found 2 potential research items.
+[2026-01-21 05:20:01,918] [nvidia] [INFO] Saved 2 records to data_engineering/bronze/nvidia_raw_2026-01-21T05-20-01.911236.json
+[2026-01-21 05:20:02,063] [nvidia] [INFO] Finished scraper: nvidia
+[2026-01-21 05:20:02,063] [intel] [INFO] Starting scraper: intel
+[2026-01-21 05:20:02,432] [intel] [INFO] Navigating to https://www.intel.com/content/www/us/en/security-center/default.html
+[2026-01-21 05:23:38,773] [intel] [INFO] Saved 969 records to data_engineering/bronze/intel_raw_2026-01-21T05-23-38.743225.json
+[2026-01-21 05:23:38,908] [intel] [INFO] Finished scraper: intel
+[2026-01-21 05:23:38,909] [twitter] [INFO] Starting scraper: twitter
+[2026-01-21 05:23:38,909] [twitter] [WARNING] No Twitter Bearer Token found. Skipping.
+[2026-01-21 05:23:38,909] [twitter] [WARNING] No data to save.
+[2026-01-21 05:23:38,909] [twitter] [INFO] Finished scraper: twitter
+[2026-01-21 05:23:38,910] [openai] [INFO] Starting scraper: openai
+[2026-01-21 05:23:39,240] [openai] [INFO] Navigating to https://openai.com/research
+[2026-01-21 05:23:43,628] [openai] [INFO] Found 19 potential research items.
+[2026-01-21 05:23:43,670] [openai] [INFO] Saved 19 records to data_engineering/bronze/openai_raw_2026-01-21T05-23-43.663320.json
+[2026-01-21 05:23:43,811] [openai] [INFO] Finished scraper: openai
+[2026-01-21 05:23:43,811] [arxiv] [INFO] Starting scraper: arxiv
+[2026-01-21 05:23:43,811] [arxiv] [INFO] Querying arXiv with: (cat:cs.CR OR cat:cs.AI OR cat:cs.LG) AND (all:"LLM" OR all:"security" OR all:"vulnerability" OR all:"adversarial")
+[2026-01-21 05:23:43,812] [arxiv] [INFO] Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CR+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22LLM%22+OR+all%3A%22security%22+OR+all%3A%22vulnerability%22+OR+all%3A%22adversarial%22%29&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100
+[2026-01-21 05:23:46,404] [arxiv] [INFO] Got first page: 100 of 96110 total results
+[2026-01-21 05:23:46,406] [arxiv] [INFO] Collected 50 papers from arXiv.
+[2026-01-21 05:23:46,418] [arxiv] [INFO] Saved 50 records to data_engineering/bronze/arxiv_raw_2026-01-21T05-23-46.408379.json
+[2026-01-21 05:23:46,418] [arxiv] [INFO] Finished scraper: arxiv
+[2026-01-21 05:23:46,419] [Orchestrator] [INFO] Orchestration complete.
+[2026-01-22 02:09:53,158] [Orchestrator] [INFO] Starting execution of 6 scrapers...
+[2026-01-22 02:09:53,159] [cve_mitre] [INFO] Starting scraper: cve_mitre
+[2026-01-22 02:09:54,334] [cve_mitre] [INFO] Searching for keyword: artificial intelligence
+[2026-01-22 02:09:54,335] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=artificial intelligence
+[2026-01-22 02:09:56,900] [cve_mitre] [INFO] Found 50 results for artificial intelligence
+[2026-01-22 02:09:56,901] [cve_mitre] [INFO] Searching for keyword: GPU
+[2026-01-22 02:09:56,901] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=GPU
+[2026-01-22 02:09:58,535] [cve_mitre] [INFO] Found 50 results for GPU
+[2026-01-22 02:09:58,535] [cve_mitre] [INFO] Searching for keyword: neural network
+[2026-01-22 02:09:58,536] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=neural network
+[2026-01-22 02:09:59,630] [cve_mitre] [INFO] Found 4 results for neural network
+[2026-01-22 02:09:59,630] [cve_mitre] [INFO] Searching for keyword: LLM
+[2026-01-22 02:09:59,631] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=LLM
+[2026-01-22 02:10:01,135] [cve_mitre] [INFO] Found 50 results for LLM
+[2026-01-22 02:10:01,136] [cve_mitre] [INFO] Searching for keyword: machine learning
+[2026-01-22 02:10:01,136] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=machine learning
+[2026-01-22 02:10:02,563] [cve_mitre] [INFO] Found 50 results for machine learning
+[2026-01-22 02:10:02,646] [cve_mitre] [INFO] Saved 204 records to data_engineering/bronze/cve_mitre_raw_2026-01-22T02-10-02.627280.json
+[2026-01-22 02:10:02,807] [cve_mitre] [INFO] Finished scraper: cve_mitre
+[2026-01-22 02:10:02,808] [nvidia] [INFO] Starting scraper: nvidia
+[2026-01-22 02:10:03,144] [nvidia] [INFO] Navigating to https://www.nvidia.com/en-us/research/publications/
+[2026-01-22 02:10:07,596] [nvidia] [INFO] Found 2 potential research items.
+[2026-01-22 02:10:07,651] [nvidia] [INFO] Saved 2 records to data_engineering/bronze/nvidia_raw_2026-01-22T02-10-07.636950.json
+[2026-01-22 02:10:07,822] [nvidia] [INFO] Finished scraper: nvidia
+[2026-01-22 02:10:07,822] [intel] [INFO] Starting scraper: intel
+[2026-01-22 02:10:08,222] [intel] [INFO] Navigating to https://www.intel.com/content/www/us/en/security-center/default.html
+[2026-01-22 02:13:40,261] [intel] [INFO] Saved 969 records to data_engineering/bronze/intel_raw_2026-01-22T02-13-40.226708.json
+[2026-01-22 02:13:40,387] [intel] [INFO] Finished scraper: intel
+[2026-01-22 02:13:40,388] [twitter] [INFO] Starting scraper: twitter
+[2026-01-22 02:13:40,388] [twitter] [WARNING] No Twitter Bearer Token found. Skipping.
+[2026-01-22 02:13:40,388] [twitter] [WARNING] No data to save.
+[2026-01-22 02:13:40,388] [twitter] [INFO] Finished scraper: twitter
+[2026-01-22 02:13:40,388] [openai] [INFO] Starting scraper: openai
+[2026-01-22 02:13:40,679] [openai] [INFO] Navigating to https://openai.com/research
+[2026-01-22 02:13:46,682] [openai] [INFO] Found 19 potential research items.
+[2026-01-22 02:13:46,724] [openai] [INFO] Saved 19 records to data_engineering/bronze/openai_raw_2026-01-22T02-13-46.717365.json
+[2026-01-22 02:13:46,846] [openai] [INFO] Finished scraper: openai
+[2026-01-22 02:13:46,847] [arxiv] [INFO] Starting scraper: arxiv
+[2026-01-22 02:13:46,847] [arxiv] [INFO] Querying arXiv with: (cat:cs.CR OR cat:cs.AI OR cat:cs.LG) AND (all:"LLM" OR all:"security" OR all:"vulnerability" OR all:"adversarial")
+[2026-01-22 02:13:46,847] [arxiv] [INFO] Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CR+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22LLM%22+OR+all%3A%22security%22+OR+all%3A%22vulnerability%22+OR+all%3A%22adversarial%22%29&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100
+[2026-01-22 02:13:49,860] [arxiv] [INFO] Got first page: 100 of 96212 total results
+[2026-01-22 02:13:49,862] [arxiv] [INFO] Collected 50 papers from arXiv.
+[2026-01-22 02:13:49,875] [arxiv] [INFO] Saved 50 records to data_engineering/bronze/arxiv_raw_2026-01-22T02-13-49.863350.json
+[2026-01-22 02:13:49,875] [arxiv] [INFO] Finished scraper: arxiv
+[2026-01-22 02:13:49,876] [Orchestrator] [INFO] Orchestration complete.
