@@ -28,7 +28,7 @@ logger = logging.getLogger("GoldETL")
 BASE_DIR = Path(__file__).resolve().parent
 SILVER_DIR = BASE_DIR / "silver"
 GOLD_DIR = BASE_DIR / "gold"
-ENV_PATH = BASE_DIR.parent / "agents" / "scrapers" / ".env"
+ENV_PATH = BASE_DIR.parent / ".env"
 
 # Load Env
 if ENV_PATH.exists():

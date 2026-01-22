@@ -7,8 +7,8 @@ import praw
 from dotenv import load_dotenv
 from base_scraper import BaseScraper
 
-# Load env from local directory
-load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
+# Load env from root directory
+load_dotenv(os.path.join(os.path.dirname(__file__), '..', '..', '.env'))
 
 class RedditScraper(BaseScraper):
     def __init__(self):

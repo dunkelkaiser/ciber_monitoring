@@ -1,0 +1,44 @@
+# Environment Variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# Databases & Data
+data_engineering/bronze/*.json
+data_engineering/silver/*.parquet
+data_engineering/gold/*.parquet
+rag_system/chroma_db_store/
+
+# IDEs
+.vscode/
+.idea/
+
+# Docker
+.docker_temp/
+
+# Log files
+*.log
+login_page_source.html
+scraper_crash.png

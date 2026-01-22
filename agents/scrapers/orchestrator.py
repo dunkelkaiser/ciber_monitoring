@@ -5,7 +5,8 @@ import sys
 from typing import List
 from dotenv import load_dotenv
 
-load_dotenv()
+# Load env from root
+load_dotenv(os.path.join(os.path.dirname(__file__), '..', '..', '.env'))
 
 # Import scrapers
 from cve_mitre_scraper import CVEMitreScraper
