@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue.svg?style=for-the-badge&logo=python&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg?style=for-the-badge&logo=docker&logoColor=white)
-![OpenAI](https://img.shields.io/badge/AI-GPT--5--Nano-green.svg?style=for-the-badge&logo=openai&logoColor=white)
+![Google](https://img.shields.io/badge/AI-Gemini--3--Flash-blue.svg?style=for-the-badge&logo=google&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/API-FastAPI-009688.svg?style=for-the-badge&logo=fastapi&logoColor=white)
 
 > **Diplomado IA y TA | Módulo 4: Proyecto Integrador**
@@ -11,37 +11,27 @@
 
 ---
 
-## 📖 Visión General
-**CiberMonitoring** fusiona Big Data, Web Scraping y Modelos de Lenguaje (LLMs) para crear un **Dashboard de Defensa Proactiva**. El sistema monitorea continuamente el "estado del arte" en IA (Papers de NVIDIA/OpenAI) y lo cruza con vulnerabilidades emergentes (CVEs), permitiendo a los analistas visualizar el riesgo de adoptar nuevas tecnologías antes de que sea crítico.
+## 📑 Resumen Ejecutivo
+
+**CiberMonitoring** es una plataforma integral de inteligencia de amenazas diseñada para monitorear el "borde tecnológico" (Edge-tech). El sistema automatiza la recolección de datos de fuentes de alta fidelidad como NVIDIA Research, OpenAI y ArXiv, cruzándolos con avisos de vulnerabilidad (CVE) y señales sociales (Hacker News, Twitter). 
+
+A través de un pipeline de datos robusto cargado en **Docker**, el proyecto transforma datos crudos en KPIs accionables (Innovation Score, Risk Index) y ofrece una interfaz conversacional inteligente que permite a analistas consultar el estado del ecosistema mediante lenguaje natural.
 
 ---
 
-## Actualizaciones Recientes
+## 🚀 Actualizaciones y Hitos Recientes
 
-### 2026-01-19 - Multi-Modelo y Web Scraping 2.0
+### 🧠 Multi-Model AI Storytelling (Resiliencia Extrema)
+Se ha implementado una arquitectura de **relevo automático de modelos**. El generador de narrativas intenta procesar insights con **Gemini 3 Flash**, con fallback automático a **GPT-5 Nano** y **Claude Haiku** en caso de latencia o errores, garantizando disponibilidad 24/7.
 
-#### 🧠 Multi-Model AI Storytelling
-Un nuevo generador de narrativas ha sido integrado en el Dashboard, impulsado por una arquitectura de **relevo de modelos** para máxima resiliencia:
-- **Flujo de Trabajo**: Intenta generar insights con **Gemini 3 Flash**, si falla recurre a **OpenAI GPT-5**, y finalmente a **Claude Haiku**.
-- **Trazabilidad**: Cada insight generado guarda el registro de qué modelo lo creó, visible en el Dashboard.
-- **API History**: Endpoint `/api/v1/storytelling-history` expone toda la memoria histórica de insights generados.
+### ⚡ Optimización Masiva de ETL
+El pipeline Gold ha sido optimizado mediante **paralelismo (Threading)**. El procesamiento de cientos de registros con IA pasó de ~15 minutos a menos de 2 minutos, aprovechando al máximo la capacidad de cómputo del sistema y mejorando el manejo de errores de parsing.
 
-#### 🕷️ Reddit API Integration (Standby)
-Se ha migrado la recolección de datos de Reddit de Selenium a la **API oficial (PRAW)**:
-- **Estado**: **Standby** (En espera de aprobación de credenciales por parte de Reddit).
-- **Cumplimiento**: El scraper está preparado para operar bajo el framework oficial v3 de Reddit, garantizando estabilidad y respeto a los límites de tráfico.
-- **Fuentes**: `r/cybersecurity`, `r/hardware`, `r/intel`, `r/amd`, `r/nvidia`.
-- **Datos**: Extrae títulos, contenido y metadatos de posts mediante el cliente oficial.
+### 🔄 Evolución de Fuentes Sociales
+Sustitución estratégica de Reddit por **Hacker News API** para garantizar estabilidad en el despliegue Docker, eliminando dependencias pesadas de navegadores (Selenium) y mejorando la calidad de las señales técnicas recolectadas.
 
-#### Nuevos Scrapers Implementados (Legacy)
-**arXiv Scraper**
-- Descripción: Recolecta papers académicos de categorías de Ciencias de la Computación (AI, Criptografía).
-- Fuente de datos: arXiv API
-- Datos capturados: Título, abstract, autores, URL PDF, fecha de publicación, fecha de recolección.
-
-#### Mejoras en Sistema de Fechas
-- Todos los scrapers normalizan a UTC ISO 8601.
-- Pipeline Silver unifica fuentes heterogéneas (Tweets, Posts, Papers).
+### 🔐 Seguridad y Centralización
+Migración de secretos a una gestión centralizada mediante `.env` fuera del repositorio y configuración profesional de `.gitignore` para proteger credenciales.
 
 ---
 
@@ -49,96 +39,63 @@ Se ha migrado la recolección de datos de Reddit de Selenium a la **API oficial 
 
 ```mermaid
 graph TD
-    subgraph Ingesta_Automatizada ["🕵️ 1. Ingesta (Browsers Autónomos)"]
+    subgraph Ingesta_Automatizada ["🕵️ 1. Ingesta (Browsers & APIs)"]
         direction TB
-        A[NVIDIA Research] & B[OpenAI Blog] -->|Playwright| C[Bronze: Raw JSON]
-        D[CVE Mitre] & E[Twitter/X] -->|APIs| C
+        A[NVIDIA / OpenAI] & B[Hacker News / ArXiv] -->|Clean Ingestion| C[Bronze: Raw JSON]
+        D[CVE Mitre / Intel] -->|Security Data| C
     end
 
-    subgraph Procesamiento_Datos ["⚙️ 2. ETL & IA (Bronze → Gold)"]
-        C --> F[Silver ETL: Limpieza/Validación]
-        F --> G[Gold ETL: Feature Eng.]
-        G -->|GPT-5-Nano| H[Tech Edge Score]
+    subgraph Procesamiento_IA ["⚙️ 2. Pipeline ETL (Threading)"]
+        C --> F[Silver ETL: Normalización]
+        F --> G[Gold ETL: Refinamiento]
+        G -->|GPT-Scoring| H[Tech Edge Score]
         G -->|Time Series| I[Vulnerability Index]
-        G -->|Correlation| J[Social Risk Matrix]
+        G --> J[Social Sentiment Matrix]
     end
 
-    subgraph Capa_Servicios ["🚀 3. Servicios & Consumo"]
+    subgraph Capa_Servicios ["🚀 3. Interfaz y Consumo"]
         H & I & J --> K[FastAPI Gateway]
-        F --> L[RAG Vector Store]
-        L --> M[Asistente IA]
+        F --> L[ChromaDB Vector Store]
+        M[🤖 Chatbot Assistant] -->|1. Query Metrics| K
+        M -->|2. Context Retrieval| L
         K --> N[📊 Power BI Dashboard]
     end
 ```
 
 ---
 
-## 🚀 Despliegue con Docker
+## 🏗️ Despliegue con Docker
 
-El proyecto está contenerizado para un despliegue rápido y consistente.
+El proyecto está contenerizado para un despliegue rápido.
 
 ### 1. Configuración
-Asegúrate de tener un archivo `.env` en la raíz (puedes copiar el de `agents/scrapers/.env`):
-```env
-OPENAI_API_KEY=sk-...
-TWITTER_BEARER_TOKEN=...
-```
+Crea un archivo `.env` en la raíz con tus llaves correspondientes.
 
-### 2. Iniciar Servicios (API)
-Para levantar la API Gateway (Backend del Dashboard):
-```bash
-docker-compose up -d api
-```
-*   **API URL**: `http://localhost:8000`
-*   **Documentación**: `http://localhost:8000/docs`
-
-### 3. Ejecutar Pipeline de Ingesta (Batch)
-Para disparar los scrapers y actualizar todas las bases de datos (ETL + Vector Store):
+### 2. Ejecutar Pipeline de Ingesta (Batch)
 ```bash
 docker-compose --profile ingest up
 ```
-*Esto ejecutará secuencialmente: Scrapers -> Limpieza -> Análisis GPT-5 -> Indexación Vectorial.*
+*Esto ejecutará secuencialmente: Scrapers -> Limpieza -> Análisis IA -> Indexación Vectorial.*
+
+### 3. Iniciar Chatbot e Interfaz (Gradio)
+```bash
+docker-compose up chatbot
+```
 
 ---
 
 ## 🧩 Módulos del Proyecto
 
-| Módulo | Descripción | Tecnologías |
+| Módulo | Función | Tecnología |
 | :--- | :--- | :--- |
-| **`agents/scrapers`** | Flota de robots que navegan webs dinámicas y APIs. | Playwright, AsyncIO |
-| **`data_engineering`** | Pipelines Bronze/Silver/Gold con validación de calidad. | Pandas, Great Expectations |
-| **`api_gateway`** | API REST que sirve los KPIs calculados a Power BI. | FastAPI, Uvicorn |
-| **`rag_system`** | Base de conocimiento vectorial para búsquedas semánticas. | LangChain, ChromaDB |
+| **`agents/scrapers`** | Recolección autónoma de datos. | Python, Playwright, Requests |
+| **`data_engineering`** | Pipeline de limpieza y métricas Gold. | Pandas, Threading, OpenAI API |
+| **`api_gateway`** | Backend que sirve KPIs en tiempo real. | FastAPI, JSON |
+| **`rag_system`** | Inteligencia semántica y vectores. | LangChain, ChromaDB |
 
 ---
 
-## 📊 Integración con Power BI
+## 🏛️ Créditos Académicos
+Este proyecto fue desarrollado íntegramente para el **Diplomado en Inteligencia Artificial y Tecnologías Avanzadas** de la **Facultad de Ingeniería / Ciencias de la Computación** de la **Universidad Autónoma de San Luis Potosí (UASLP)**.
 
-Para conectar Power BI a la plataforma:
-1.  Abrir Power BI Desktop.
-2.  Seleccionar **Inportar datos desde Web**.
-3.  Usar los endpoints de la API:
-    *   **Innovation Score**: `http://localhost:8000/api/v1/tech-edge-score`
-    *   **Risk Index**: `http://localhost:8000/api/v1/vulnerability-index`
-    *   **Correlations**: `http://localhost:8000/api/v1/correlation/matrix`
-
----
-
-## 🤖 Asistente Conversacional (Gemma 3)
-
-El proyecto incluye una interfaz de chat avanzada potenciada por **Gemma 3 (4B)** y Gradio.
-
-### Capacidades
-*   **RAG (Retrieval Augmented Generation)**: Consulta la base de conocimiento local (ChromaDB).
-*   **Uso de Herramientas (Tool Use)**: El agente puede consultar dinámicamente la API para obtener métricas en tiempo real (Tech Edge Score, Risk Index).
-*   **Interfaz Personalizada**: Diseño CSS adaptado para modo Dark/Light profesional.
-
-### Ejecución
-```bash
-cd gradio_assistant
-python app.py
-```
-Acceso: `http://localhost:7860`
-
----
 *Desarrollado para la Excelencia en Ciberinteligencia.*

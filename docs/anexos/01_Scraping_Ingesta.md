@@ -20,7 +20,7 @@ El módulo de ingesta (`agents/scrapers`) es responsable de la recolección aut�
 | **CVEMitreScraper** | CVE Mitre / NIST | Playwright (Search) | Diario | CVE ID, descripción, severidad. |
 | **IntelScraper** | Intel Security | Playwright (DOM) | Diario | Advisories, parches. |
 | **TwitterScraper** | Twitter/X API | API (Tweepy) | Tiempo Real | Discusión social, tendencias. |
-| **RedditScraper** | Reddit API | API (PRAW) [Standby] | Diario | Posts, comentarios, sentimiento. |
+| **HackerNewsScraper** | Hacker News | API (Firebase) | Diario | Tech trends, security discussions. |
 | **ArxivScraper** | arXiv.org | API (xml) | Semanal | Papers académicos (CS, AI, Crypto). |
 
 ---
@@ -28,14 +28,14 @@ El módulo de ingesta (`agents/scrapers`) es responsable de la recolección aut�
 ## 3. Estrategias de Implementación
 
 ### 3.1 Manejo de Sesiones y Bloqueos
-- **User-Agent Rotation**: Se utiliza `fake-useragent` para rotar identidades en cada petición.
-- **Rate Limiting**: Implementado en la clase base `BaseScraper`. Esperas aleatorias entre peticiones (1-3s) para evitar detección.
-- **Retry Logic**: Decoradores de `tenacity` para reintentar fallos de red (3 intentos con backoff exponencial).
+- **User-Agent Rotation**: Se utiliza `fake-useragent` para rotar identidades en cada petición (en scrapers basados en DOM).
+- **Rate Limiting**: Implementado en la clase base `BaseScraper`. Esperas aleatorias entre peticiones para evitar detección.
+- **REST APIs**: Para Hacker News y arXiv, se utilizan los endpoints oficiales de solo lectura.
 
 ### 3.2 Estandarización de Fechas
 Todos los scrapers normalizan el tiempo a UTC ISO 8601:
-- `published_date`: Fecha de creación del contenido en la fuente. Si no existe, "UNKNOWN".
-- `scraped_date`: `datetime.utcnow().isoformat() + "Z"`.
+- `published_date`: Fecha de creación del contenido en la fuente.
+- `scraped_date`: Marca temporal de ingesta.
 
 ---
 
@@ -46,10 +46,10 @@ El script `orchestrator.py` gestiona el ciclo de vida de los scrapers.
 ### Comandos Docker
 ```bash
 # Ejecutar TODO el pipeline de ingesta
-docker-compose run scrapers python agents/scrapers/orchestrator.py --scraper all
+docker-compose --profile ingest up
 
 # Ejecutar un scraper específico
-docker-compose run scrapers python agents/scrapers/orchestrator.py --scraper reddit
+docker-compose run scrapers python agents/scrapers/orchestrator.py --scraper hacker_news
 docker-compose run scrapers python agents/scrapers/orchestrator.py --scraper arxiv
 ```
 
