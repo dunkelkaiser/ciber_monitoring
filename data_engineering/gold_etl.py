@@ -8,6 +8,8 @@ from textblob import TextBlob
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import MinMaxScaler
 import statsmodels.api as sm
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import re
 
 # Optional API imports
 try:
@@ -159,12 +161,24 @@ class GoldRefiner:
         # We sum tfidf scores as a proxy for "information density"
         df['complexity_score'] = np.asarray(tfidf_matrix.sum(axis=1)).flatten()
         
-        # 2. LLM Analysis (Ollama/OpenAI) for "Edge" scoring
-        # If API key exists, we call it. Else we simulate.
-        scores = []
-        for title in df['title']:
-            score = self.query_llm_for_score(title)
-            scores.append(score)
+        # 2. Parallel LLM Analysis for "Edge" scoring
+        logger.info(f"Processing {len(df)} titles with LLM in parallel...")
+        
+        # Limit workers to avoid hitting rate limits too fast (adjust as needed)
+        max_workers = 10 
+        scores = [5.0] * len(df) # Default values
+        
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # Create a mapping of future to index
+            future_to_idx = {executor.submit(self.query_llm_for_score, title): i for i, title in enumerate(df['title'])}
+            
+            for future in as_completed(future_to_idx):
+                idx = future_to_idx[future]
+                try:
+                    scores[idx] = future.result()
+                except Exception as e:
+                    logger.error(f"Future for index {idx} failed: {e}")
+                    scores[idx] = 5.0
         
         df['ai_innovation_score'] = scores
         
@@ -191,10 +205,16 @@ class GoldRefiner:
                     ],
                     max_completion_tokens=50
                 )
-                score_str = response.choices[0].message.content.strip()
-                return float(score_str)
+                score_raw = response.choices[0].message.content.strip()
+                # Robust parsing: extract the first number found in the string
+                match = re.search(r"(\d+\.?\d*)", score_raw)
+                if match:
+                    return float(match.group(1))
+                else:
+                    logger.warning(f"No numeric value found in LLM response: '{score_raw}'. Falling back to 5.0")
+                    return 5.0
             except Exception as e:
-                logger.warning(f"OpenAI Call failed: {e}. using fallback.")
+                logger.warning(f"OpenAI Call failed for '{text[:50]}...': {e}. Using fallback 5.0")
                 return 5.0
         else:
             # Fallback / "Ollama" local logic simulation
