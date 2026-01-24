@@ -233,28 +233,35 @@ class GoldRefiner:
              logger.warning("No 'created_at' in social data, using asof_date for event_date.")
              social_df['event_date'] = pd.to_datetime(self.timestamp).floor('D')
              
-        # Aggregate Social: Daily Average Sentiment
+        # Aggregate Social: Daily Average Sentiment and Volume per Platform (Ticket 5)
+        # We group by event_date AND platform
+        platform_metrics = social_df.groupby(['event_date', 'platform']).agg({
+            'sentiment': 'mean',
+            'text': 'count'
+        }).reset_index()
+        platform_metrics.rename(columns={'sentiment': 'avg_sentiment', 'text': 'volume'}, inplace=True)
+        
+        # Add asof_date for tracking
+        platform_metrics['asof_date'] = pd.to_datetime(self.timestamp).floor('D')
+        
+        # Save historical social metrics
+        self.save_gold(platform_metrics, "gold_social_metrics_daily", subset=['event_date', 'platform'])
+        
+        # Aggregate Social: Daily Global Average Sentiment for Correlation
         daily_sentiment = social_df.groupby('event_date')['sentiment'].mean().reset_index(name='avg_sentiment')
         
         # Aggregate Risk: Daily Total Risk
         if vuln_df is None or vuln_df.empty:
              logger.warning("No Risk Data (vuln_df) provided for correlation.")
-             # We can still save social part if needed, but correlation requires both.
-             # Create empty structure for merge
              daily_risk = pd.DataFrame(columns=['event_date', 'days_risk_score_total'])
         else:
-             # vuln_df comes from create_vulnerability_index (Ticket 2), has 'event_date' and 'days_risk_score'
-             # We want total risk per day across all entities
              if 'event_date' in vuln_df.columns and 'days_risk_score' in vuln_df.columns:
                   daily_risk = vuln_df.groupby('event_date')['days_risk_score'].sum().reset_index(name='days_risk_score_total')
              else:
                   logger.warning("vuln_df missing expected columns.")
                   daily_risk = pd.DataFrame(columns=['event_date', 'days_risk_score_total'])
 
-        # Merge for Correlation (Fact Table)
-        # Outer join to capture days where we have signals but no risk, or vice versa
-        
-        # FIX: Ensure both are Timezone Naive before merge to avoid ValueError
+        # FIX: Ensure both are Timezone Naive before merge
         if not daily_risk.empty and 'event_date' in daily_risk.columns:
              if hasattr(daily_risk['event_date'].dt, 'tz_localize'):
                   daily_risk['event_date'] = daily_risk['event_date'].apply(lambda x: x.replace(tzinfo=None) if pd.notnull(x) else x)
@@ -265,23 +272,15 @@ class GoldRefiner:
 
         merged = pd.merge(daily_risk, daily_sentiment, on='event_date', how='outer')
         
-        # Fill missing values:
-        # If no risk data for a date, risk score is 0
         merged['days_risk_score_total'] = merged['days_risk_score_total'].fillna(0)
-        # If no sentiment data, average sentiment is 0 (neutral) or keep NaN? 
-        # For correlation, NaN is usually ignored. For dashboard, 0 is safer.
         merged['avg_sentiment'] = merged['avg_sentiment'].fillna(0)
-        
-        # Add Metadata
         merged['asof_date'] = pd.to_datetime(self.timestamp).floor('D')
         
         if not merged.empty:
+             # Calculate correlation between global sentiment and risk
              corr_matrix = merged[['days_risk_score_total', 'avg_sentiment']].corr()
+             self.save_gold(merged, "gold_fact_risk_sentiment_daily", subset=['event_date'])
              
-             # Save the aggregated daily time series (Fact Table)
-             self.save_gold(merged, "gold_fact_risk_sentiment_daily")
-             
-             # Save the matrix summary
              correlation_summary = pd.DataFrame(corr_matrix).reset_index()
              self.save_gold(correlation_summary, "gold_correlation_values")
         else:

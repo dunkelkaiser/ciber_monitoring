@@ -2,6 +2,7 @@ import asyncio
 import argparse
 import logging
 import sys
+import os
 from typing import List
 from dotenv import load_dotenv
 
@@ -14,7 +15,7 @@ from nvidia_scraper import NVIDIAScraper
 from intel_scraper import IntelScraper
 from twitter_scraper import TwitterScraper
 from openai_blog_scraper import OpenAIScraper
-from reddit_scraper import RedditScraper
+from hacker_news_scraper import HackerNewsScraper
 from arxiv_scraper import ArxivScraper
 
 # Configure logging
@@ -44,7 +45,7 @@ async def main():
         "intel": IntelScraper,
         "twitter": TwitterScraper,
         "openai": OpenAIScraper,
-        "reddit": RedditScraper,
+        "hacker_news": HackerNewsScraper,
         "arxiv": ArxivScraper
     }
     

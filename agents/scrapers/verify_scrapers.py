@@ -2,7 +2,7 @@ import asyncio
 import logging
 import sys
 from arxiv_scraper import ArxivScraper
-from reddit_scraper import RedditScraper
+from hacker_news_scraper import HackerNewsScraper
 
 # Setup simple logging
 logging.basicConfig(level=logging.INFO)
@@ -33,31 +33,29 @@ async def test_arxiv():
     logger.info(f"✅ Arxiv Scraper passed. Got {len(results)} items. Sample Date: {first['published_date']}")
     return True
 
-async def test_reddit_structure():
-    logger.info("Testing RedditScraper instantiation...")
+async def test_hn_structure():
+    logger.info("Testing HackerNewsScraper...")
     try:
-        scraper = RedditScraper()
-        # We expect this to run but return empty list if no creds, OR throw warning.
-        # We won't call scrape() fully if we know it fails without creds, 
-        # but let's try and catch the warning/empty return.
+        scraper = HackerNewsScraper()
+        # HN uses public API, so we can actually test a small scrape
+        results = await scraper.scrape()
         
-        # Inject dummy creds to test logic if logic doesn't validate strictly immediately
-        scraper.client_id = "fake"
-        scraper.client_secret = "fake"
-        
-        # This will likely fail connection or auth
-        # But we want to ensure the CODE is valid (imports, class structure)
-        logger.info("✅ RedditScraper instantiated successfully.")
+        if not results:
+            logger.warning("⚠️ HackerNews returned no results (might be no current relevant news).")
+            # We count it as pass if NO ERROR occurs
+            return True
+            
+        logger.info(f"✅ HackerNewsScraper passed. Got {len(results)} items.")
         return True
     except Exception as e:
-        logger.error(f"❌ RedditScraper instantiation failed: {e}")
+        logger.error(f"❌ HackerNewsScraper failed: {e}")
         return False
 
 async def main():
     pass_arxiv = await test_arxiv()
-    pass_reddit = await test_reddit_structure()
+    pass_hn = await test_hn_structure()
     
-    if pass_arxiv and pass_reddit:
+    if pass_arxiv and pass_hn:
         logger.info("🎉 All verification tests passed!")
         sys.exit(0)
     else:

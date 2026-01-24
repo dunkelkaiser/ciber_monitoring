@@ -1423,3 +1423,6 @@ Symbols not available. Dumping unresolved backtrace:
 [2026-01-22 02:13:49,875] [arxiv] [INFO] Saved 50 records to data_engineering/bronze/arxiv_raw_2026-01-22T02-13-49.863350.json
 [2026-01-22 02:13:49,875] [arxiv] [INFO] Finished scraper: arxiv
 [2026-01-22 02:13:49,876] [Orchestrator] [INFO] Orchestration complete.
+[2026-01-22 23:53:24,222] [hacker_news] [INFO] Fetching Hacker News Top Stories IDs...
+[2026-01-22 23:53:25,186] [hacker_news] [INFO] Retrieved 100 top story IDs. Fetching details...
+[2026-01-22 23:53:32,057] [hacker_news] [INFO] Filtered 21 relevant items from Hacker News.

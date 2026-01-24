@@ -189,34 +189,36 @@ class SilverCleaner:
 
         self.validate_and_save(vuln_df, "vuln_suite", "silver_vulnerabilities", vuln_expectations)
 
-        # 3. Pipeline: Social Signals (Twitter + Reddit)
+        # 3. Pipeline: Social Signals (Twitter + HackerNews)
         logger.info("--- Processing SOCIAL Schema ---")
         twitter_df = self.load_bronze_files("twitter")
-        reddit_df = self.load_bronze_files("reddit")
+        hn_df = self.load_bronze_files("hacker_news")
         
         social_dfs = []
 
         if not twitter_df.empty:
             twitter_df['source_entity'] = 'Twitter'
-            social_dfs.append(twitter_df)
-        
-        if not reddit_df.empty:
-            reddit_df['source_entity'] = 'Reddit'
-            # Map Reddit: {title, selftext, created_utc, url} -> {text, created_at, link}
-            if 'selftext' in reddit_df.columns:
-                # fillna('') is important for concating strings
-                reddit_df['text'] = reddit_df['title'].fillna('') + " " + reddit_df['selftext'].fillna('')
-            elif 'title' in reddit_df.columns:
-                reddit_df['text'] = reddit_df['title']
+            twitter_df['platform'] = 'Twitter'
+            # Standardize for Twitter if needed
+            if 'text' not in twitter_df.columns and 'full_text' in twitter_df.columns:
+                 twitter_df.rename(columns={'full_text': 'text'}, inplace=True)
             
-            if 'created_utc' in reddit_df.columns:
-                # Convert UTC timestamp to datetime
-                reddit_df['created_at'] = pd.to_datetime(reddit_df['created_utc'], unit='s', errors='coerce')
-            
-            if 'url' in reddit_df.columns:
-                 reddit_df.rename(columns={'url': 'link'}, inplace=True)
+            # For engagement_score, use metrics if available
+            twitter_df['engagement_score'] = 0
+            if 'public_metrics.retweet_count' in twitter_df.columns:
+                 twitter_df['engagement_score'] = twitter_df['public_metrics.retweet_count'].fillna(0)
 
-            social_dfs.append(reddit_df)
+            social_dfs.append(twitter_df[['text', 'created_at', 'platform', 'source_entity', 'engagement_score']])
+        
+        if not hn_df.empty:
+            hn_df['source_entity'] = 'HackerNews'
+            hn_df['platform'] = 'HackerNews'
+            
+            # Map HN: {title, text, created_at, score} -> {text, created_at, engagement_score}
+            hn_df['combined_text'] = hn_df['title'].fillna('') + " " + hn_df['text'].fillna('')
+            hn_df.rename(columns={'combined_text': 'text', 'score': 'engagement_score'}, inplace=True)
+            
+            social_dfs.append(hn_df[['text', 'created_at', 'platform', 'source_entity', 'engagement_score']])
 
         if social_dfs:
             social_df = pd.concat(social_dfs, ignore_index=True)
@@ -224,10 +226,14 @@ class SilverCleaner:
             social_df = pd.DataFrame()
 
         if not social_df.empty:
+            # Ensure created_at is datetime
+            social_df['created_at'] = pd.to_datetime(social_df['created_at'], errors='coerce')
+            
             social_expectations = [
-                 {'method': 'expect_column_values_to_not_be_null', 'kwargs': {'column': 'text'}}
+                 {'method': 'expect_column_values_to_not_be_null', 'kwargs': {'column': 'text'}},
+                 {'method': 'expect_column_to_exist', 'kwargs': {'column': 'platform'}}
             ]
-            self.validate_and_save(twitter_df, "social_suite", "silver_social_signals", social_expectations)
+            self.validate_and_save(social_df, "social_suite", "silver_social_signals", social_expectations)
 
 if __name__ == "__main__":
     cleaner = SilverCleaner()
