@@ -279,8 +279,8 @@
       6
     ],
     "memory": {
-      "bytes": 2037,
-      "human": "1.99 KB"
+      "bytes": 3030,
+      "human": "2.96 KB"
     },
     "columns": [
       "date",
@@ -305,7 +305,7 @@
         "risk_value": 0,
         "innovation_value": 0,
         "run_id": 0,
-        "model_used": 3
+        "model_used": 2
       },
       "pct": {
         "date": 0.0,
@@ -313,7 +313,7 @@
         "risk_value": 0.0,
         "innovation_value": 0.0,
         "run_id": 0.0,
-        "model_used": 75.0
+        "model_used": 50.0
       }
     },
     "duplicates_rows": {
@@ -326,7 +326,7 @@
       "risk_value": 3,
       "innovation_value": 2,
       "run_id": 4,
-      "model_used": 1
+      "model_used": 2
     },
     "date_columns_detected": [
       "date"

@@ -187,7 +187,37 @@ class GoldRefiner:
         df[['ai_innovation_score', 'complexity_score']] = scaler.fit_transform(df[['ai_innovation_score', 'complexity_score']])
         
         df['tech_edge_total'] = (df['ai_innovation_score'] + df['complexity_score']) / 2
-        
+
+        # Tratar fechas faltantes
+        for idx, value in enumerate(df['run_ts']):
+            if value == "NaT":
+                # Expresión regular para capturar el formato "Mes día, año"
+                patron = r'([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})'
+
+                # Buscar la fecha en el texto
+                fecha_title = df['title'].iloc[idx]
+                match = re.search(patron, fecha_title)
+
+                if match:
+                    # Extraer los grupos capturados
+                    mes_str = match.group(1)  # 'Dec'
+                    dia = match.group(2)       # '11'
+                    año = match.group(3)       # '2025'
+                    
+                    # Construir la fecha completa
+                    fecha_str = f"{mes_str} {dia}, {año}"
+                    
+                    # Convertir a objeto datetime
+                    fecha_objeto = datetime.strptime(fecha_str, "%b %d, %Y")
+                    
+                    # Formatear al formato deseado YYYY-MM-DD
+                    fecha_formateada = fecha_objeto.strftime("%Y-%m-%d")
+                    
+                else:
+                    fecha_formateada = "2026-01-12"
+
+                    df.at[idx, 'run_ts'] = fecha_formateada
+
         self.save_gold(df, "gold_tech_edge_score")
         return df
 
