@@ -14,15 +14,17 @@ graph TD
 
 ## 2. Silver ETL: Limpieza y Validación
 
-**Script**: `data_engineering/silver_etl.py`
+**Script**: `data_engineering/cleaner_etl.py` (anteriormente `silver_etl.py`)
 
 ### Funciones Principales
-1.  **Normalización**: Aplana estructuras JSON anidadas (ej. respuestas de API de Reddit) en DataFrames tabulares.
-2.  **Validación de Calidad**:
+1.  **Limpieza de HTML**: Eliminación de etiquetas y normalización de texto.
+2.  **Estandarización de Fechas**: Conversión a ISO-8601 (UTC).
+3.  **Unificación**: Consolidación de señales sociales.
+4.  **Validación de Calidad**:
     *   Usa **Great Expectations** para aplicar reglas de negocio.
     *   *Regla*: `expect_column_values_to_not_be_null` en campos críticos (`title`, `url`).
     *   *Regla*: `expect_column_values_to_match_regex` para validar formatos de links.
-3.  **Persistencia**: Guarda particiones Parquet optimizadas para lectura.
+5.  **Persistencia**: Guarda particiones Parquet optimizadas para lectura.
 
 ## 3. Gold ETL: Ingeniería de Características
 

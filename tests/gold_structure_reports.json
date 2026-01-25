@@ -1,0 +1,688 @@
+{
+  "gold_correlation_matrix_data.parquet": {
+    "dataset": "gold_correlation_matrix_data.parquet",
+    "shape": [
+      1,
+      3
+    ],
+    "memory": {
+      "bytes": 207,
+      "human": "207.00 B"
+    },
+    "columns": [
+      "date",
+      "days_risk_score",
+      "avg_sentiment"
+    ],
+    "dtypes": {
+      "date": "object",
+      "days_risk_score": "int64",
+      "avg_sentiment": "float64"
+    },
+    "nulls": {
+      "count": {
+        "date": 0,
+        "days_risk_score": 0,
+        "avg_sentiment": 0
+      },
+      "pct": {
+        "date": 0.0,
+        "days_risk_score": 0.0,
+        "avg_sentiment": 0.0
+      }
+    },
+    "duplicates_rows": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "nunique": {
+      "date": 1,
+      "days_risk_score": 1,
+      "avg_sentiment": 1
+    },
+    "date_columns_detected": [
+      "date",
+      "avg_sentiment"
+    ],
+    "date_conversions_applied": {},
+    "numeric_columns": [
+      "days_risk_score",
+      "avg_sentiment"
+    ],
+    "categorical_columns": [
+      "date"
+    ]
+  },
+  "gold_correlation_values.parquet": {
+    "dataset": "gold_correlation_values.parquet",
+    "shape": [
+      28,
+      6
+    ],
+    "memory": {
+      "bytes": 5184,
+      "human": "5.06 KB"
+    },
+    "columns": [
+      "index",
+      "days_risk_score",
+      "avg_sentiment",
+      "days_risk_score_total",
+      "run_id",
+      "run_ts"
+    ],
+    "dtypes": {
+      "index": "object",
+      "days_risk_score": "float64",
+      "avg_sentiment": "float64",
+      "days_risk_score_total": "float64",
+      "run_id": "object",
+      "run_ts": "datetime64[us]"
+    },
+    "nulls": {
+      "count": {
+        "index": 0,
+        "days_risk_score": 28,
+        "avg_sentiment": 2,
+        "days_risk_score_total": 2,
+        "run_id": 0,
+        "run_ts": 2
+      },
+      "pct": {
+        "index": 0.0,
+        "days_risk_score": 100.0,
+        "avg_sentiment": 7.14,
+        "days_risk_score_total": 7.14,
+        "run_id": 0.0,
+        "run_ts": 7.14
+      }
+    },
+    "duplicates_rows": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "nunique": {
+      "index": 3,
+      "days_risk_score": 0,
+      "avg_sentiment": 5,
+      "days_risk_score_total": 5,
+      "run_id": 14,
+      "run_ts": 13
+    },
+    "date_columns_detected": [
+      "avg_sentiment",
+      "run_ts"
+    ],
+    "date_conversions_applied": {},
+    "numeric_columns": [
+      "days_risk_score",
+      "avg_sentiment",
+      "days_risk_score_total"
+    ],
+    "categorical_columns": [
+      "index",
+      "run_id"
+    ]
+  },
+  "gold_fact_risk_sentiment_daily.parquet": {
+    "dataset": "gold_fact_risk_sentiment_daily.parquet",
+    "shape": [
+      235,
+      6
+    ],
+    "memory": {
+      "bytes": 29507,
+      "human": "28.82 KB"
+    },
+    "columns": [
+      "event_date",
+      "days_risk_score_total",
+      "avg_sentiment",
+      "asof_date",
+      "run_id",
+      "run_ts"
+    ],
+    "dtypes": {
+      "event_date": "datetime64[ns]",
+      "days_risk_score_total": "float64",
+      "avg_sentiment": "float64",
+      "asof_date": "datetime64[ns]",
+      "run_id": "object",
+      "run_ts": "datetime64[us]"
+    },
+    "nulls": {
+      "count": {
+        "event_date": 0,
+        "days_risk_score_total": 0,
+        "avg_sentiment": 0,
+        "asof_date": 0,
+        "run_id": 0,
+        "run_ts": 0
+      },
+      "pct": {
+        "event_date": 0.0,
+        "days_risk_score_total": 0.0,
+        "avg_sentiment": 0.0,
+        "asof_date": 0.0,
+        "run_id": 0.0,
+        "run_ts": 0.0
+      }
+    },
+    "duplicates_rows": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "nunique": {
+      "event_date": 235,
+      "days_risk_score_total": 34,
+      "avg_sentiment": 7,
+      "asof_date": 6,
+      "run_id": 6,
+      "run_ts": 6
+    },
+    "date_columns_detected": [
+      "event_date",
+      "avg_sentiment",
+      "asof_date",
+      "run_ts"
+    ],
+    "date_conversions_applied": {},
+    "numeric_columns": [
+      "days_risk_score_total",
+      "avg_sentiment"
+    ],
+    "categorical_columns": [
+      "run_id"
+    ]
+  },
+  "gold_social_metrics_daily.parquet": {
+    "dataset": "gold_social_metrics_daily.parquet",
+    "shape": [
+      4,
+      7
+    ],
+    "memory": {
+      "bytes": 840,
+      "human": "840.00 B"
+    },
+    "columns": [
+      "event_date",
+      "platform",
+      "avg_sentiment",
+      "volume",
+      "asof_date",
+      "run_id",
+      "run_ts"
+    ],
+    "dtypes": {
+      "event_date": "datetime64[ns, UTC]",
+      "platform": "object",
+      "avg_sentiment": "float64",
+      "volume": "int64",
+      "asof_date": "datetime64[ns]",
+      "run_id": "object",
+      "run_ts": "datetime64[us]"
+    },
+    "nulls": {
+      "count": {
+        "event_date": 0,
+        "platform": 0,
+        "avg_sentiment": 0,
+        "volume": 0,
+        "asof_date": 0,
+        "run_id": 0,
+        "run_ts": 0
+      },
+      "pct": {
+        "event_date": 0.0,
+        "platform": 0.0,
+        "avg_sentiment": 0.0,
+        "volume": 0.0,
+        "asof_date": 0.0,
+        "run_id": 0.0,
+        "run_ts": 0.0
+      }
+    },
+    "duplicates_rows": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "nunique": {
+      "event_date": 4,
+      "platform": 1,
+      "avg_sentiment": 4,
+      "volume": 4,
+      "asof_date": 1,
+      "run_id": 1,
+      "run_ts": 1
+    },
+    "date_columns_detected": [
+      "event_date",
+      "avg_sentiment",
+      "asof_date",
+      "run_ts"
+    ],
+    "date_conversions_applied": {},
+    "numeric_columns": [
+      "avg_sentiment",
+      "volume"
+    ],
+    "categorical_columns": [
+      "platform",
+      "run_id"
+    ]
+  },
+  "gold_storytelling_history.parquet": {
+    "dataset": "gold_storytelling_history.parquet",
+    "shape": [
+      4,
+      6
+    ],
+    "memory": {
+      "bytes": 2037,
+      "human": "1.99 KB"
+    },
+    "columns": [
+      "date",
+      "insight",
+      "risk_value",
+      "innovation_value",
+      "run_id",
+      "model_used"
+    ],
+    "dtypes": {
+      "date": "object",
+      "insight": "object",
+      "risk_value": "object",
+      "innovation_value": "object",
+      "run_id": "object",
+      "model_used": "object"
+    },
+    "nulls": {
+      "count": {
+        "date": 0,
+        "insight": 0,
+        "risk_value": 0,
+        "innovation_value": 0,
+        "run_id": 0,
+        "model_used": 3
+      },
+      "pct": {
+        "date": 0.0,
+        "insight": 0.0,
+        "risk_value": 0.0,
+        "innovation_value": 0.0,
+        "run_id": 0.0,
+        "model_used": 75.0
+      }
+    },
+    "duplicates_rows": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "nunique": {
+      "date": 4,
+      "insight": 4,
+      "risk_value": 3,
+      "innovation_value": 2,
+      "run_id": 4,
+      "model_used": 1
+    },
+    "date_columns_detected": [
+      "date"
+    ],
+    "date_conversions_applied": {},
+    "numeric_columns": [],
+    "categorical_columns": [
+      "date",
+      "insight",
+      "risk_value",
+      "innovation_value",
+      "run_id",
+      "model_used"
+    ]
+  },
+  "gold_tech_edge_score.parquet": {
+    "dataset": "gold_tech_edge_score.parquet",
+    "shape": [
+      10114,
+      26
+    ],
+    "memory": {
+      "bytes": 24000391,
+      "human": "22.89 MB"
+    },
+    "columns": [
+      "data",
+      "metadata.source",
+      "metadata.timestamp",
+      "metadata.record_count",
+      "source_entity",
+      "data_quality_check",
+      "title",
+      "link",
+      "type",
+      "date",
+      "published_date",
+      "scraped_date",
+      "complexity_score",
+      "ai_innovation_score",
+      "tech_edge_total",
+      "abstract",
+      "authors",
+      "categories",
+      "url",
+      "pdf_url",
+      "arxiv_id",
+      "source",
+      "text",
+      "publication_date",
+      "run_id",
+      "run_ts"
+    ],
+    "dtypes": {
+      "data": "object",
+      "metadata.source": "object",
+      "metadata.timestamp": "object",
+      "metadata.record_count": "float64",
+      "source_entity": "object",
+      "data_quality_check": "object",
+      "title": "object",
+      "link": "object",
+      "type": "object",
+      "date": "object",
+      "published_date": "object",
+      "scraped_date": "object",
+      "complexity_score": "float64",
+      "ai_innovation_score": "float64",
+      "tech_edge_total": "float64",
+      "abstract": "object",
+      "authors": "object",
+      "categories": "object",
+      "url": "object",
+      "pdf_url": "object",
+      "arxiv_id": "object",
+      "source": "object",
+      "text": "object",
+      "publication_date": "object",
+      "run_id": "object",
+      "run_ts": "datetime64[us]"
+    },
+    "nulls": {
+      "count": {
+        "data": 0,
+        "metadata.source": 0,
+        "metadata.timestamp": 0,
+        "metadata.record_count": 10112,
+        "source_entity": 0,
+        "data_quality_check": 0,
+        "title": 0,
+        "link": 0,
+        "type": 0,
+        "date": 0,
+        "published_date": 0,
+        "scraped_date": 0,
+        "complexity_score": 0,
+        "ai_innovation_score": 0,
+        "tech_edge_total": 0,
+        "abstract": 0,
+        "authors": 0,
+        "categories": 0,
+        "url": 0,
+        "pdf_url": 0,
+        "arxiv_id": 0,
+        "source": 0,
+        "text": 0,
+        "publication_date": 0,
+        "run_id": 0,
+        "run_ts": 86
+      },
+      "pct": {
+        "data": 0.0,
+        "metadata.source": 0.0,
+        "metadata.timestamp": 0.0,
+        "metadata.record_count": 99.98,
+        "source_entity": 0.0,
+        "data_quality_check": 0.0,
+        "title": 0.0,
+        "link": 0.0,
+        "type": 0.0,
+        "date": 0.0,
+        "published_date": 0.0,
+        "scraped_date": 0.0,
+        "complexity_score": 0.0,
+        "ai_innovation_score": 0.0,
+        "tech_edge_total": 0.0,
+        "abstract": 0.0,
+        "authors": 0.0,
+        "categories": 0.0,
+        "url": 0.0,
+        "pdf_url": 0.0,
+        "arxiv_id": 0.0,
+        "source": 0.0,
+        "text": 0.0,
+        "publication_date": 0.0,
+        "run_id": 0.0,
+        "run_ts": 0.85
+      }
+    },
+    "duplicates_rows": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "nunique": {
+      "data": 3,
+      "metadata.source": 3,
+      "metadata.timestamp": 3,
+      "metadata.record_count": 2,
+      "source_entity": 3,
+      "data_quality_check": 1,
+      "title": 322,
+      "link": 23,
+      "type": 2,
+      "date": 2,
+      "published_date": 301,
+      "scraped_date": 29,
+      "complexity_score": 531,
+      "ai_innovation_score": 2,
+      "tech_edge_total": 572,
+      "abstract": 301,
+      "authors": 302,
+      "categories": 106,
+      "url": 301,
+      "pdf_url": 301,
+      "arxiv_id": 301,
+      "source": 2,
+      "text": 2,
+      "publication_date": 2,
+      "run_id": 18,
+      "run_ts": 17
+    },
+    "date_columns_detected": [
+      "metadata.timestamp",
+      "date",
+      "published_date",
+      "scraped_date",
+      "publication_date",
+      "run_ts"
+    ],
+    "date_conversions_applied": {
+      "scraped_date": "object -> datetime64[ns] (coerce)"
+    },
+    "numeric_columns": [
+      "metadata.record_count",
+      "complexity_score",
+      "ai_innovation_score",
+      "tech_edge_total"
+    ],
+    "categorical_columns": [
+      "data",
+      "metadata.source",
+      "metadata.timestamp",
+      "source_entity",
+      "data_quality_check",
+      "title",
+      "link",
+      "type",
+      "date",
+      "published_date",
+      "abstract",
+      "authors",
+      "categories",
+      "url",
+      "pdf_url",
+      "arxiv_id",
+      "source",
+      "text",
+      "publication_date",
+      "run_id"
+    ]
+  },
+  "gold_test_append.parquet": {
+    "dataset": "gold_test_append.parquet",
+    "shape": [
+      5,
+      4
+    ],
+    "memory": {
+      "bytes": 891,
+      "human": "891.00 B"
+    },
+    "columns": [
+      "id",
+      "value",
+      "run_id",
+      "run_ts"
+    ],
+    "dtypes": {
+      "id": "int64",
+      "value": "object",
+      "run_id": "object",
+      "run_ts": "datetime64[us]"
+    },
+    "nulls": {
+      "count": {
+        "id": 0,
+        "value": 0,
+        "run_id": 0,
+        "run_ts": 0
+      },
+      "pct": {
+        "id": 0.0,
+        "value": 0.0,
+        "run_id": 0.0,
+        "run_ts": 0.0
+      }
+    },
+    "duplicates_rows": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "nunique": {
+      "id": 5,
+      "value": 5,
+      "run_id": 3,
+      "run_ts": 3
+    },
+    "date_columns_detected": [
+      "run_ts"
+    ],
+    "date_conversions_applied": {},
+    "numeric_columns": [
+      "id"
+    ],
+    "categorical_columns": [
+      "value",
+      "run_id"
+    ]
+  },
+  "gold_vulnerability_index.parquet": {
+    "dataset": "gold_vulnerability_index.parquet",
+    "shape": [
+      4275,
+      9
+    ],
+    "memory": {
+      "bytes": 1016007,
+      "human": "992.19 KB"
+    },
+    "columns": [
+      "date",
+      "source_entity",
+      "count",
+      "days_risk_score",
+      "risk_moving_avg_7d",
+      "asof_date",
+      "event_date",
+      "run_id",
+      "run_ts"
+    ],
+    "dtypes": {
+      "date": "object",
+      "source_entity": "object",
+      "count": "int64",
+      "days_risk_score": "int64",
+      "risk_moving_avg_7d": "float64",
+      "asof_date": "datetime64[ns]",
+      "event_date": "datetime64[ns]",
+      "run_id": "object",
+      "run_ts": "datetime64[us]"
+    },
+    "nulls": {
+      "count": {
+        "date": 0,
+        "source_entity": 0,
+        "count": 0,
+        "days_risk_score": 0,
+        "risk_moving_avg_7d": 0,
+        "asof_date": 225,
+        "event_date": 225,
+        "run_id": 0,
+        "run_ts": 225
+      },
+      "pct": {
+        "date": 0.0,
+        "source_entity": 0.0,
+        "count": 0.0,
+        "days_risk_score": 0.0,
+        "risk_moving_avg_7d": 0.0,
+        "asof_date": 5.26,
+        "event_date": 5.26,
+        "run_id": 0.0,
+        "run_ts": 5.26
+      }
+    },
+    "duplicates_rows": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "nunique": {
+      "date": 225,
+      "source_entity": 2,
+      "count": 126,
+      "days_risk_score": 126,
+      "risk_moving_avg_7d": 267,
+      "asof_date": 8,
+      "event_date": 231,
+      "run_id": 19,
+      "run_ts": 18
+    },
+    "date_columns_detected": [
+      "date",
+      "asof_date",
+      "event_date",
+      "run_ts"
+    ],
+    "date_conversions_applied": {},
+    "numeric_columns": [
+      "count",
+      "days_risk_score",
+      "risk_moving_avg_7d"
+    ],
+    "categorical_columns": [
+      "date",
+      "source_entity",
+      "run_id"
+    ]
+  }
+}

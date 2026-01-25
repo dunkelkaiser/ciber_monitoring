@@ -6,8 +6,9 @@ El sistema RAG permite al Asistente IA (Chatbot) y a los scripts de análisis ac
 
 ### Componentes
 1.  **Embedding Model**: `sentence-transformers/all-MiniLM-L6-v2`. Convierte texto en vectores de 384 dimensiones.
-2.  **Vector Store**: **ChromaDB**. Base de datos local optimizada para búsqueda de similaridad.
+2.  **Vector Store**: **chroma_db_store**. Base de datos local optimizada para búsqueda de similaridad para contexto histórico.
 3.  **Retrieve Strategy**: Búsqueda semántica por similitud coseno + filtros de metadatos (fecha, fuente).
+4.  **Real-time Tool Use**: El sistema realiza llamadas API en tiempo real para obtener las últimas métricas de la capa Gold y complementar el contexto recuperado.
 
 ---
 

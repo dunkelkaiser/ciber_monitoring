@@ -27,6 +27,7 @@ La velocidad de innovación tecnológica (IA, Computación Cuántica) supera la 
 Una plataforma autónoma que ingesta, procesa y correlaciona millones de datapoints para generar índices predictivos:
 *   **Tech Edge Score**: ¿Qué tan disruptiva es una nueva tecnología?
 *   **Vulnerability Index**: ¿Qué tan riesgosa es esa tecnología hoy?
+*   **Índice de Riesgo de Adopción**: Proporciona una medida de riesgo mediante el cruce de señales sociales y vulnerabilidades técnicas.
 
 El sistema no solo muestra datos, **narra historias** (Data Storytelling) para explicar *por qué* debemos preocuparnos.
 
@@ -71,7 +72,14 @@ Algoritmos de NLP (TF-IDF) y Series de Tiempo calculan métricas avanzadas como 
 > 👉 **Detalle Técnico**: [Anexo 03: Procesos ETL](anexos/03_Procesos_ETL.md)
 
 ### 3.4 Inteligencia Artificial (RAG & Modelos)
-El núcleo cognitivo. Usa **Gemma 3** y modelos de embedding para permitir que el sistema "razone" sobre los datos recolectados.
+El núcleo cognitivo. Utiliza una arquitectura híbrida:
+1. **RAG (Retrieval Augmented Generation)**: Consulta `chroma_db_store` para contexto histórico.
+2. **Tool Use**: Llamadas API en tiempo real para obtener las últimas métricas de la capa Gold.
+3. **Multi-Model Fallback**:
+   - Primario: Gemini 3 Flash.
+   - Secundario: GPT-5 Nano.
+   - Terciario: Claude Haiku.
+
 > 👉 **Detalle Técnico**: [Anexo 04: Sistema RAG](anexos/04_Sistema_RAG.md) y [Anexo 05: Inferencias IA](anexos/05_Modelos_IA_Inferencias.md)
 
 ---
@@ -79,7 +87,7 @@ El núcleo cognitivo. Usa **Gemma 3** y modelos de embedding para permitir que e
 ## 4. Resultados y Métricas
 
 El sistema ha demostrado capacidad para:
-- Detectar correlaciones entre picos de discusión en Reddit y la publicación posterior de CVEs críticos (>0.7 Pearson).
+- Detectar correlaciones entre picos de discusión en Twitter o Hacker News y la publicación posterior de CVEs críticos (>0.7 Pearson).
 - Reducir el tiempo de análisis de papers académicos de horas a segundos mediante resúmenes ejecutivos automáticos.
 
 > 👉 **Detalle Técnico**: [Anexo 07: Evaluación y Métricas](anexos/07_Evaluacion_Metricas.md)

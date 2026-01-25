@@ -1,7 +1,7 @@
 # Anexo 01: Scraping e Ingesta de Datos
 
 ## 1. Visión General
-El módulo de ingesta (`agents/scrapers`) es responsable de la recolección autónoma de datos desde fuentes heterogéneas. Utiliza técnica de **Web Scraping** avanzado y consultas a **APIs oficiales** para alimentar el pipeline de datos.
+El módulo de ingesta (`agents/scrapers`) es responsable de la recolección autónoma de datos desde fuentes heterogéneas. El objetivo es detectar la correlación entre la innovación en Hardware/IA (NVIDIA, OpenAI) y el ecosistema de amenazas (CVE, Hacker News).
 
 ### Tecnologías Clave
 - **Playwright**: Para navegación headless en sitios dinámicos (SPA) como NVIDIA y OpenAI Blog.

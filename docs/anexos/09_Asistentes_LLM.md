@@ -47,6 +47,6 @@ Para la generación de narrativas ejecutivas en el Dashboard, se ha implementado
 ### Cadena de Responsabilidad
 1.  **Primario**: **Gemini 3 Flash** (Google). Priorizado por su ventana de contexto y velocidad.
 2.  **Secundario**: **GPT-5 Nano** (OpenAI). Se activa si Gemini falla o devuelve error 4xx/5xx.
-3.  **Terciario**: **Claude Haiku 3.5** (Anthropic). Última línea de defensa si los anteriores fallan.
+3.  **Terciario**: **Claude Haiku**. Última línea de defensa si los anteriores fallan.
 
 Esta lógica está encapsulada en `storytelling_generator.py` y reporta qué modelo fue utilizado en la columna `model_used` del historial.

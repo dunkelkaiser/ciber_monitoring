@@ -15,7 +15,7 @@ graph LR
 
 ## 2. Capa Bronze (Raw)
 - **Ubicación**: `data_engineering/bronze/`
-- **Formato**: JSON
+- **Formato**: Archivos JSON crudos con metadatos de recolección.
 - **Propósito**: Almacenamiento inmutable de la respuesta original de la fuente.
 - **Esquema**: Flexible (Schema-on-Read).
 - **Ejemplo**:
@@ -49,6 +49,7 @@ graph LR
 - **Ubicación**: `data_engineering/gold/`
 - **Formato**: Parquet
 - **Propósito**: Tablas listas para consumo analítico y modelos de ML.
+- **Optimización**: Procesamiento en paralelo de llamadas a LLM para scoring masivo.
 - **Tablas Principales**:
     - **`gold_tech_edge_score`**: Puntuación de innovación por paper (0-100).
     - **`gold_vulnerability_index`**: Serie temporal de riesgo agregado diario.

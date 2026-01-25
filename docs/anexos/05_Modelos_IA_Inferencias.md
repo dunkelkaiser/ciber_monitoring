@@ -11,6 +11,13 @@ El proyecto utiliza una estrategia híbrida de modelos para balancear costo, pri
 
 ---
 
+## 2. KPIs y Métricas de Inferencia
+- **Tech Edge Score**: Nivel de innovación técnica (ML-driven).
+- **Vulnerability Index**: Tendencia temporal de parches y brechas.
+- **Correlation Matrix**: Correlación entre ruido social y criticidad técnica.
+
+---
+
 ## 2. Lógica de Inferencias
 
 ### 2.1 Chain-of-Verification (CoVe)
