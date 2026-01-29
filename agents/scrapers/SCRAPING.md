@@ -34,7 +34,8 @@ Child Scrapers (Specific Implementations)
     ├── NVIDIAScraper
     ├── IntelScraper
     ├── TwitterScraper
-    └── OpenAIBlogScraper
+    ├── OpenAIBlogScraper
+    └── AMDScraper
 ```
 
 ---
@@ -318,6 +319,42 @@ queries = [
 
 ---
 
+#### **Scraper 6: AMD Product Security**
+
+**File**: `scrapers/agents/amd_scraper.py`
+
+**Source**: `https://www.amd.com/en/resources/product-security.html`
+
+**Approach**: Use `Playwright` (Dynamic tables and lists)
+
+**Data to Extract**:
+- Advisory ID (Bulletin ID)
+- Title
+- Date
+- Severity
+- Source URL
+
+**Custom Logic**:
+- Navigate to the security page
+- Wait for the dynamic content to load
+- Identify the table or list of bulletins
+- Extract ID, Title, Date, and Severity
+- Fallback to link-based parsing if the table structure changes
+
+**Expected Output Schema**:
+```json
+{
+  "advisory_id": "AMD-SB-7055",
+  "title": "RDSEED Failure on AMD Zen 5 Processors",
+  "published_date": "2024-08-15",
+  "severity": "HIGH",
+  "source_url": "https://www.amd.com/en/resources/product-security/bulletin/amd-sb-7055.html",
+  "scraped_date": "2026-01-28T00:00:00Z"
+}
+```
+
+---
+
 ### 3. Create Orchestrator
 
 **File**: `scrapers/orchestrator.py`
@@ -515,7 +552,7 @@ For **httpx-based scrapers** (CVE Mitre):
 ## Expected Deliverables
 
 1. ✅ `base_scraper.py` - Fully functional parent class with all shared modules
-2. ✅ 5 child scraper files - Each implementing only custom logic
+2. ✅ 6 child scraper files - Each implementing only custom logic
 3. ✅ `orchestrator.py` - Coordination script with CLI support
 4. ✅ `Dockerfile` - Container definition with Playwright
 5. ✅ `docker-compose.yml` - Service definitions for each scraper

@@ -93,7 +93,10 @@ class BaseScraper(ABC):
         self.playwright = await async_playwright().start()
         self.browser = await self.playwright.chromium.launch(
             headless=True,
-            args=['--disable-blink-features=AutomationControlled']
+            args=[
+                '--disable-blink-features=AutomationControlled',
+                '--disable-http2'
+            ]
         )
         
         # Create context with random user agent and viewport

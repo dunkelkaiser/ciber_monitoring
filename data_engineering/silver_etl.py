@@ -171,6 +171,7 @@ class SilverCleaner:
         logger.info("--- Processing VULNERABILITY Schema ---")
         cve_df = self.load_bronze_files("cve_mitre")
         intel_df = self.load_bronze_files("intel")
+        amd_df = self.load_bronze_files("amd")
 
         if not cve_df.empty:
             cve_df['source_entity'] = 'MITRE'
@@ -178,7 +179,10 @@ class SilverCleaner:
         if not intel_df.empty:
             intel_df['source_entity'] = 'INTEL'
         
-        vuln_df = pd.concat([cve_df, intel_df], ignore_index=True)
+        if not amd_df.empty:
+            amd_df['source_entity'] = 'AMD'
+        
+        vuln_df = pd.concat([cve_df, intel_df, amd_df], ignore_index=True)
         
         vuln_expectations = [
              {'method': 'expect_column_to_exist', 'kwargs': {'column': 'source_entity'}}

@@ -3,6 +3,7 @@ import logging
 import sys
 from arxiv_scraper import ArxivScraper
 from hacker_news_scraper import HackerNewsScraper
+from amd_scraper import AMDScraper
 
 # Setup simple logging
 logging.basicConfig(level=logging.INFO)
@@ -51,11 +52,36 @@ async def test_hn_structure():
         logger.error(f"❌ HackerNewsScraper failed: {e}")
         return False
 
+async def test_amd():
+    logger.info("Testing AMDScraper...")
+    try:
+        scraper = AMDScraper()
+        # Test the robust scrape
+        results = await scraper.scrape()
+        
+        if not results:
+            logger.error("❌ AMDScraper returned no results.")
+            return False
+            
+        first = results[0]
+        required_fields = ["advisory_id", "title", "source_url", "vendor"]
+        for field in required_fields:
+            if field not in first:
+                logger.error(f"❌ Missing field '{field}' in AMD record.")
+                return False
+                
+        logger.info(f"✅ AMDScraper passed. Got {len(results)} items. Sample: {first['advisory_id']} - {first['title']}")
+        return True
+    except Exception as e:
+        logger.error(f"❌ AMDScraper failed: {e}")
+        return False
+
 async def main():
     pass_arxiv = await test_arxiv()
     pass_hn = await test_hn_structure()
+    pass_amd = await test_amd()
     
-    if pass_arxiv and pass_hn:
+    if pass_arxiv and pass_hn and pass_amd:
         logger.info("🎉 All verification tests passed!")
         sys.exit(0)
     else:

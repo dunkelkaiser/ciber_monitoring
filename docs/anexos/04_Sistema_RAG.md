@@ -24,9 +24,9 @@ El sistema RAG permite al Asistente IA (Chatbot) y a los scripts de análisis ac
 
 ### Metadata Enriquecida
 Cada vector almacenado incluye metadatos críticos para el filtrado posterior:
-*   `source`: (nvidia, cve, reddit)
+*   `source`: (nvidia, cve, hacker_news, arxiv)
 *   `date`: Fecha ISO.
-*   `category`: (research, vulnerability, social)
+*   `category`: (research, vulnerability, social_news)
 
 ---
 

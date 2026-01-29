@@ -49,7 +49,7 @@ graph LR
 - **Ubicación**: `data_engineering/gold/`
 - **Formato**: Parquet
 - **Propósito**: Tablas listas para consumo analítico y modelos de ML.
-- **Optimización**: Procesamiento en paralelo de llamadas a LLM para scoring masivo.
+- **Optimización**: Procesamiento en paralelo mediante `ThreadPoolExecutor` para llamadas masivas a LLMs, acelerando el cálculo del `Tech Edge Score`.
 - **Tablas Principales**:
     - **`gold_tech_edge_score`**: Puntuación de innovación por paper (0-100).
     - **`gold_vulnerability_index`**: Serie temporal de riesgo agregado diario.
@@ -63,7 +63,7 @@ graph LR
 | Campo | Tipo | Descripción |
 | :--- | :--- | :--- |
 | `id` | String | Identificador único del registro (hash o ID fuente). |
-| `source_entity` | Categorical | Fuente original (NVIDIA, MITRE, REDDIT). |
+| `source_entity` | Categorical | Fuente original (NVIDIA, MITRE, HACKER NEWS, ARXIV). |
 | `published_date` | Datetime (UTC) | Fecha de evento. |
 | `sentiment_score` | Float (-1.0 a 1.0) | Polaridad del texto (Textblob/VADER). |
 | `complexity_score` | Float (0-100) | Densidad técnica calculada (TF-IDF). |

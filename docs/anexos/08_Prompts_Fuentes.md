@@ -66,5 +66,6 @@ El sistema se alimenta estrictamente de las siguientes fuentes primarias validad
 3.  **MITRE CVE List**: `https://cve.mitre.org/` (Vulnerabilidades oficiales).
 4.  **Intel Security Advisories**: `https://www.intel.com/content/www/us/en/security-center/default.html`.
 5.  **arXiv (CS.CR, CS.AI)**: `http://arxiv.org/` (Investigación académica pre-print).
-6.  **Twitter/X API**: (Señales de alerta temprana no oficiales).
-7.  **Reddit (r/cybersecurity, r/netsec)**: (Discusión comunitaria técnica).
+6.  **Hacker News**: `https://news.ycombinator.com/` (Tendencias tecnológicas y discusiones de seguridad).
+7.  **Twitter/X API**: (Señales de alerta temprana no oficiales).
+8.  **Reddit (r/cybersecurity, r/netsec)**: (Discusión comunitaria técnica - Modo Standby).

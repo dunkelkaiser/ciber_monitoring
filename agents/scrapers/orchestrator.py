@@ -17,6 +17,7 @@ from twitter_scraper import TwitterScraper
 from openai_blog_scraper import OpenAIScraper
 from hacker_news_scraper import HackerNewsScraper
 from arxiv_scraper import ArxivScraper
+from amd_scraper import AMDScraper
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
@@ -46,7 +47,8 @@ async def main():
         "twitter": TwitterScraper,
         "openai": OpenAIScraper,
         "hacker_news": HackerNewsScraper,
-        "arxiv": ArxivScraper
+        "arxiv": ArxivScraper,
+        "amd": AMDScraper
     }
     
     to_run = []

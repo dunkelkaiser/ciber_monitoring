@@ -18,6 +18,16 @@ El proyecto utiliza una estrategia híbrida de modelos para balancear costo, pri
 
 ---
 
+## 3. Estrategias de Inferencia Masiva (Gold Layer)
+
+Para el cálculo de métricas en la capa Gold, se implementan las siguientes optimizaciones:
+
+- **Concurrencia (Multi-threading)**: El sistema utiliza hilos para gestionar múltiples peticiones simultáneas a proveedores de LLM (OpenAI, Gemini), maximizando el throughput.
+- **Manejo de Errores y Fallbacks**: Si un LLM falla o devuelve un formato inválido, el sistema aplica un **fallback automático de 5.0 (neutral)**, garantizando que el pipeline de datos no se detenga.
+- **Extracción de Datos Estructurados**: Uso de expresiones regulares para normalizar la salida del LLM a valores numéricos (0.0 - 10.0).
+
+---
+
 ## 2. Lógica de Inferencias
 
 ### 2.1 Chain-of-Verification (CoVe)

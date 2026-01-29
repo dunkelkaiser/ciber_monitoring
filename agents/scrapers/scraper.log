@@ -187,3 +187,16 @@ RuntimeError: OpenAI scraper requires Playwright
 [2026-01-05 21:31:58,593] [openai] [INFO] Saved 19 records to data/bronze\openai_raw_2026-01-05T21-31-58.592886.json
 [2026-01-05 21:31:58,642] [openai] [INFO] Finished scraper: openai
 [2026-01-05 21:31:58,642] [Orchestrator] [INFO] Orchestration complete.
+[2026-01-28 20:25:02,967] [Verifier] [INFO] Testing ArxivScraper...
+[2026-01-28 20:25:02,981] [arxiv] [INFO] Querying arXiv with: (cat:cs.CR OR cat:cs.AI OR cat:cs.LG) AND (all:"LLM")
+[2026-01-28 20:25:02,982] [arxiv] [INFO] Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CR+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22LLM%22%29&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100
+[2026-01-28 20:25:04,525] [arxiv] [INFO] Got first page: 100 of 35273 total results
+[2026-01-28 20:25:04,526] [arxiv] [INFO] Collected 3 papers from arXiv.
+[2026-01-28 20:25:04,535] [Verifier] [INFO] Testing HackerNewsScraper...
+[2026-01-28 20:25:04,538] [hacker_news] [INFO] Fetching Hacker News Top Stories IDs...
+[2026-01-28 20:25:05,026] [hacker_news] [INFO] Retrieved 100 top story IDs. Fetching details...
+[2026-01-28 20:25:11,596] [hacker_news] [INFO] Filtered 25 relevant items from Hacker News.
+[2026-01-28 20:25:11,600] [Verifier] [INFO] Testing AMDScraper...
+[2026-01-28 20:25:11,603] [amd] [INFO] Fetching AMD security page: https://www.amd.com/en/resources/product-security.html
+[2026-01-28 20:25:12,055] [httpx] [INFO] HTTP Request: GET https://www.amd.com/en/resources/product-security.html "HTTP/1.1 200 OK"
+[2026-01-28 20:25:12,212] [amd] [INFO] Found 151 bulletin links via BeautifulSoup

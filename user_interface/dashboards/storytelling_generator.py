@@ -140,36 +140,36 @@ def generate_insight_with_fallback(risk_idx, innovation_score, context):
     """Generate insight using Multi-Model Fallback: Gemini -> OpenAI -> Claude."""
     
     prompt = f"""
-    You are a CISO Assistant specialized in technology risk and emerging innovation analysis.
+You are a CISO Assistant specialized in technology risk and emerging innovation analysis.
 
-    Current Indicators (Tech Edge Context):
-    - Tech Edge Score: {innovation_score.get('score', 'N/A')}
-    Represents the organization's current position relative to the technological frontier 
-    (innovation velocity, adoption of emerging technologies, and competitive differentiation).
+Current Indicators (Tech Edge Context):
+- Tech Edge Score: {innovation_score.get('score', 'N/A')}
+  Represents the organization's current position relative to the technological frontier 
+  (innovation velocity, adoption of emerging technologies, and competitive differentiation).
 
-    - Vulnerability Index: {risk_idx.get('count', 'N/A')}
-    Represents the current exposure level to known and emerging cyber threats, vulnerabilities, 
-    and systemic risks associated with operating near the technological edge.
+- Vulnerability Index: {risk_idx.get('count', 'N/A')}
+  Represents the current exposure level to known and emerging cyber threats, vulnerabilities, 
+  and systemic risks associated with operating near the technological edge.
 
-    Contextual Signals:
-    {context}
+Contextual Signals:
+{context}
 
-    Task:
-    Write a concise executive analysis in Spanish (2–3 sentences) that:
-    1. Explains what the current levels of both indices mean in terms of operating at the technological edge 
-    (balance between innovation momentum and risk exposure).
-    2. Interprets whether the organization is in a position of controlled innovation, emerging risk tension, 
-    or critical imbalance.
-    3. Highlights the most relevant driver or signal from the provided context that explains the current state.
+Task:
+Write a concise executive analysis in Spanish (2–3 sentences) that:
+1. Explains what the current levels of both indices mean in terms of operating at the technological edge 
+   (balance between innovation momentum and risk exposure).
+2. Interprets whether the organization is in a position of controlled innovation, emerging risk tension, 
+   or critical imbalance.
+3. Highlights the most relevant driver or signal from the provided context that explains the current state.
 
-    Output requirements:
-    - Plain text only.
-    - No LaTeX, no Markdown, no bullet points, no emojis.
-    - No titles, labels, or decorative formatting.
-    - Write as a continuous executive narrative suitable for dashboards or automated reports.
+Output requirements:
+- Plain text only.
+- No LaTeX, no Markdown, no bullet points, no emojis.
+- No titles, labels, or decorative formatting.
+- Write as a continuous executive narrative suitable for dashboards or automated reports.
 
-    Tone: strategic, interpretative, and suitable for executive decision-making.
-    """
+Tone: strategic, interpretative, and suitable for executive decision-making.
+"""
     
     # 1. Gemini
     logger.info(f"Attempting Gemini ({MODELS['gemini']})...")
@@ -187,7 +187,7 @@ def generate_insight_with_fallback(risk_idx, innovation_score, context):
     if result: return (f"[Claude] {result}", MODELS['claude'])
     
     # Final Fallback
-    return ("No se pudo generar el insight con nungún modelo (APIs fallaron o no disponibles).", "None")
+    return ("No se pudo generar el insight con ningún modelo (APIs fallaron o no disponibles).", "None")
 
 # --- Main Logic ---
 

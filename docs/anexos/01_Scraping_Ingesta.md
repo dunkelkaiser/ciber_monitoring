@@ -18,10 +18,12 @@ El módulo de ingesta (`agents/scrapers`) es responsable de la recolección aut�
 | **NvidiaScraper** | NVIDIA Research | Playwright (DOM) | Semanal | Títulos, abstracts, links a papers. |
 | **OpenAIBlogScraper** | OpenAI Blog | Playwright (DOM) | Semanal | Artículos de investigación, anuncios. |
 | **CVEMitreScraper** | CVE Mitre / NIST | Playwright (Search) | Diario | CVE ID, descripción, severidad. |
+| **AMDScraper** | AMD Security | Robust (httpx/BS4) | Diario | Bulletins, CVE IDs, Severidad. |
 | **IntelScraper** | Intel Security | Playwright (DOM) | Diario | Advisories, parches. |
-| **TwitterScraper** | Twitter/X API | API (Tweepy) | Tiempo Real | Discusión social, tendencias. |
+| **TwitterScraper** | Twitter/X API | API (Tweepy) | Diario | Discusión social, tendencias. |
 | **HackerNewsScraper** | Hacker News | API (Firebase) | Diario | Tech trends, security discussions. |
 | **ArxivScraper** | arXiv.org | API (xml) | Semanal | Papers académicos (CS, AI, Crypto). |
+| **RedditScraper** | Reddit (PRAW) | API (Standby) | Diario | Comunidad técnica (Requiere API Key). |
 
 ---
 
@@ -30,7 +32,8 @@ El módulo de ingesta (`agents/scrapers`) es responsable de la recolección aut�
 ### 3.1 Manejo de Sesiones y Bloqueos
 - **User-Agent Rotation**: Se utiliza `fake-useragent` para rotar identidades en cada petición (en scrapers basados en DOM).
 - **Rate Limiting**: Implementado en la clase base `BaseScraper`. Esperas aleatorias entre peticiones para evitar detección.
-- **REST APIs**: Para Hacker News y arXiv, se utilizan los endpoints oficiales de solo lectura.
+- **Robust Fetching (AMD)**: El scraper de AMD utiliza una arquitectura híbrida que prioriza `httpx` y `BeautifulSoup` para evitar bloqueos por infraestructura de navegador (Playwright), asegurando una ingesta constante.
+- **REST APIs (Hacker News)**: Se integra directamente con la API Firebase de Hacker News para obtener historias de alta relevancia sin scraping de DOM.
 
 ### 3.2 Estandarización de Fechas
 Todos los scrapers normalizan el tiempo a UTC ISO 8601:

@@ -19,6 +19,13 @@ scrapers:
     timeout: 60000
     base_url: "https://www.intel.com/content/www/us/en/security-center/default.html"
     output_dir: "data_engineering/bronze"
+
+  amd:
+    rate_limit: 10
+    use_playwright: true
+    timeout: 60000
+    base_url: "https://www.amd.com/en/resources/product-security.html"
+    output_dir: "data_engineering/bronze"
   
   twitter:
     rate_limit: 2 # Conservative limit for API

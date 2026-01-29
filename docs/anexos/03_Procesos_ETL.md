@@ -14,7 +14,7 @@ graph TD
 
 ## 2. Silver ETL: Limpieza y Validación
 
-**Script**: `data_engineering/cleaner_etl.py` (anteriormente `silver_etl.py`)
+**Script**: `data_engineering/silver_etl.py`
 
 ### Funciones Principales
 1.  **Limpieza de HTML**: Eliminación de etiquetas y normalización de texto.
@@ -35,7 +35,8 @@ Esta etapa crea las métricas avanzadas que alimentan el dashboard.
 ### 3.1 Tech Edge Score (Índice de Innovación)
 Combina NLP estadístico con inferencia semántica de LLM para puntuar papers.
 *   **Complejidad (TF-IDF)**: Calcula qué tan "denso" es el lenguaje técnico del paper usando TF-IDF. Detecta keywords raras.
-*   **Relevancia (AI Score)**: Consulta simulada (o real vía API) a un LLM para calificar del 0-10 qué tan disruptiva es la tecnología mencionada.
+*   **Parallel Scoring (AI Edge)**: Utiliza `ThreadPoolExecutor` para paralelizar peticiones a LLMs. El sistema procesa lotes de registros simultáneamente para optimizar el rendimiento de la API.
+*   **Robust Parsing**: Implementa extracción basada en **Regex** para capturar valores numéricos de las respuestas crudas de los LLMs, previniendo errores por formatos inconsistentes.
 *   *Fórmula*: `Edge Score = (TF_IDF_Norm + AI_Score_Norm) / 2`
 
 ### 3.2 Vulnerability Index (Time Series)

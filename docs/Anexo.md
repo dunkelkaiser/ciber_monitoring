@@ -60,15 +60,15 @@ graph TD
 ## 3. Componentes Principales
 
 ### 3.1 Recolección de Datos (Scrapers)
-Una flota de robots monitorea continuamente fuentes como **arXiv, Reddit, NVIDIA y MITRE**.
+Una flota de robots monitorea continuamente fuentes como **arXiv, Hacker News, NVIDIA y MITRE**. El sistema es flexible, manteniendo fuentes como **Twitter y Reddit** en modo standby o APIs secundarias.
 > 👉 **Detalle Técnico**: [Anexo 01: Scraping e Ingesta](anexos/01_Scraping_Ingesta.md)
 
 ### 3.2 Arquitectura de Datos (Medallion)
-Los datos fluyen a través de capas de refinamiento progresivo (Raw -> Clean -> Aggregated), garantizando trazabilidad y calidad.
-> 👉 **Detalle Técnico**: [Anexo 02: Arquitectura de Datos](anexos/02_Arquitectura_Datos.md)
+Los datos fluyen a través de capas de refinamiento progresivo (Raw -> Clean -> Aggregated). La configuración se centraliza en un archivo `.env` en la raíz para máxima seguridad.
+> 👉 **Detalle Técnico**: [Anexo 02: Arquitectura de Datos](anexos/02_Arquitectura_Datos.md) y [PROJECT_DETAILS.md](PROJECT_DETAILS.md)
 
 ### 3.3 Motor de Transformación (ETL)
-Algoritmos de NLP (TF-IDF) y Series de Tiempo calculan métricas avanzadas como el "Índice de Innovación AI".
+Los procesos ETL han sido optimizados con ejecución en paralelo (Multi-threading) para el scoring masivo con LLMs, reduciendo tiempos de procesamiento en un 80%.
 > 👉 **Detalle Técnico**: [Anexo 03: Procesos ETL](anexos/03_Procesos_ETL.md)
 
 ### 3.4 Inteligencia Artificial (RAG & Modelos)
