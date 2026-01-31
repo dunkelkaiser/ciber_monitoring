@@ -56,11 +56,27 @@ graph TD
     subgraph Capa_Servicios ["🚀 3. Interfaz y Consumo"]
         H & I & J --> K[FastAPI Gateway]
         F --> L[ChromaDB Vector Store]
-        M[🤖 Chatbot Assistant] -->|1. Query Metrics| K
-        M -->|2. Context Retrieval| L
+        
+        K -->|1. Feeds Metrics| M[🤖 Chatbot Assistant]
+        L -->|2. Provides Context| M
+        
         K --> N[📊 Power BI Dashboard]
     end
 ```
+
+---
+
+## 📊 Galería de Dashboards (Power BI MVP)
+
+**Objetivo**: Visualizar y correlacionar en tiempo real las métricas de innovación (Tech Edge) con los riesgos de seguridad (Vulnerabilidades).
+
+````carousel
+![Vista Ejecutiva](user_interface/dashboards/img/dashboard_ejecutivo.png)
+<!-- slide -->
+![Análisis Temporal](user_interface/dashboards/img/dashboard_temporal.png)
+<!-- slide -->
+![Deep Dive](user_interface/dashboards/img/dashboard_deep_dive.png)
+````
 
 ---
 
