@@ -2014,3 +2014,139 @@ Too Many Requests
 [2026-01-29 02:52:42,384] [amd] [INFO] Saved 151 records to data_engineering/bronze/amd_raw_2026-01-29T02-52-42.369321.json
 [2026-01-29 02:52:42,532] [amd] [INFO] Finished scraper: amd
 [2026-01-29 02:52:42,532] [Orchestrator] [INFO] Orchestration complete.
+[2026-01-30 05:05:48,740] [Orchestrator] [INFO] Starting execution of 8 scrapers...
+[2026-01-30 05:05:48,749] [cve_mitre] [INFO] Starting scraper: cve_mitre
+[2026-01-30 05:05:54,807] [cve_mitre] [INFO] Searching for keyword: artificial intelligence
+[2026-01-30 05:05:54,810] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=artificial intelligence
+[2026-01-30 05:06:00,166] [cve_mitre] [INFO] Found 50 results for artificial intelligence
+[2026-01-30 05:06:00,172] [cve_mitre] [INFO] Searching for keyword: GPU
+[2026-01-30 05:06:00,176] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=GPU
+[2026-01-30 05:06:03,462] [cve_mitre] [INFO] Found 50 results for GPU
+[2026-01-30 05:06:03,465] [cve_mitre] [INFO] Searching for keyword: neural network
+[2026-01-30 05:06:03,471] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=neural network
+[2026-01-30 05:06:05,759] [cve_mitre] [INFO] Found 4 results for neural network
+[2026-01-30 05:06:05,763] [cve_mitre] [INFO] Searching for keyword: LLM
+[2026-01-30 05:06:05,769] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=LLM
+[2026-01-30 05:06:08,539] [cve_mitre] [INFO] Found 50 results for LLM
+[2026-01-30 05:06:08,540] [cve_mitre] [INFO] Searching for keyword: machine learning
+[2026-01-30 05:06:08,544] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=machine learning
+[2026-01-30 05:06:11,295] [cve_mitre] [INFO] Found 50 results for machine learning
+[2026-01-30 05:06:11,428] [cve_mitre] [INFO] Saved 204 records to data_engineering/bronze/cve_mitre_raw_2026-01-30T05-06-11.396100.json
+[2026-01-30 05:06:11,720] [cve_mitre] [INFO] Finished scraper: cve_mitre
+[2026-01-30 05:06:11,720] [nvidia] [INFO] Starting scraper: nvidia
+[2026-01-30 05:06:12,100] [nvidia] [INFO] Navigating to https://www.nvidia.com/en-us/research/publications/
+[2026-01-30 05:06:19,139] [nvidia] [INFO] Found 2 potential research items.
+[2026-01-30 05:06:19,205] [nvidia] [INFO] Saved 2 records to data_engineering/bronze/nvidia_raw_2026-01-30T05-06-19.192085.json
+[2026-01-30 05:06:19,382] [nvidia] [INFO] Finished scraper: nvidia
+[2026-01-30 05:06:19,382] [intel] [INFO] Starting scraper: intel
+[2026-01-30 05:06:19,771] [intel] [INFO] Navigating to https://www.intel.com/content/www/us/en/security-center/default.html
+[2026-01-30 05:09:59,658] [intel] [INFO] Saved 969 records to data_engineering/bronze/intel_raw_2026-01-30T05-09-59.640411.json
+[2026-01-30 05:09:59,783] [intel] [INFO] Finished scraper: intel
+[2026-01-30 05:09:59,784] [twitter] [INFO] Starting scraper: twitter
+[2026-01-30 05:09:59,785] [twitter] [INFO] Searching Twitter for: CVE vulnerability -is:retweet lang:en
+[2026-01-30 05:10:00,150] [twitter] [ERROR] Twitter search failed for CVE vulnerability -is:retweet lang:en: 429 Too Many Requests
+Usage cap exceeded: Monthly product cap
+[2026-01-30 05:10:00,150] [twitter] [INFO] Searching Twitter for: zero-day exploit -is:retweet lang:en
+[2026-01-30 05:10:29,868] [twitter] [ERROR] Twitter search failed for zero-day exploit -is:retweet lang:en: 429 Too Many Requests
+Too Many Requests
+[2026-01-30 05:10:29,869] [twitter] [INFO] Searching Twitter for: NVIDIA security -is:retweet lang:en
+[2026-01-30 05:10:59,899] [twitter] [ERROR] Twitter search failed for NVIDIA security -is:retweet lang:en: 429 Too Many Requests
+Too Many Requests
+[2026-01-30 05:10:59,900] [twitter] [INFO] Searching Twitter for: Intel vulnerability -is:retweet lang:en
+[2026-01-30 05:11:29,923] [twitter] [ERROR] Twitter search failed for Intel vulnerability -is:retweet lang:en: 429 Too Many Requests
+Too Many Requests
+[2026-01-30 05:11:29,923] [twitter] [WARNING] No data to save.
+[2026-01-30 05:11:29,924] [twitter] [INFO] Finished scraper: twitter
+[2026-01-30 05:11:29,924] [openai] [INFO] Starting scraper: openai
+[2026-01-30 05:11:30,246] [openai] [INFO] Navigating to https://openai.com/research
+[2026-01-30 05:11:34,589] [openai] [INFO] Found 19 potential research items.
+[2026-01-30 05:11:34,638] [openai] [INFO] Saved 19 records to data_engineering/bronze/openai_raw_2026-01-30T05-11-34.631216.json
+[2026-01-30 05:11:34,763] [openai] [INFO] Finished scraper: openai
+[2026-01-30 05:11:34,763] [hacker_news] [INFO] Starting scraper: hacker_news
+[2026-01-30 05:11:34,763] [hacker_news] [INFO] Fetching Hacker News Top Stories IDs...
+[2026-01-30 05:11:35,100] [hacker_news] [INFO] Retrieved 100 top story IDs. Fetching details...
+[2026-01-30 05:11:37,100] [hacker_news] [INFO] Filtered 23 relevant items from Hacker News.
+[2026-01-30 05:11:37,107] [hacker_news] [INFO] Saved 23 records to data_engineering/bronze/hacker_news_raw_2026-01-30T05-11-37.101297.json
+[2026-01-30 05:11:37,108] [hacker_news] [INFO] Finished scraper: hacker_news
+[2026-01-30 05:11:37,108] [arxiv] [INFO] Starting scraper: arxiv
+[2026-01-30 05:11:37,108] [arxiv] [INFO] Querying arXiv with: (cat:cs.CR OR cat:cs.AI OR cat:cs.LG) AND (all:"LLM" OR all:"security" OR all:"vulnerability" OR all:"adversarial")
+[2026-01-30 05:11:37,109] [arxiv] [INFO] Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CR+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22LLM%22+OR+all%3A%22security%22+OR+all%3A%22vulnerability%22+OR+all%3A%22adversarial%22%29&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100
+[2026-01-30 05:11:38,552] [arxiv] [INFO] Got first page: 100 of 96951 total results
+[2026-01-30 05:11:38,554] [arxiv] [INFO] Collected 50 papers from arXiv.
+[2026-01-30 05:11:38,564] [arxiv] [INFO] Saved 50 records to data_engineering/bronze/arxiv_raw_2026-01-30T05-11-38.555015.json
+[2026-01-30 05:11:38,565] [arxiv] [INFO] Finished scraper: arxiv
+[2026-01-30 05:11:38,565] [amd] [INFO] Starting scraper: amd
+[2026-01-30 05:11:38,843] [amd] [INFO] Fetching AMD security page: https://www.amd.com/en/resources/product-security.html
+[2026-01-30 05:11:39,312] [httpx] [INFO] HTTP Request: GET https://www.amd.com/en/resources/product-security.html "HTTP/1.1 200 OK"
+[2026-01-30 05:11:39,457] [amd] [INFO] Found 151 bulletin links via BeautifulSoup
+[2026-01-30 05:11:39,469] [amd] [INFO] Saved 151 records to data_engineering/bronze/amd_raw_2026-01-30T05-11-39.460980.json
+[2026-01-30 05:11:39,587] [amd] [INFO] Finished scraper: amd
+[2026-01-30 05:11:39,587] [Orchestrator] [INFO] Orchestration complete.
+[2026-01-31 05:38:54,881] [Orchestrator] [INFO] Starting execution of 8 scrapers...
+[2026-01-31 05:38:54,882] [cve_mitre] [INFO] Starting scraper: cve_mitre
+[2026-01-31 05:38:55,824] [cve_mitre] [INFO] Searching for keyword: artificial intelligence
+[2026-01-31 05:38:55,825] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=artificial intelligence
+[2026-01-31 05:38:58,442] [cve_mitre] [INFO] Found 50 results for artificial intelligence
+[2026-01-31 05:38:58,443] [cve_mitre] [INFO] Searching for keyword: GPU
+[2026-01-31 05:38:58,443] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=GPU
+[2026-01-31 05:38:59,910] [cve_mitre] [INFO] Found 50 results for GPU
+[2026-01-31 05:38:59,910] [cve_mitre] [INFO] Searching for keyword: neural network
+[2026-01-31 05:38:59,910] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=neural network
+[2026-01-31 05:39:00,865] [cve_mitre] [INFO] Found 4 results for neural network
+[2026-01-31 05:39:00,866] [cve_mitre] [INFO] Searching for keyword: LLM
+[2026-01-31 05:39:00,866] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=LLM
+[2026-01-31 05:39:02,262] [cve_mitre] [INFO] Found 50 results for LLM
+[2026-01-31 05:39:02,263] [cve_mitre] [INFO] Searching for keyword: machine learning
+[2026-01-31 05:39:02,263] [cve_mitre] [INFO] Navigating to https://www.cve.org/CVERecord/SearchResults?query=machine learning
+[2026-01-31 05:39:03,761] [cve_mitre] [INFO] Found 50 results for machine learning
+[2026-01-31 05:39:03,813] [cve_mitre] [INFO] Saved 204 records to data_engineering/bronze/cve_mitre_raw_2026-01-31T05-39-03.801878.json
+[2026-01-31 05:39:03,913] [cve_mitre] [INFO] Finished scraper: cve_mitre
+[2026-01-31 05:39:03,914] [nvidia] [INFO] Starting scraper: nvidia
+[2026-01-31 05:39:04,197] [nvidia] [INFO] Navigating to https://www.nvidia.com/en-us/research/publications/
+[2026-01-31 05:39:10,880] [nvidia] [INFO] Found 2 potential research items.
+[2026-01-31 05:39:10,922] [nvidia] [INFO] Saved 2 records to data_engineering/bronze/nvidia_raw_2026-01-31T05-39-10.913925.json
+[2026-01-31 05:39:11,047] [nvidia] [INFO] Finished scraper: nvidia
+[2026-01-31 05:39:11,048] [intel] [INFO] Starting scraper: intel
+[2026-01-31 05:39:11,453] [intel] [INFO] Navigating to https://www.intel.com/content/www/us/en/security-center/default.html
+[2026-01-31 05:42:29,378] [intel] [INFO] Saved 969 records to data_engineering/bronze/intel_raw_2026-01-31T05-42-29.359175.json
+[2026-01-31 05:42:29,498] [intel] [INFO] Finished scraper: intel
+[2026-01-31 05:42:29,499] [twitter] [INFO] Starting scraper: twitter
+[2026-01-31 05:42:29,499] [twitter] [INFO] Searching Twitter for: CVE vulnerability -is:retweet lang:en
+[2026-01-31 05:42:29,836] [twitter] [ERROR] Twitter search failed for CVE vulnerability -is:retweet lang:en: 429 Too Many Requests
+Usage cap exceeded: Monthly product cap
+[2026-01-31 05:42:29,836] [twitter] [INFO] Searching Twitter for: zero-day exploit -is:retweet lang:en
+[2026-01-31 05:42:59,646] [twitter] [ERROR] Twitter search failed for zero-day exploit -is:retweet lang:en: 429 Too Many Requests
+Too Many Requests
+[2026-01-31 05:42:59,646] [twitter] [INFO] Searching Twitter for: NVIDIA security -is:retweet lang:en
+[2026-01-31 05:43:29,668] [twitter] [ERROR] Twitter search failed for NVIDIA security -is:retweet lang:en: 429 Too Many Requests
+Too Many Requests
+[2026-01-31 05:43:29,669] [twitter] [INFO] Searching Twitter for: Intel vulnerability -is:retweet lang:en
+[2026-01-31 05:43:59,670] [twitter] [ERROR] Twitter search failed for Intel vulnerability -is:retweet lang:en: 429 Too Many Requests
+Too Many Requests
+[2026-01-31 05:43:59,671] [twitter] [WARNING] No data to save.
+[2026-01-31 05:43:59,672] [twitter] [INFO] Finished scraper: twitter
+[2026-01-31 05:43:59,672] [openai] [INFO] Starting scraper: openai
+[2026-01-31 05:43:59,981] [openai] [INFO] Navigating to https://openai.com/research
+[2026-01-31 05:44:04,329] [openai] [INFO] Found 19 potential research items.
+[2026-01-31 05:44:04,374] [openai] [INFO] Saved 19 records to data_engineering/bronze/openai_raw_2026-01-31T05-44-04.368277.json
+[2026-01-31 05:44:04,497] [openai] [INFO] Finished scraper: openai
+[2026-01-31 05:44:04,498] [hacker_news] [INFO] Starting scraper: hacker_news
+[2026-01-31 05:44:04,498] [hacker_news] [INFO] Fetching Hacker News Top Stories IDs...
+[2026-01-31 05:44:04,802] [hacker_news] [INFO] Retrieved 100 top story IDs. Fetching details...
+[2026-01-31 05:44:06,862] [hacker_news] [INFO] Filtered 25 relevant items from Hacker News.
+[2026-01-31 05:44:06,871] [hacker_news] [INFO] Saved 25 records to data_engineering/bronze/hacker_news_raw_2026-01-31T05-44-06.863748.json
+[2026-01-31 05:44:06,872] [hacker_news] [INFO] Finished scraper: hacker_news
+[2026-01-31 05:44:06,872] [arxiv] [INFO] Starting scraper: arxiv
+[2026-01-31 05:44:06,872] [arxiv] [INFO] Querying arXiv with: (cat:cs.CR OR cat:cs.AI OR cat:cs.LG) AND (all:"LLM" OR all:"security" OR all:"vulnerability" OR all:"adversarial")
+[2026-01-31 05:44:06,873] [arxiv] [INFO] Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CR+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22LLM%22+OR+all%3A%22security%22+OR+all%3A%22vulnerability%22+OR+all%3A%22adversarial%22%29&id_list=&sortBy=submittedDate&sortOrder=descending&start=0&max_results=100
+[2026-01-31 05:44:08,447] [arxiv] [INFO] Got first page: 100 of 96951 total results
+[2026-01-31 05:44:08,449] [arxiv] [INFO] Collected 50 papers from arXiv.
+[2026-01-31 05:44:08,460] [arxiv] [INFO] Saved 50 records to data_engineering/bronze/arxiv_raw_2026-01-31T05-44-08.450727.json
+[2026-01-31 05:44:08,461] [arxiv] [INFO] Finished scraper: arxiv
+[2026-01-31 05:44:08,461] [amd] [INFO] Starting scraper: amd
+[2026-01-31 05:44:08,754] [amd] [INFO] Fetching AMD security page: https://www.amd.com/en/resources/product-security.html
+[2026-01-31 05:44:09,228] [httpx] [INFO] HTTP Request: GET https://www.amd.com/en/resources/product-security.html "HTTP/1.1 200 OK"
+[2026-01-31 05:44:09,384] [amd] [INFO] Found 151 bulletin links via BeautifulSoup
+[2026-01-31 05:44:09,397] [amd] [INFO] Saved 151 records to data_engineering/bronze/amd_raw_2026-01-31T05-44-09.388566.json
+[2026-01-31 05:44:09,529] [amd] [INFO] Finished scraper: amd
+[2026-01-31 05:44:09,529] [Orchestrator] [INFO] Orchestration complete.

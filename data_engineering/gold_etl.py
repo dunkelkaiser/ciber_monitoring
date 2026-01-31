@@ -188,35 +188,26 @@ class GoldRefiner:
         
         df['tech_edge_total'] = (df['ai_innovation_score'] + df['complexity_score']) / 2
 
-        # Tratar fechas faltantes
-        for idx, value in enumerate(df['run_ts']):
-            if value == "NaT":
-                # Expresión regular para capturar el formato "Mes día, año"
-                patron = r'([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})'
-
-                # Buscar la fecha en el texto
-                fecha_title = df['title'].iloc[idx]
-                match = re.search(patron, fecha_title)
-
-                if match:
-                    # Extraer los grupos capturados
-                    mes_str = match.group(1)  # 'Dec'
-                    dia = match.group(2)       # '11'
-                    año = match.group(3)       # '2025'
-                    
-                    # Construir la fecha completa
-                    fecha_str = f"{mes_str} {dia}, {año}"
-                    
-                    # Convertir a objeto datetime
-                    fecha_objeto = datetime.strptime(fecha_str, "%b %d, %Y")
-                    
-                    # Formatear al formato deseado YYYY-MM-DD
-                    fecha_formateada = fecha_objeto.strftime("%Y-%m-%d")
-                    
-                else:
-                    fecha_formateada = "2026-01-12"
-
-                    df.at[idx, 'run_ts'] = fecha_formateada
+        # Date Fallback Strategy (Ticket 1)
+        # Priority: run_ts > scraped_date > published_date > self.timestamp
+        # First, ensure all potential date columns are datetime objects, coercing errors
+        potential_dates = ['run_ts', 'scraped_date', 'published_date']
+        for col in potential_dates:
+             if col in df.columns:
+                 df[col] = pd.to_datetime(df[col], errors='coerce').dt.tz_localize(None)
+        
+        # Initialize final_date with self.timestamp (lowest priority)
+        final_date = pd.Series([self.timestamp.replace(tzinfo=None)] * len(df), index=df.index)
+        
+        # Apply cascade in reverse order of priority to overwrite
+        if 'published_date' in df.columns:
+            final_date = df['published_date'].combine_first(final_date)
+        if 'scraped_date' in df.columns:
+            final_date = df['scraped_date'].combine_first(final_date)
+        if 'run_ts' in df.columns:
+             final_date = df['run_ts'].combine_first(final_date)
+            
+        df['run_ts'] = final_date.dt.strftime("%Y-%m-%d")
 
         self.save_gold(df, "gold_tech_edge_score")
         return df
@@ -274,13 +265,13 @@ class GoldRefiner:
                  social_df['sentiment'] = 0.0
 
         # Date Alignment (Ticket 4)
-        # Use 'created_at' if available, otherwise 'asof_date' fallback
-        if 'created_at' in social_df.columns:
+        # Use 'published_date' (Standardized in Ticket 2)
+        if 'published_date' in social_df.columns:
              # Ensure datetime
-             social_df['event_date'] = pd.to_datetime(social_df['created_at'], errors='coerce').dt.floor('D')
+             social_df['event_date'] = pd.to_datetime(social_df['published_date'], errors='coerce').dt.floor('D')
         else:
-             # Fallback to current run date (asof_date) if created_at missing
-             logger.warning("No 'created_at' in social data, using asof_date for event_date.")
+             # Fallback to current run date (asof_date) if published_date missing
+             logger.warning("No 'published_date' in social data, using asof_date for event_date.")
              social_df['event_date'] = pd.to_datetime(self.timestamp).floor('D')
              
         # Aggregate Social: Daily Average Sentiment and Volume per Platform (Ticket 5)
