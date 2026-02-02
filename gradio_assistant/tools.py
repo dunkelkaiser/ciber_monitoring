@@ -12,7 +12,7 @@ API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000/api/v1")
 def get_tech_edge_score():
     """Fetches the current Tech Edge Score and innovation ranking."""
     try:
-        response = requests.get(f"{API_BASE_URL}/tech-edge-score")
+        response = requests.get(f"{API_BASE_URL}/tech-edge-score/summary")
         if response.status_code == 200:
             return response.json()
         return {"error": f"API Error: {response.status_code}"}

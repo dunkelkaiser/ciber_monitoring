@@ -43,8 +43,12 @@ def get_api_metric(endpoint):
         response = requests.get(f"{API_URL}/{endpoint}", timeout=5)
         if response.status_code == 200:
             data = response.json()
+            # If summary endpoint (dict), return as is
+            if isinstance(data, dict):
+                return data
+            # If list (historical data), return latest
             if isinstance(data, list) and len(data) > 0:
-                return data[-1] # Return latest
+                return data[-1] 
             return {}
         return {}
     except Exception as e:
@@ -195,8 +199,10 @@ def run_storytelling():
     today_str = datetime.now().strftime("%Y-%m-%d")
     
     # 1. Fetch Data
+    # 1. Fetch Data
     risk_data = get_api_metric("vulnerability-index")
-    innovation_data = get_api_metric("tech-edge-score")
+    # Use Summary Endpoint
+    innovation_data = get_api_metric("tech-edge-score/summary")
     
     # 2. RAG Context
     context = get_rag_context("critical vulnerabilities and AI innovation high risk")
